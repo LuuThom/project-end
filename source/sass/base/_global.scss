@@ -1,0 +1,53 @@
+// ======================================================
+// Base :: Global like html, body, img, a, ul
+// ======================================================
+html {
+  font-size: $font-size-base - 1;
+}
+
+body {
+  font-size: $font-size-base - 1;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  background: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  color: $blue;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+.glyphicon {
+  display: inline-block;
+  text-rendering: auto;
+  font: $font-size-base/1 $font-icon;
+  font-size: inherit;
+}
+
+.icon-arrow-right:after {
+  content: '\f2fb';
+  font-size: $font-size-base;
+  font-weight: $font-weight-bolded;
+}
+
+.icon-arrow-left:before {
+  content: '\f2fa';
+  font-size: $font-size-base;
+}

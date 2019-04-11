@@ -1,0 +1,85 @@
+// ======================================================
+// Abstracts :: Variables
+// ======================================================
+
+// Paths
+$path-image: '../images';
+$path-fonts: '../fonts';
+
+// Fonts
+// >> Font-family
+$font-family-base : 'Roboto', 'Arial', 'sans-serif';
+$font-icon: 'Material-Design-Iconic-Font';
+// >> Font-size
+$font-size-small  : 12px;
+$font-size-base   : 14px;
+$font-size-medium : 16px;
+$font-size-large  : 18px;
+// >> Font-weight
+$font-weight-light: 300;
+$font-weight-base : 400;
+$font-weight-bold : 600;
+$font-weight-bolded : 700;
+
+// Borders
+$border-radius-small : 2px;
+$border-radius-base  : 4px;
+$border-radius-medium: 8px;
+
+// z-index
+$z-indexes: (
+  base    : 1,
+  under   : -1,
+  modal   : 1001,
+  sidebar : 1000
+);
+//color
+$color-white: #fff;
+$color-hover: #272727;
+$color-border: #bababa;
+$color-black: #000;
+$cl-pri-hover: #404040;
+$cl-slide: #4285f4;
+$cl-label-border: #d5d8de;
+$color-white: #fff;
+$color-hover: #272727;
+$color-border: #bababa;
+$color-black: #000;
+$color-pri-hover: #404040;
+$cl-valid: #34a853;
+$cl-disabled: #eee;
+$cl-top-border: #bdc0c7;
+$cl-switch-after: #b3b3b2;
+
+$bg-white: #fff;
+$bg-primary: #4285f4;
+$bg-primary-shadow: rgba(18, 102, 241, .96);
+$bg-danger: #ea4335;
+$bg-warning: #fbbc05;
+$bg-warning-hover: #ca9703;
+$bg-secondary-active: #e3e3e3;
+$bg-active-pri: #2572f2;
+$bg-danger-active: #e72919;
+$bg-warning-active: #dea604;
+$bg-success: #28a745;
+$bg-success-active: #2d9147;
+
+$bd-danger: #ea4335;
+$box-shadow-danger : #d62516;
+$bd-warning: #fbbc05;
+$box-shadow-warning: #ca9703;
+$bd-warning-focus: #bd8e03;
+$bd-sd-primary: #1266f1;
+$bd-active-pri: #2572f2;
+$box-shadow-active-pri: #0c57d3;
+$bd-primary: #4285f4;
+$bd-danger-active: #e72919;
+$bd-danger-top: #b51f13;
+$bd-danger-shadow: #d62516;
+$bd-warning-active: #dea604;
+$bd-warning-top: #a77d03;
+$box-shadow-success: #218838;
+$bd-success-active: #2d9147;
+$bd-success-top: #206632;
+$box-shadow-success-active: #288140;
+

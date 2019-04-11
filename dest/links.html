@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>List links</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="List links" />
+    <meta name="keywords" content="List links" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      .page-list {
+        background: linear-gradient(270deg, #1d3349 0%, #0d1723 100%);
+        position: relative;
+        overflow: hidden;
+        margin: 0 -15px;
+        min-height: 100vh;
+      }
+
+      .page-list__title {
+        margin: 40px auto 35px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 9;
+        color: #fff;
+      }
+
+      .page-list .table {
+        background-color: rgba(255, 255, 255, 0.15);
+        position: relative;
+        z-index: 9;
+        width: 65%;
+        margin: 0 auto 65px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .page-list .table th,
+      .page-list .table td {
+        color: #fff;
+        padding: 13px 15px;
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+
+      .page-list .table thead tr:first-child th {
+        background-color: rgba(255, 255, 255, 0.25);
+      }
+
+      .page-list__link {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+      }
+
+      .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.78);
+      }
+
+      .table-striped tbody tr:nth-of-type(even) {
+        background-color: #000;
+      }
+
+      .page-list__link:first-letter {
+        font-size: 16px;
+      }
+
+      .page-list__link:hover {
+        color: #fff;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-list">
+        <h1 class="page-list__title">Page List</h1>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Name Of Screen</th>
+              <th>Link Of Screen</th>
+            </tr>
+          </thead>
+          <tr>
+            <th>0</th>
+            <td><a class="page-list__link" href="styleguides.html">Style Guides</a>
+            </td>
+            <td><a class="page-list__link" href="styleguides.html">styleguides.html</a>
+            </td>
+          </tr>
+          <tr>
+            <th>1</th>
+            <td><a class="page-list__link" href="home.html">Home</a>
+            </td>
+            <td><a class="page-list__link" href="home.html">home.html</a>
+            </td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td><a class="page-list__link" href="login.html">Login</a>
+            </td>
+            <td><a class="page-list__link" href="login.html">login.html</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

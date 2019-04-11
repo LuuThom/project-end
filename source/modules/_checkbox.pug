@@ -1,0 +1,41 @@
+mixin checkbox({id, label, checked, typecheck, typeInput})
+  .custom-control.custom-checkbox()&attributes(attributes)
+      input.custom-control-input(
+        type= typecheck ? typecheck : null
+        id= id ? id : null
+        checked= (checked === true) ? true : false
+        class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
+    )
+      label.custom-control-label(
+        for = id ? id : null 
+      )= label
+
+  if typeInput
+    input.form-control(
+      type= typeInput
+    )
+mixin checkboxColor({id, label, checked, type, color, text})
+  label.custom-control.custom-checkbox()&attributes(attributes)
+    input.custom-control-input(
+      type= typecheck ? 'checkbox' : null
+      id= id ? id : null
+      checked= (checked === true) ? true : false
+    )
+    span.custom-control-label(class= (color===true) ? `custom-control-color` : null)= text
+
+mixin switch({id, checked, type, size})
+  .switch-button(
+    class= size ? `switch-button--${size}` : null
+    class= type ? `switch-button--${type}` : null
+  )
+    input.onoffswitch-checkbox(
+      type= "checkbox"
+      checked= (checked === true) ? true : false
+      id= id ? id : null
+      name= id ? id : null
+    )
+    label.onoffswitch-label(
+      for= id ? id :null
+    )
+      span.onoffswitch-inner
+      span.onoffswitch-switch

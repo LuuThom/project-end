@@ -1,0 +1,105 @@
+.switch-button {
+  position: relative;
+  width: 66px;
+
+  .onoffswitch {
+    position: relative;
+    width: 56px;
+
+    &-checkbox {
+      display: none;
+    }
+
+    &-label {
+      display: block;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid $color-white;
+      border-radius: 20px;
+      padding: 0;
+      height: 32px;
+    }
+
+    &-inner {
+      display: block;
+      width: 200%;
+      margin-left: -100%;
+
+      &:before,
+      &:after {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 32px;
+        padding: 0;
+        line-height: 26px;
+        font-size: 1.25rem;
+        color: #000;
+        font-weight: $font-weight-bold;
+        box-sizing: border-box;
+      }
+
+      &:before {
+        content: 'ON';
+        padding-left: 6px;
+        background-color: $bg-primary;
+        color: $color-white;
+        text-align: left;
+      }
+
+      &:after {
+        content: 'OFF';
+        padding-right: 6px;
+        background-color: $cl-switch-after;
+        color: $color-white;
+        text-align: right;
+      }
+    }
+
+    &-switch {
+      display: block;
+      width: 20px;
+      margin: 5px;
+      background: $bg-white;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 38px;
+      border: 2px solid $color-white;
+      border-radius: 20px;
+      transition: all .3s ease-in 0s;
+    }
+
+    &-checkbox:checked + &-label &-inner {
+      margin-left: 0;
+    }
+
+    &-checkbox:checked + &-label &-switch {
+      right: 0;
+    }
+  }
+  label {
+    padding: 0;
+  }
+  &--success {
+    .onoffswitch-inner:before {
+      background: $bg-success;
+    }
+  }
+  &--warning {
+    .onoffswitch-inner:before {
+      background: $bg-warning;
+    }
+  }
+  &--danger {
+    .onoffswitch-inner:before {
+      background: $bg-danger;
+    }
+  }
+  &--primary {
+    .onoffswitch-inner:before {
+      background: $bg-primary;
+    }
+  }
+}
+

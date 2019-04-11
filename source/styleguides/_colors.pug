@@ -1,0 +1,33 @@
+//-------------------------------------------------------
+//- Styleguides :: Colors
+//-------------------------------------------------------
+
+-
+  var colors = [
+    { key: '$color-white', color: '#fff' },
+    { key: '$color-hover', color: '#272727' },
+    { key: '$color-border', color: '#bababa' },
+    { key: '$color-black', color: '#000' },
+    { key: '$color-pri-hover', color: '#404040'},
+    { key: '$bg-white', color: '#fff' },
+    { key: '$bg-primary', color: '#4285f4' },
+    { key: '$bg-primary-shadow', color: 'rgba(18, 102, 241, .96)' },
+    { key: '$bg-danger', color: '#ea4335' },
+    { key: '$bg-warning', color: '#fbbc05'},
+    { key: '$bg-warning-hover', color: '#ca9703' },
+    { key: '$bg-secondary-active', color: '#e3e3e3' },
+    { key: '$bg-active-pri', color: '#2572f2' },
+    { key: '$bg-danger-active', color: '#e72919' },
+    { key: '$bg-warning-active', color: '#dea604'},
+    { key: '$bg-success', color: '#28a745' },
+    { key: '$bg-success-active', color: '#2d9147' },
+  ];
+
+.row
+  each val in colors
+    .col-md-4.col-6
+      .code-example
+        .demo(style=`background-color: ${val.color}; width: 100%; height: 100px`)
+        pre
+          code
+            | #{val.key}: #{val.color}

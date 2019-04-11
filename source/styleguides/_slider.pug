@@ -1,0 +1,77 @@
+h2 Slider
+.row
+  .col-md-6.col-6
+    .code-example
+      .demo
+        h3 Slider Base
+        +input-field({
+          id: 'slide1',
+          dataSliderId: 'ex1Slide',
+        })(value="8" data-value="8")
+      pre
+        code
+        | +input-field({
+        |   id: 'slide1',
+        |   dataSliderId: 'ex1Slide',
+        |})(value="8" data-value="8")
+  .col-md-6.col-6
+    .code-example
+      .demo
+        h3 Range Slider
+        +input-field({
+          id: 'slide2',
+        })(data-slider-value="[250,450]" data-slider-step="5" data-slider-max="1000" data-slider-min="10" value="450,505" data-value="450,505")
+      pre
+        code
+        | +input-field({
+        |   id: 'slide2',
+        |   type: 'text',
+        |})(data-slider-value="[250,450]" data-slider-step="5" data-slider-max="1000" data-slider-min="10" value="450,505" data-value="450,505")
+  .col-12
+    .code-example
+      .demo
+        h3 Vertical Slider
+        +input-field({
+          id: 'slide3',
+        })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="13" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="13" data-value="-13")
+        +input-field({
+          id: 'slide4',
+        })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="9" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="15" data-value="-15")
+        +input-field({
+          id: 'slide5',
+        })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="5" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="20" data-value="-20")
+        +input-field({
+          id: 'slide6',
+        })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="2" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="16" data-value="-16")
+        +input-field({
+          id: 'slide7',
+        })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="5" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="17" data-value="-17")
+        +input-field({
+          id: 'slide8',
+        })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="9" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="20" data-value="-20")
+        +input-field({
+          id: 'slide9',
+        })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="13" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="14" data-value="-14")
+      pre
+        code
+        | +input-field({
+        |   id: 'slide3',
+        |})(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="-13" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="-20" data-value="-20")
+        | +input-field({
+        |    id: 'slide4',
+        | })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="-9" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="-15" data-value="-15")
+        | +input-field({
+        |   id: 'slide5',
+        | })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="-5" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="-20" data-value="-20")
+        | +input-field({
+        |   id: 'slide6',
+        | })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="-2" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="-16" data-value="-16")
+        | +input-field({
+        |   id: 'slide7',
+        | })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="-5" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="-17" data-value="-17")
+        | +input-field({
+        |   id: 'slide8',
+        | })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="-9" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="-20" data-value="-20")
+        | +input-field({
+        |   id: 'slide9',
+        | })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="-13" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="-14" data-value="-14")

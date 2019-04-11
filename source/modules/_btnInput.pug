@@ -1,0 +1,15 @@
+mixin btnInput({typeInput, typeBtn, textBtn, toggle})
+  .input-group
+    input.form-control(
+      type= typeInput ? typeInput : null
+    )
+    .input-group-append
+      button.btn.btn-primary(
+        type= typeBtn
+        class= toggle ? `dropdown-toggle` : null
+        data-toggle= toggle ? `dropdown` : null
+        aria-expanded= toggle ? false : null
+      )= textBtn
+      if toggle
+        .dropdown-menu
+          

@@ -1,0 +1,119 @@
+input[type='radio'],
+input[type='checkbox'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+.custom-control {
+  &-input {
+    position: absolute;
+    opacity: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  &-label {
+    display: inline-block;
+    line-height: 1.7;
+    white-space: nowrap;
+    margin-bottom: 0;
+    vertical-align: top;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    outline: 0;
+    cursor: pointer;
+    &:before {
+      top: 0;
+      left: -35px;
+      position: absolute;
+      border-radius: 3px;
+      margin: 0;
+      color: #4285f4;
+      display: block;
+      width: 1.7rem;
+      height: 1.7rem;
+      pointer-events: none;
+      content: '';
+      background-color: #fff;
+      border: #a1a1a1 solid 1px;
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      left: -35px;
+      display: block;
+      width: 1.7rem;
+      height: 1.7rem;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+  }
+}
+.custom-control-input:checked ~ .custom-control-label:before {
+  border-color: #4285f4;
+  color: #4285f4;
+  background-color: #fff;
+  box-shadow: 0;
+}
+.custom-control-input:checked ~ .custom-control-label:after {
+  content: '\f26b';
+  font-size: 1.5452rem;
+  font-family: $font-icon;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.1;
+  color: #4285f4;
+  box-shadow: 0;
+}
+.custom-checkbox {
+  &--inline {
+    display: inline-block;
+    float: left;
+    margin-bottom: 30px;
+    width: 30%;
+    margin-top: 20px;
+  }
+}
+.custom-demo {
+  padding-bottom: 70px;
+}
+pre {
+  clear: both;
+}
+
+.custom-checkbox .custom-control-label:before {
+  content: "";
+  width: 1.699rem;
+  height: 1.699rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 0;
+}
+.custom-control-input:checked~.custom-control-label::before {
+  color: #4285f4;
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+  content: "\f26b";
+  font-size: 1.5452rem;
+  font-family: "Material Icons";
+  margin: 0 0;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.1;
+}
+.custom-control-input:checked~.custom-control-color::before {
+  border-color: #4285f4;
+}
+.custom-control-input:checked~.custom-control-label::after {
+  color: #4285f4;
+}
+.custom-control-input:checked~.custom-control-color::after {
+  background-color: #4285f4;
+  color: #fff;
+  border-radius: 3px;
+}

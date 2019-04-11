@@ -1,0 +1,368 @@
+h2 Basic Input
+.row
+  .col-md-6.col-12
+    .code-example
+      .demo
+        +input-field({
+          label: 'Email address',
+          id: 'inputEmail',
+          type: 'email',
+          placeholder: 'Enter email'
+        })
+      pre
+        code
+        |+input-field({
+        |   label: 'Email address',
+        |   id: 'inputEmail',
+        |   type: 'email',
+        |   placeholder: 'Enter email'
+        |})
+  .col-md-6.col-12
+    .code-example
+      .demo
+        +input-field({
+          label:'Password',
+          id:'inputPassword',
+          type:'password',
+          placeholder:'Password'
+        })
+      pre
+        code
+        |+input-field({
+        |   label:'Password',
+        |   id:'inputPassword',
+        |   type:'password',
+        |   placeholder:'Password'
+        |})
+  .col-md-6.col-12
+    .code-example
+      .demo
+        +input-field({
+          label:'Input Text',
+          id:'inputText',
+          type:'text'
+        })
+      pre
+        code
+        |+input-field({
+        |  label:'Input Text',
+        |  id:'inputText3',
+        |  type:'text'
+        |})
+  .col-md-6.col-12
+    .code-example
+      .demo
+        +input-field({
+          label:'Input Password',
+          id:'inputPassword',
+          type:'password'
+        })
+      pre
+        code
+        |+input-field({
+        |  label:'Input Password',
+        |  id:'inputPassword',
+        |  type:'password'
+        |})
+  .col-md-6.col-12
+    .code-example
+      .demo
+        +input-field({
+          label:'Placeholder Input',
+          id:'inputPlaceholder',
+          type:'text',
+          placeholder: 'Placeholder text'
+        })
+      pre
+        code
+        |+input-field({
+        |   label:'Placeholder Input',
+        |   id:'inputPlaceholder',
+        |   type:'text',
+        |   placeholder: 'Placeholder text'
+        |})
+  .col-md-6.col-12
+    .code-example
+      .demo
+        +input-field({
+          label:'Disabled Input',
+          id:'inputDisabled',
+          type:'text',
+          disabled:true,
+          placeholder: 'Disabled input text'
+        })
+      pre
+        code
+        |+input-field({
+        |   label:'Disabled Input',
+        |   id:'inputDisabled',
+        |   type:'text',
+        |   disabled:true,
+        |   placeholder: 'Disabled input text'
+        |})
+  .col-md-6.col-12
+    h4 Readonly Input
+    .code-example
+      .demo
+        +input-field({
+          label: 'Readonly Input',
+          id: 'inputReadonly3',
+          type: 'text',
+          readonly: true,
+          value: 'Readonly input text'
+        })
+      pre
+        code
+        |+input-field({
+        |   label: 'Readonly Input',
+        |   id: 'inputReadonly3',
+        |   type:'text',
+        |   readonly: true,
+        |   value: 'Readonly input text'
+        |}) 
+h2 Input upload file
+.row
+  each val in ['secondar','primary']
+    .col-md-6.col-12
+      .code-example
+        .demo
+          +input-field({
+            label:'Input File',
+            id:'file',
+            type:'file',
+            name: 'file',
+            multipleCap: '{count} files selected',
+            multiple: true,
+            typeColor: val,
+            icon: 'upload',
+            text: 'Browse files...'
+          })
+        pre
+          codes
+          |+input-filed({
+          |   label:'Readonly Input',
+          |   id:'file',
+          |   type:'file',
+          |   name: 'file',
+          |   multipleCap: '{count} files selected',
+          |   multiple: true,
+          |   typeColor: `#{val}`,
+          |   icon: 'upload',
+          |   text: 'Browse files...'
+          |})
+-
+  var inputSize = [
+    {
+      label: 'Large',
+      id: 'inputLarge',
+      size: 'lg',
+      value: 'Large input',
+      placeholder: 'Large input'
+    },
+    {
+      label: 'Default',
+      id: 'inputDefault',
+      size: 'md',
+      value: 'Default input',
+      placeholder: 'Default input'
+    },
+    {
+      label: 'Small',
+      id: 'inputSmall',
+      size: 'sm',
+      value: 'Small input',
+      placeholder: 'Small input'
+    },
+    {
+      label: 'Extra Small',
+      id: 'inputExtraSmall',
+      size: 'xs',
+      value: 'Extra small input',
+      placeholder: 'Extra small input'
+    },
+  ]
+h2 Input Size
+.row
+  each val in inputSize
+    .col-md-6.col-12
+      .code-example
+        .demo
+          +input-field({
+            label:val.label,
+            id:val.id,
+            type:'text',
+            size: val.size,
+            placeholder: val.placeholder
+          })
+        pre
+          code
+            |+input-field({
+            |   label: `#{val.label}`,
+            |   id: `#{val.id}`,
+            |   type: 'text',
+            |   size: `#{val.size}`,
+            |   placeholder: `#{val.placeholder}`
+            |})
+h2 Validate States
+.row
+  .col-md-6.col-12
+    .code-example
+      h3 Success
+      .demo
+        +input-field({
+          required: true,
+          valid: true
+        })
+      pre
+        code
+          |+input-field({
+          | required: true,
+          | valid: true
+          |})
+  .col-md-6.col-12
+    .code-example
+      h3 Error
+      .demo
+        +input-field({
+          required: true,
+          valid: false
+        })
+      pre
+        code
+          |+input-field({
+          |   required: true,
+          |   valid: false
+          |})
+h2 Datetimepicker
+.row
+  .col-md-6.col-12
+    .code-example
+      h3 Default
+      .demo
+        +input-field({
+          datetimepicker: true
+        })
+      pre
+        code
+        |+input-field({
+        |   datetimepicker: true
+        |})
+  .col-md-6.col-12
+    h3 Datetime Readonly
+    .code-example
+      .demo
+        +input-field({
+          datetimepicker: true,
+          readonly: true
+        })
+      pre
+        code
+        |+input-field({
+        |   datetimepicker: true,
+        |   readonly: true
+        |})
+  .col-md-6.col-12
+    .code-example
+      h3 Datetime Only Date
+      .demo
+        +input-field({
+          datetimepicker: true,
+        })(data-min-view="2" data-date-format="yyyy-mm-dd")
+      pre
+        code
+        |+input-field({
+        |   datetimepicker: true,
+        |})(data-min-view="2" data-date-format="yyyy-mm-dd")
+  .col-12
+    .code-example
+      h3 Decade View
+      .demo
+        +input-field({
+          datetimepicker: true,
+        })(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+      pre
+        code
+        |+input-field({
+        |   datetimepicker: true,
+        |})(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+  .col-12
+    .code-example
+      h3 Year View
+      .demo
+        +input-field({
+          datetimepicker: true,
+        })(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+      pre
+        code
+        |+input-field({
+        |   datetimepicker: true,
+        |})(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+  .col-12
+    .code-example
+      h3 Month View
+      .demo
+        +input-field({
+          datetimepicker: true,
+        })(data-start-view="2" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+      pre
+        code
+        |+input-field({
+        |   datetimepicker: true,
+        |})(data-start-view="2" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+  .col-12
+    .code-example
+      h3 Day View
+      .demo
+        +input-field({
+          datetimepicker: true,
+        })(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+      pre
+        code
+        |+input-field({
+        |   datetimepicker: true,
+        |})(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+  .col-12
+    .code-example
+      h3 Hour View
+      .demo
+        +input-field({
+          datetimepicker: true,
+        })(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+      pre
+        code
+        |+input-field({
+        |   datetimepicker: true,
+        |})(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+  .col-12
+    .code-example
+      h3 Day View Meridian
+      .demo
+        +input-field({
+          datetimepicker: true,
+        })(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+      pre
+        code
+        |+input-field({
+        |   datetimepicker: true,
+        |})(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+  .col-12
+    .code-example
+      h3 Hour View Meridian
+      .demo
+        +input-field({
+          datetimepicker: true,
+        })(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+      pre
+        code
+        |+input-field({
+        |   datetimepicker: true,
+        |})(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
+h2 Textarea
+.row
+  .col-12
+    .code-example
+      .demo
+        +textArea({id: 'inputTextarea3'})
+      pre
+        code
+        | +textArea({id: 'inputTextarea3'})

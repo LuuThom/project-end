@@ -1,0 +1,43 @@
+//-------------------------------------------------------
+//- Styleguide :: form
+//-------------------------------------------------------
+
+mixin input-field({label, id, type, placeholder, size, sizing, value, disabled, readonly, datetimepicker, valid, name, multipleCap, multiple, icon, required, typeColor, text})
+  input.form__control(
+    class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
+    class= (type === 'file') ? 'input-file' : null
+    class= size ? `form__control--${size}` : null
+    class= datetimepicker ? 'datetimepicker' : null
+    id= id ? id : null
+    type= type ? type : 'text'
+    placeholder= placeholder ? placeholder : null
+    value= value ? value : null
+    readonly= (readonly === true) ? true : null
+    disabled= (disabled === true) ? true : null
+    data-multiple-caption= multipleCap ? multipleCap : null
+    multiple= (multiple === true) ? true : null
+    required= (required === true) ? true : null
+    size= sizing ? sizing : null
+    data-slider-id= dataSliderId ? dataSliderId : null
+  )&attributes(attributes)
+  if (type === 'file' && multiple === 'undefined')
+    label.label(
+      for= id ? id : null
+      class= typeColor ? `btn-${typeColor}` : null
+    )
+  if (type === 'file' && multiple !== 'undefined')
+    label.label(
+      for= id ? id : null
+      class= typeColor ? `btn-${typeColor}` :null
+    )
+      i.zmdi(
+        class= icon ? `zmdi-${icon}` : null
+      )
+      span.textInput= text
+
+
+//- textarea
+mixin textArea({label, id, breackpointLabel, breackpointInput})
+  textarea.form-control(
+    id= id ? id : null
+  )

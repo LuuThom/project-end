@@ -1,0 +1,14 @@
+//-------------------------------------------------------
+//- Styleguide :: button
+//-------------------------------------------------------
+
+mixin buttons({text, type, icon, size, rounded})
+  button.btn.btn-space(
+    class= type ? `btn-${type}` : null
+    class= rounded ? `btn-rounded` : null
+    class= size ? `btn-${size}` : null
+  )
+    if icon
+      i.icon.icon-left.zmdi(class= icon ? `zmdi-${icon}` : null)
+    | #{text}
+
