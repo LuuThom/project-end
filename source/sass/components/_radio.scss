@@ -1,0 +1,47 @@
+
+.form-check {
+  margin-bottom: .5rem;
+}
+
+.form-group.row label {
+  white-space: nowrap;
+}
+
+.custom-radio-icon {
+  padding: 7px 0;
+  width: 52px;
+  height: 52px;
+}
+
+.custom-radio-icon .custom-control-label {
+  cursor: pointer;
+  margin: 0;
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
+  border: 1px solid #d5d8de;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 36px;
+  vertical-align: middle;
+  color: gray;
+  font-family: $font-icon;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  .zmdi {
+    margin-right: 0;
+  }
+}
+.custom-radio-icon input[type='radio']:checked + .custom-control-label i {
+  color: #4285f4;
+}
+
+.custom-radio-icon input[type='radio']:checked + .custom-control-label {
+  border-color: #4285f4;
+  color: #4285f4;
+  background-color: #fff;
+}

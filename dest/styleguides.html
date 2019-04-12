@@ -53,7 +53,7 @@
       </div>
       <div class="row">
         <div class="col-2">
-          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="position: sticky; top: 0"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-buttons-tab" href="#v-pills-buttons" aria-controls="v-pills-buttons">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-input-tab" href="#v-pills-input" aria-controls="v-pills-input">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkbox</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-selectbox-tab" href="#v-pills-selectbox" aria-controls="v-pills-selectbox">Selectbox</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-slide-tab" href="#v-pills-slide" aria-controls="v-pills-slide">Slides</a>
+          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="position: sticky; top: 0"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-buttons-tab" href="#v-pills-buttons" aria-controls="v-pills-buttons">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-input-tab" href="#v-pills-input" aria-controls="v-pills-input">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkbox</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-selectbox-tab" href="#v-pills-selectbox" aria-controls="v-pills-selectbox">Selectbox</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-slide-tab" href="#v-pills-slide" aria-controls="v-pills-slide">Slides</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-datetime-tab" href="#v-pills-datetime" aria-controls="v-pills-datetime">Datetimepicker</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-radio-tab" href="#v-pills-radio" aria-controls="v-pills-radio">Radio</a>
           </div>
         </div>
         <div class="col-10">
@@ -1350,8 +1350,8 @@ size: `xl`
                 <div class="col-md-6 col-12">
                   <div class="code-example">
                     <div class="demo">
-                      <input class="form__control input-file" id="file" type="file" data-multiple-caption="{count} files selected" multiple="multiple" />
-                      <label class="label btn-secondar" for="file"><i class="zmdi zmdi-upload"></i><span class="textInput">Browse files...</span></label>
+                      <input class="input-file" id="file0" type="file" data-multiple-caption="{count} files selected" multiple="multiple" />
+                      <label class="label btn-secondar" for="file0"><i class="zmdi zmdi-upload"></i><span class="textInput">Browse files...</span></label>
                     </div>
                     <pre>
 											<codes></codes>+input-filed({
@@ -1370,8 +1370,8 @@ size: `xl`
                 <div class="col-md-6 col-12">
                   <div class="code-example">
                     <div class="demo">
-                      <input class="form__control input-file" id="file" type="file" data-multiple-caption="{count} files selected" multiple="multiple" />
-                      <label class="label btn-primary" for="file"><i class="zmdi zmdi-upload"></i><span class="textInput">Browse files...</span></label>
+                      <input class="input-file" id="file1" type="file" data-multiple-caption="{count} files selected" multiple="multiple" />
+                      <label class="label btn-primary" for="file1"><i class="zmdi zmdi-upload"></i><span class="textInput">Browse files...</span></label>
                     </div>
                     <pre>
 											<codes></codes>+input-filed({
@@ -1453,7 +1453,7 @@ size: `xl`
                   <div class="code-example">
                     <h3>Success</h3>
                     <div class="demo">
-                      <input class="form__control is--valid" type="text" required="required" />
+                      <input class="is--valid form__control" type="text" required="required" />
                     </div>
                     <pre><code>+input-field({
 required: true,
@@ -1465,126 +1465,12 @@ valid: true
                   <div class="code-example">
                     <h3>Error</h3>
                     <div class="demo">
-                      <input class="form__control is--invalid" type="text" required="required" />
+                      <input class="is--invalid form__control" type="text" required="required" />
                     </div>
                     <pre><code>+input-field({
   required: true,
   valid: false
 })</code></pre>
-                  </div>
-                </div>
-              </div>
-              <h2>Datetimepicker</h2>
-              <div class="row">
-                <div class="col-md-6 col-12">
-                  <div class="code-example">
-                    <h3>Default</h3>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" />
-                    </div>
-                    <pre><code></code>+input-field({
-  datetimepicker: true
-})</pre>
-                  </div>
-                </div>
-                <div class="col-md-6 col-12">
-                  <h3>Datetime Readonly</h3>
-                  <div class="code-example">
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" readonly="readonly" />
-                    </div>
-                    <pre><code></code>+input-field({
-  datetimepicker: true,
-  readonly: true
-})</pre>
-                  </div>
-                </div>
-                <div class="col-md-6 col-12">
-                  <div class="code-example">
-                    <h3>Datetime Only Date</h3>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-min-view="2" data-date-format="yyyy-mm-dd" />
-                    </div>
-                    <pre><code></code>+input-field({
-  datetimepicker: true,
-})(data-min-view="2" data-date-format="yyyy-mm-dd")</pre>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="code-example">
-                    <h3>Decade View</h3>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
-                    </div>
-                    <pre><code></code>+input-field({
-  datetimepicker: true,
-})(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="code-example">
-                    <h3>Year View</h3>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
-                    </div>
-                    <pre><code></code>+input-field({
-  datetimepicker: true,
-})(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="code-example">
-                    <h3>Month View</h3>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-start-view="2" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
-                    </div>
-                    <pre><code></code>+input-field({
-  datetimepicker: true,
-})(data-start-view="2" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="code-example">
-                    <h3>Day View</h3>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
-                    </div>
-                    <pre><code></code>+input-field({
-  datetimepicker: true,
-})(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="code-example">
-                    <h3>Hour View</h3>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
-                    </div>
-                    <pre><code></code>+input-field({
-  datetimepicker: true,
-})(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="code-example">
-                    <h3>Day View Meridian</h3>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
-                    </div>
-                    <pre><code></code>+input-field({
-  datetimepicker: true,
-})(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="code-example">
-                    <h3>Hour View Meridian</h3>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
-                    </div>
-                    <pre><code></code>+input-field({
-  datetimepicker: true,
-})(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
                   </div>
                 </div>
               </div>
@@ -1674,36 +1560,34 @@ valid: true
                   <div class="code-example">
                     <div class="demo">
                       <h3>Checkbox Base</h3>
-                      <div class="custom-control custom-checkbox">
+                      <div class="custom-control">
                         <input class="custom-control-input" type="checkbox" id="check1" checked="checked" />
                         <label class="custom-control-label" for="check1">Option1</label>
                       </div>
-                      <div class="custom-control custom-checkbox">
+                      <div class="custom-control">
                         <input class="custom-control-input" type="checkbox" id="check2" />
                         <label class="custom-control-label" for="check2">Option2</label>
                       </div>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" type="checkbox" id="check3" />
+                      <div class="custom-control">
+                        <input class="custom-control-input" type="checkbox" id="check3" disabled="disabled" />
                         <label class="custom-control-label" for="check3">Option3</label>
                       </div>
                     </div>
-                    <pre><code></code> +checkbox({
-  typecheck: 'checkbox',
-  checked: true,
-  id: check1,
-  label: 'Option1'
+                    <pre><code></code>+checkbox({
+ checked: true,
+ id: check1,
+ label: 'Option1'
 })
 +checkbox({
-  typecheck: 'checkbox',
-  checked: false,
-  id: check2,
-  label: 'Option1'
+ checked: false,
+ id: check2,
+ label: 'Option2'
 })
 +checkbox({
-  typecheck: 'checkbox',
-  checked: false,
-  id: check3,
-  label: 'Option1'
+ checked: false,
+ id: check3,
+ label: 'Option3',
+ disabled: true
 })</pre>
                   </div>
                 </div>
@@ -1711,36 +1595,34 @@ valid: true
                   <div class="code-example">
                     <div class="demo custom-demo">
                       <h3>Checkbox Inline</h3>
-                      <div class="custom-control custom-checkbox custom-checkbox--inline">
+                      <div class="custom-control custom-checkbox--inline">
                         <input class="custom-control-input" type="checkbox" id="check4" checked="checked" />
                         <label class="custom-control-label" for="check4">Option1</label>
                       </div>
-                      <div class="custom-control custom-checkbox custom-checkbox--inline">
+                      <div class="custom-control custom-checkbox--inline">
                         <input class="custom-control-input" type="checkbox" id="check5" />
                         <label class="custom-control-label" for="check5">Option2</label>
                       </div>
-                      <div class="custom-control custom-checkbox custom-checkbox--inline">
-                        <input class="custom-control-input" type="checkbox" id="check6" />
+                      <div class="custom-control custom-checkbox--inline">
+                        <input class="custom-control-input" type="checkbox" id="check6" disabled="disabled" />
                         <label class="custom-control-label" for="check6">Option3</label>
                       </div>
                     </div>
-                    <pre><code></code> +checkbox({
-  typecheck: 'checkbox',
-  checked: true,
-  id: check4,
-  label: 'Option1'
+                    <pre><code></code>+checkbox({
+ checked: true,
+ id: check4,
+ label: 'Option1'
 })
 +checkbox({
-  typecheck: 'checkbox',
-  checked: false,
-  id: check5,
-  label: 'Option1'
+ checked: false,
+ id: check5,
+ label: 'Option2'
 })
 +checkbox({
-  typecheck: 'checkbox',
-  checked: false,
-  id: check6,
-  label: 'Option1'
+ checked: false,
+ id: check6,
+ label: 'Option3'
+ disabled: true
 })</pre>
                   </div>
                 </div>
@@ -1749,35 +1631,32 @@ valid: true
                     <h3>Checkbox Base Full Color </h3>
                     <div class="demo">
                       <label class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="cl1" checked="checked" /><span class="custom-control-label custom-control-color">Option1</span>
+                        <input class="custom-control-input" type="checkbox" id="cl1" checked="checked" /><span class="custom-control-label custom-control-color">Option1</span>
                       </label>
                       <label class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="cl2" /><span class="custom-control-label custom-control-color">Option2</span>
+                        <input class="custom-control-input" type="checkbox" id="cl2" /><span class="custom-control-label custom-control-color">Option2</span>
                       </label>
                       <label class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="cl3" /><span class="custom-control-label custom-control-color">Option3</span>
+                        <input class="custom-control-input" type="checkbox" id="cl3" /><span class="custom-control-label custom-control-color">Option3</span>
                       </label>
                     </div>
-                    <pre><code></code> +checkboxColor({
-  typecheck: 'checkbox',
+                    <pre><code></code>+checkboxColor({
   checked: true,
   id: cl1,
   text: 'Option1'
  color: true
 })
 +checkboxColor({
-  typecheck: 'checkbox',
   checked: false,
   id: cl2,
   text: 'Option1'
-color: true
+  color: true
 })
 +checkboxColor({
-  typecheck: 'checkbox',
   checked: false,
   id: cl3,
   text: 'Option1'
-color: true
+  color: true
 })</pre>
                   </div>
                 </div>
@@ -1786,31 +1665,28 @@ color: true
                     <h3>Checkbox Inline Full Color</h3>
                     <div class="demo custom-demo">
                       <label class="custom-control custom-checkbox custom-checkbox--inline">
-                        <input class="custom-control-input" id="cl-1" checked="checked" /><span class="custom-control-label custom-control-color">Option1</span>
+                        <input class="custom-control-input" type="checkbox" id="cl-1" checked="checked" /><span class="custom-control-label custom-control-color">Option1</span>
                       </label>
                       <label class="custom-control custom-checkbox custom-checkbox--inline">
-                        <input class="custom-control-input" id="cl-2" /><span class="custom-control-label custom-control-color">Option2</span>
+                        <input class="custom-control-input" type="checkbox" id="cl-2" /><span class="custom-control-label custom-control-color">Option2</span>
                       </label>
                       <label class="custom-control custom-checkbox custom-checkbox--inline">
-                        <input class="custom-control-input" id="cl-3" /><span class="custom-control-label custom-control-color">Option3</span>
+                        <input class="custom-control-input" type="checkbox" id="cl-3" /><span class="custom-control-label custom-control-color">Option3</span>
                       </label>
                     </div>
-                    <pre><code></code> +checkboxColor({
-  typecheck: 'checkbox',
+                    <pre><code></code>+checkboxColor({
   checked: true,
   id: cl-1,
   text: 'Option1'
-color: true
+  color: true
 })
 +checkboxColor({
-  typecheck: 'checkbox',
   checked: false,
   id: cl-2,
   text: 'Option1'
-color: true
+  color: true
 })
 +checkboxColor({
-  typecheck: 'checkbox',
   checked: false,
   id: cl-3,
   text: 'Option1'
@@ -1947,6 +1823,183 @@ var options = [
 +input-field({
   id: 'slide9',
 })(data-slider-selection="after" data-slider-orientation="vertical" data-slider-value="-13" data-slider-step="1" data-slider-max="20" data-slider-min="-20" value="-14" data-value="-14")</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="v-pills-datetime" aria-labelledby="v-pills-datetime-tab">
+              <h2>Datetimepicker</h2>
+              <div class="row">
+                <div class="col-md-6 col-12">
+                  <div class="code-example">
+                    <h3>Default</h3>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" />
+                    </div>
+                    <pre><code></code>+input-field({
+  datetimepicker: true
+})</pre>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <h3>Datetime Readonly</h3>
+                  <div class="code-example">
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" readonly="readonly" />
+                    </div>
+                    <pre><code></code>+input-field({
+  datetimepicker: true,
+  readonly: true
+})</pre>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="code-example">
+                    <h3>Datetime Only Date</h3>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-min-view="2" data-date-format="yyyy-mm-dd" />
+                    </div>
+                    <pre><code></code>+input-field({
+  datetimepicker: true,
+})(data-min-view="2" data-date-format="yyyy-mm-dd")</pre>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="code-example">
+                    <h3>Decade View</h3>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
+                    </div>
+                    <pre><code></code>+input-field({
+  datetimepicker: true,
+})(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="code-example">
+                    <h3>Year View</h3>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
+                    </div>
+                    <pre><code></code>+input-field({
+  datetimepicker: true,
+})(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="code-example">
+                    <h3>Month View</h3>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-start-view="2" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
+                    </div>
+                    <pre><code></code>+input-field({
+  datetimepicker: true,
+})(data-start-view="2" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="code-example">
+                    <h3>Day View</h3>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
+                    </div>
+                    <pre><code></code>+input-field({
+  datetimepicker: true,
+})(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="code-example">
+                    <h3>Hour View</h3>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
+                    </div>
+                    <pre><code></code>+input-field({
+  datetimepicker: true,
+})(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="code-example">
+                    <h3>Day View Meridian</h3>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
+                    </div>
+                    <pre><code></code>+input-field({
+  datetimepicker: true,
+})(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="code-example">
+                    <h3>Hour View Meridian</h3>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1" />
+                    </div>
+                    <pre><code></code>+input-field({
+  datetimepicker: true,
+})(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="v-pills-radio" aria-labelledby="v-pills-radio-tab">
+              <h2>Radio</h2>
+              <div class="row">
+                <div class="col-md-6 col-12">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="form-check form-check-inline">
+                        <label class="custom-control custom-radio custom-radio-icon custom-control-inline">
+                          <input class="custom-control-input" id="radioIcon1" type="radio" name="radio-icon" checked="checked" /><span class="custom-control-label"><i class="zmdi zmdi-female"></i></span>
+                        </label>
+                        <label class="custom-control custom-radio custom-radio-icon custom-control-inline">
+                          <input class="custom-control-input" id="radioIcon2" type="radio" name="radio-icon" /><span class="custom-control-label"><i class="zmdi zmdi-male-alt"></i></span>
+                        </label>
+                      </div>
+                      <pre><code>+radio({
+  id: 'radioIcon1',
+  name: 'radio-icon',
+  checked: true,
+  icon: 'female',
+})
++radio({
+  id: 'radioIcon2',
+  name: 'radio-icon',
+  checked: false,
+  icon: 'male-alt',
+})</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="form-check">
+                        <label class="custom-control custom-radio">
+                          <input class="custom-control-input" type="radio" name="radio-stacked" checked="checked" /><span class="custom-control-label">Option1</span>
+                        </label>
+                        <label class="custom-control custom-radio">
+                          <input class="custom-control-input" type="radio" name="radio-stacked" /><span class="custom-control-label">Option2</span>
+                        </label>
+                        <label class="custom-control custom-radio">
+                          <input class="custom-control-input" type="radio" name="radio-stacked" /><span class="custom-control-label">Option3</span>
+                        </label>
+                      </div>
+                      <pre><code>+radio({
+  name: 'radio-stacked',
+  checked: true,
+})
++radio({
+  name: 'radio-stacked',
+  checked: false,
+})
++radio({
+ name: 'radio-stacked',
+ checked: false,
+ text: 'Option1'
+})</code></pre>
+                    </div>
                   </div>
                 </div>
               </div>

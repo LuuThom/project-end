@@ -4,6 +4,7 @@ input[type='checkbox'] {
   padding: 0;
 }
 .custom-control {
+  margin-bottom: 20px;
   &-input {
     position: absolute;
     opacity: 0;
@@ -67,53 +68,46 @@ input[type='checkbox'] {
   color: #4285f4;
   box-shadow: 0;
 }
-.custom-checkbox {
-  &--inline {
-    display: inline-block;
-    float: left;
-    margin-bottom: 30px;
-    width: 30%;
-    margin-top: 20px;
-  }
-}
+
 .custom-demo {
   padding-bottom: 70px;
+  .custom-checkbox {
+    &--inline {
+      display: inline-block;
+      width: 30%;
+      margin: 20px 0;
+    }
+  }
 }
 pre {
   clear: both;
 }
-
 .custom-checkbox .custom-control-label:before {
-  content: "";
+  content: '';
   width: 1.699rem;
   height: 1.699rem;
   border: 1px solid #ccc;
   border-radius: 3px;
   margin: 0 0;
 }
-.custom-control-input:checked~.custom-control-label::before {
+.custom-control-input:checked ~ .custom-control-color:after {
+  background-color: #4285f4;
+  color: #fff;
+  border-radius: 3px;
+}
+.custom-control-input:checked ~ .custom-control-color:before {
   color: #4285f4;
   border-color: #fff;
   background-color: #fff;
 }
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
-  content: "\f26b";
+.custom-checkbox .custom-control-input:checked ~ .custom-control-color:after {
+  background-image: none;
+  content: '\f26b';
   font-size: 1.5452rem;
-  font-family: "Material Icons";
+  font-family: $font-icon;
   margin: 0 0;
   font-weight: 400;
   text-align: center;
   line-height: 1.1;
-}
-.custom-control-input:checked~.custom-control-color::before {
-  border-color: #4285f4;
-}
-.custom-control-input:checked~.custom-control-label::after {
-  color: #4285f4;
-}
-.custom-control-input:checked~.custom-control-color::after {
-  background-color: #4285f4;
   color: #fff;
-  border-radius: 3px;
 }

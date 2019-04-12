@@ -3,9 +3,9 @@
 //-------------------------------------------------------
 
 mixin input-field({label, id, type, placeholder, size, sizing, value, disabled, readonly, datetimepicker, valid, name, multipleCap, multiple, icon, required, typeColor, text})
-  input.form__control(
+  input(
     class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
-    class= (type === 'file') ? 'input-file' : null
+    class= (type === 'file') ? 'input-file' : 'form__control'
     class= size ? `form__control--${size}` : null
     class= datetimepicker ? 'datetimepicker' : null
     id= id ? id : null

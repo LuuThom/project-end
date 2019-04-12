@@ -28,105 +28,94 @@ h2 Checkbox
       .demo
         h3 Checkbox Base
         +checkbox({
-          typecheck: 'checkbox',
           checked: true,
           id: 'check1',
           label: 'Option1',
         })
         +checkbox({
-          typecheck: 'checkbox',
           checked: false,
           id: 'check2',
           label: 'Option2',
         })
         +checkbox({
-          typecheck: 'checkbox',
           checked: false,
           id: 'check3',
           label: 'Option3',
+          disabled: true
         })
       pre
         code
-        |  +checkbox({
-        |   typecheck: 'checkbox',
-        |   checked: true,
-        |   id: check1,
-        |   label: 'Option1'
-        | })
-        | +checkbox({
-        |   typecheck: 'checkbox',
-        |   checked: false,
-        |   id: check2,
-        |   label: 'Option1'
-        | })
-        | +checkbox({
-        |   typecheck: 'checkbox',
-        |   checked: false,
-        |   id: check3,
-        |   label: 'Option1'
+        |+checkbox({
+        |  checked: true,
+        |  id: check1,
+        |  label: 'Option1'
+        |})
+        |+checkbox({
+        |  checked: false,
+        |  id: check2,
+        |  label: 'Option2'
+        |})
+        |+checkbox({
+        |  checked: false,
+        |  id: check3,
+        |  label: 'Option3',
+        |  disabled: true
         | })
   .col-md-6.col-12
     .code-example
       .demo.custom-demo
         h3 Checkbox Inline
         +checkbox({
-          typecheck: 'checkbox',
           checked: true,
           id: 'check4',
           label: 'Option1',
         })(class="custom-checkbox--inline")
         +checkbox({
-          typecheck: 'checkbox',
           checked: false,
           id: 'check5',
           label: 'Option2',
         })(class="custom-checkbox--inline")
         +checkbox({
-          typecheck: 'checkbox',
           checked: false,
           id: 'check6',
           label: 'Option3',
+          disabled: true
         })(class="custom-checkbox--inline")
       pre
         code
-        |  +checkbox({
-        |   typecheck: 'checkbox',
-        |   checked: true,
-        |   id: check4,
-        |   label: 'Option1'
-        | })
-        | +checkbox({
-        |   typecheck: 'checkbox',
-        |   checked: false,
-        |   id: check5,
-        |   label: 'Option1'
-        | })
-        | +checkbox({
-        |   typecheck: 'checkbox',
-        |   checked: false,
-        |   id: check6,
-        |   label: 'Option1'
-        | })
+        |+checkbox({
+        |  checked: true,
+        |  id: check4,
+        |  label: 'Option1'
+        |})
+        |+checkbox({
+        |  checked: false,
+        |  id: check5,
+        |  label: 'Option2'
+        |})
+        |+checkbox({
+        |  checked: false,
+        |  id: check6,
+        |  label: 'Option3'
+        |  disabled: true
+        |})
   .col-md-6.col-12
     .code-example
       h3 Checkbox Base Full Color 
       .demo
         +checkboxColor({
-          typecheck: 'checkbox',
           checked: true,
           id: 'cl1',
           text: 'Option1',
           color: true
         })
         +checkboxColor({
-          typecheck: 'checkbox',
           checked: false,
           id: 'cl2',
           text: 'Option2',
           color: true
         })
         +checkboxColor({
-          typecheck: 'checkbox',
           checked: false,
           id: 'cl3',
           text: 'Option3',
@@ -134,47 +123,41 @@ h2 Checkbox
         })
       pre
         code
-        |  +checkboxColor({
-        |   typecheck: 'checkbox',
+        |+checkboxColor({
         |   checked: true,
         |   id: cl1,
         |   text: 'Option1'
         |  color: true
-        | })
-        | +checkboxColor({
-        |   typecheck: 'checkbox',
+        |})
+        |+checkboxColor({
         |   checked: false,
         |   id: cl2,
         |   text: 'Option1'
-        | color: true
-        | })
-        | +checkboxColor({
-        |   typecheck: 'checkbox',
+        |   color: true
+        |})
+        |+checkboxColor({
         |   checked: false,
         |   id: cl3,
         |   text: 'Option1'
-        | color: true
-        | })
+        |   color: true
+        |})
   .col-md-6.col-12
     .code-example
       h3 Checkbox Inline Full Color
       .demo.custom-demo
         +checkboxColor({
-          typecheck: 'checkbox',
           checked: true,
           id: 'cl-1',
           text: 'Option1',
           color: true
         })(class="custom-checkbox--inline")
         +checkboxColor({
-          typecheck: 'checkbox',
           checked: false,
           id: 'cl-2',
           text: 'Option2',
           color: true
         })(class="custom-checkbox--inline")
         +checkboxColor({
-          typecheck: 'checkbox',
           checked: false,
           id: 'cl-3',
           text: 'Option3',
@@ -182,26 +165,23 @@ h2 Checkbox
         })(class="custom-checkbox--inline")
       pre
         code
-        |  +checkboxColor({
-        |   typecheck: 'checkbox',
+        |+checkboxColor({
         |   checked: true,
         |   id: cl-1,
         |   text: 'Option1'
-        | color: true
-        | })
-        | +checkboxColor({
-        |   typecheck: 'checkbox',
+        |   color: true
+        |})
+        |+checkboxColor({
         |   checked: false,
         |   id: cl-2,
         |   text: 'Option1'
-        | color: true
-        | })
-        | +checkboxColor({
-        |   typecheck: 'checkbox',
+        |   color: true
+        |})
+        |+checkboxColor({
         |   checked: false,
         |   id: cl-3,
         |   text: 'Option1'
         |   color: true
-        | })
+        |})
   
   

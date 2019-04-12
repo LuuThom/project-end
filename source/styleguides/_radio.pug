@@ -1,0 +1,67 @@
+h2 Radio
+.row
+  .col-md-6.col-12
+    .code-example
+      .demo
+        .form-check.form-check-inline
+          +radio({
+            id: 'radioIcon1',
+            name: 'radio-icon',
+            checked: true,
+            icon: 'female',
+          })(class= "custom-radio-icon custom-control-inline")
+          +radio({
+            id: 'radioIcon2',
+            name: 'radio-icon',
+            checked: false,
+            icon: 'male-alt',
+          })(class= "custom-radio-icon custom-control-inline")
+        pre
+          code
+            |+radio({
+            |   id: 'radioIcon1',
+            |   name: 'radio-icon',
+            |   checked: true,
+            |   icon: 'female',
+            |})
+            |+radio({
+            |   id: 'radioIcon2',
+            |   name: 'radio-icon',
+            |   checked: false,
+            |   icon: 'male-alt',
+            |})
+  .col-md-6.col-12
+    .code-example
+      .demo
+        .form-check
+          +radio({
+            name: 'radio-stacked',
+            checked: true,
+            text: 'Option1'
+          })
+          +radio({
+            name: 'radio-stacked',
+            checked: false,
+            text: 'Option2'
+          })
+          +radio({
+            name: 'radio-stacked',
+            checked: false,
+            text: 'Option3'
+          })
+        pre
+          code
+            |+radio({
+            |   name: 'radio-stacked',
+            |   checked: true,
+            |})
+            |+radio({
+            |   name: 'radio-stacked',
+            |   checked: false,
+            |})
+            |+radio({
+            |  name: 'radio-stacked',
+            |  checked: false,
+            |  text: 'Option1'
+            |})
+

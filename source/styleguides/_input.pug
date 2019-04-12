@@ -122,13 +122,13 @@ h2 Basic Input
         |}) 
 h2 Input upload file
 .row
-  each val in ['secondar','primary']
+  each val, index in ['secondar','primary']
     .col-md-6.col-12
       .code-example
         .demo
           +input-field({
             label:'Input File',
-            id:'file',
+            id:`file${index}`,
             type:'file',
             name: 'file',
             multipleCap: '{count} files selected',
@@ -233,130 +233,6 @@ h2 Validate States
           |   required: true,
           |   valid: false
           |})
-h2 Datetimepicker
-.row
-  .col-md-6.col-12
-    .code-example
-      h3 Default
-      .demo
-        +input-field({
-          datetimepicker: true
-        })
-      pre
-        code
-        |+input-field({
-        |   datetimepicker: true
-        |})
-  .col-md-6.col-12
-    h3 Datetime Readonly
-    .code-example
-      .demo
-        +input-field({
-          datetimepicker: true,
-          readonly: true
-        })
-      pre
-        code
-        |+input-field({
-        |   datetimepicker: true,
-        |   readonly: true
-        |})
-  .col-md-6.col-12
-    .code-example
-      h3 Datetime Only Date
-      .demo
-        +input-field({
-          datetimepicker: true,
-        })(data-min-view="2" data-date-format="yyyy-mm-dd")
-      pre
-        code
-        |+input-field({
-        |   datetimepicker: true,
-        |})(data-min-view="2" data-date-format="yyyy-mm-dd")
-  .col-12
-    .code-example
-      h3 Decade View
-      .demo
-        +input-field({
-          datetimepicker: true,
-        })(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-      pre
-        code
-        |+input-field({
-        |   datetimepicker: true,
-        |})(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-  .col-12
-    .code-example
-      h3 Year View
-      .demo
-        +input-field({
-          datetimepicker: true,
-        })(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-      pre
-        code
-        |+input-field({
-        |   datetimepicker: true,
-        |})(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-  .col-12
-    .code-example
-      h3 Month View
-      .demo
-        +input-field({
-          datetimepicker: true,
-        })(data-start-view="2" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-      pre
-        code
-        |+input-field({
-        |   datetimepicker: true,
-        |})(data-start-view="2" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-  .col-12
-    .code-example
-      h3 Day View
-      .demo
-        +input-field({
-          datetimepicker: true,
-        })(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-      pre
-        code
-        |+input-field({
-        |   datetimepicker: true,
-        |})(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-  .col-12
-    .code-example
-      h3 Hour View
-      .demo
-        +input-field({
-          datetimepicker: true,
-        })(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-      pre
-        code
-        |+input-field({
-        |   datetimepicker: true,
-        |})(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-  .col-12
-    .code-example
-      h3 Day View Meridian
-      .demo
-        +input-field({
-          datetimepicker: true,
-        })(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-      pre
-        code
-        |+input-field({
-        |   datetimepicker: true,
-        |})(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-  .col-12
-    .code-example
-      h3 Hour View Meridian
-      .demo
-        +input-field({
-          datetimepicker: true,
-        })(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
-      pre
-        code
-        |+input-field({
-        |   datetimepicker: true,
-        |})(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" data-link-field="dtp_input1")
 h2 Textarea
 .row
   .col-12
