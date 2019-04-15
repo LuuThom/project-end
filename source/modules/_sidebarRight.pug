@@ -1,0 +1,243 @@
+mixin sidebarRight()
+  nav.sidebarRight
+    .sidebarRight-content
+      .tab-navigation
+        ul.nav.mav-tabs.nav-justified(role="tablist")
+          li.nav-item(role="presentaion")
+            a.nav-link.active(href="#tab1" aria-control="tab1" role="tab" data-toggle="tab") Chat
+          li.nav-item(role="presentation")
+            a.nav-link(href="#tab2" aria-control="tab2" role="tab" data-toggle="tab") Todo
+          li.nav-item(role="presentation")
+            a.nav-link(href="#tab3" aria-control="tab3" role="tab" data-toggle="tab") Settings
+      .tab-panel
+        .tab-content
+          .tab-pane.tab-chat.active#tab1(role="tabpanel")
+            .chat-contacts
+              .chat-section
+                .chat-content
+                  h2 Recent
+                  .contact-list.contact-list-recent
+                    .user
+                      a(href="#")
+                        img(src="images/avatar1.png", alt="Avatar")
+                        .user-data
+                          span.status.away
+                          span.name Claire Sassu
+                          span.message Can you share the...
+                    .user
+                      a(href="#")
+                        img(src="images/avatar2.png", alt="Avatar")
+                        .user-data
+                          span.status.
+                          span.name Maggie jackson
+                          span.message I confirmed the info.
+                    .user
+                      a(href="#")
+                        img(src="images/avatar3.png", alt="Avatar")
+                        .user-data
+                          span.status.offline
+                          span.name Joel King		
+                          span.message Ready for the meeti...
+                  h2 Contact
+                    .contact-list
+                      .user
+                        a(href="#")
+                          img(src="images/avatar4.png", alt="Avatar")
+                          .user-data
+                            span.status
+                            span.name Mike Bolthort
+                      .user
+                        a(href="#")
+                          img(src="images/avatar5.png", alt="Avatar")
+                          .user-data
+                            span.status
+                            span.name Maggie jackson
+                      .user
+                        a(href="#")
+                          img(src="images/avatar3.png", alt="Avatar")
+                          .user-data
+                            span.status.offline
+                            span.name Jhon Voltemar
+              .chat-search
+                +input-field({
+                  id: 'chatsearch',
+                  placeholder: 'Search...'
+                })(class='input-chat' name='q')
+                i.zmdi.zmdi-search
+            .chat-window
+              .title
+                .user
+                  img(src="images/avatar2.png", alt="")
+                  h2 Maggie jackson
+                  span Active 1h ago
+                i.icon.return.zmdi.zmdi-chevron-left
+              .chat-messages
+                .block-messages.ps.ps--active-y
+                  .content
+                    ul
+                      li.friend
+                        p.msg Hello
+                      li.self
+                        p.msg Hi, how are you?
+                      li.friend
+                        p.msg Good, I'll need support with my pc
+                      li.self
+                        p.msg Sure, just tell me what is going on with your computer?
+                      li.friend
+                        p.msg I don't know it just turns off suddenly
+              .chat-input
+                i.zmdi.zmdi-camera.send-camera
+                .input-wrapper
+                  +input-field({
+                    placeholder: 'Message...'
+                  })(name="q" autocomplete="off")
+                  i.zmdi.zmdi-mail-send.send-msg
+          .tab-pane.tab-todo#tab2(role="tabpanel")
+            .todo-content
+              .todo-inner
+                h3 Today
+                ul.todo-list
+                  li
+                    +checkbox({
+                      id: 'check1',
+                      checked: true,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Initialize the project',
+                      lineThrough: true
+                    })
+                  li
+                    +checkbox({
+                      id: 'check2',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Create the main structure',
+                      lineThrough: true
+                    })
+                  li
+                    +checkbox({
+                      id: 'check3',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Updates changes to GitHub',
+                      lineThrough: true
+                    }) h3 Tomorrow
+                ul.todo-list
+                  li
+                    +checkbox({
+                      id: 'check4',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Initialize the project',
+                      lineThrough: true
+                    })
+                  li
+                    +checkbox({
+                      id: 'check5',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Create the main structure',
+                      lineThrough: true
+                    })
+                  li
+                    +checkbox({
+                      id: 'check6',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Updates changes to GitHub',
+                      lineThrough: true
+                    })
+                  li
+                    +checkbox({
+                      id: 'check7',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'This task is too long to be displayed in a normal space!',
+                      lineThrough: true
+                    })(title='This task is too long to be displayed in a normal space!')
+                .todo-input
+                  +input-field({
+                    id: 'todoip',
+                    placeholder: 'Create new task...'
+                  })(class='input-todo' name='q')
+                  i.zmdi.zmdi-plus
+          .tab-pan.tab-settings#tab3(role="tabpanel")
+            .tab-settings
+              h3 General
+              ul.tab-settings-list
+                li
+                  span.name Available
+                  +switch({
+                    id: 'swt01',
+                    name: 'swt01',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: true
+                  })
+                li
+                  span.name Enable notifications
+                  +switch({
+                    id: 'swt02',
+                    name: 'swt02',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: true
+                  })
+                li
+                  span.name Login with Facebook
+                  +switch({
+                    id: 'swt03',
+                    name: 'swt03',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: true
+                  })
+              h3 Notifications
+              ul.tab-settings-list
+                li
+                  span.name Email notifications
+                  +switch({
+                    id: 'swt04',
+                    name: 'swt04',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: false
+                  })
+                li
+                  span.name Project updates
+                  +switch({
+                    id: 'swt05',
+                    name: 'swt05',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: true
+                  })
+                li
+                  span.name New comments
+                  +switch({
+                    id: 'swt06',
+                    name: 'swt06',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: true
+                  })
+                li
+                  span.name Chat messages
+                  +switch({
+                    id: 'swt07',
+                    name: 'swt07',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: false
+                  })
+              h3 Workflow
+              ul.tab-settings-list
+                li
+                  span.name Deploy on commit
+                  +switch({
+                    id: 'swt08',
+                    name: 'swt08',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: false
+                  })
+                    
