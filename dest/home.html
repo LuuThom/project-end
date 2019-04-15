@@ -10,7 +10,80 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="header">Header</div>
+    <nav class="navbar navbar-expand fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-wrap"><a class="navbar-brand" href="home.html"></a></div>
+        <div class="page-title"><span>Dasboard</span></div>
+        <div class="navbar-more">
+          <ul class="nav navbar-nav float-right user-nav">
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img class="user-img" src="images/avatar.png" alt="Avatar" /><span class="user-name">Túpac Amaru</span></a>
+              <div class="dropdown-menu dropdown-admin" role="menu">
+                <div class="user-info">
+                  <div class="user-name">Túpac Amaru</div>
+                  <div class="user-position online">Available</div>
+                </div><a class="dropdown-item" href="#"><i class="icon zmdi zmdi-face"></i>Account</a><a class="dropdown-item" href="#"><i class="icon zmdi zmdi-settings"></i>Settings</a><a class="dropdown-item" href="#"><i class="icon zmdi zmdi-power"></i>Logout</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav float-right icon-nav">
+            <li class="nav-item dropdown"><a class="nav-link nav-link-setting jsnav-link-setting" href="#" role="button" aria-expanded="false"><i class="icon zmdi zmdi-settings"></i></a></li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmid zmdi-notifications"></i><span class="indicator"></span></a>
+              <div class="dropdown-menu block-notifications">
+                <div class="title">Notifications<span class="badge badge-pill">3</span></div>
+                <div class="list js-list-notifi">
+                  <div class="content-notifications js-list">
+                    <ul>
+                      <li class="notification notification-unread"><a href="#">
+                          <div class="image"><img class="user-img" src="images/avatar2.png" alt="Avatar" /></div>
+                          <div class="notification-info">
+                            <p class="text"><span class="user-name">Jessica Caruso</span> accepted your invitation to join the team.</p><span class="time-active">2 min ago</span>
+                          </div>
+                        </a></li>
+                      <li class="notification"><a href="#">
+                          <div class="image"><img class="user-img" src="images/avatar3.png" alt="Avatar" /></div>
+                          <div class="notification-info">
+                            <p class="text"><span class="user-name">Joel King</span> is now following you</p><span class="time-active">2 days ago</span>
+                          </div>
+                        </a></li>
+                      <li class="notification"><a href="#">
+                          <div class="image"><img class="user-img" src="images/avatar4.png" alt="Avatar" /></div>
+                          <div class="notification-info">
+                            <p class="text"><span class="user-name">John Doe</span> is watching your main repository</p><span class="time-active">2 day ago</span>
+                          </div>
+                        </a></li>
+                      <li class="notification"><a href="#">
+                          <div class="image"><img src="images/avatar5.png" alt="Avatar" /></div>
+                          <div class="notification-info">
+                            <p class="text"><span class="user-name">Emily Carter</span> is now following you</p><span class="time-active">5 day ago</span>
+                          </div>
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer"><a href="#">View all notifications</a></div>
+              </div>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-apps"></i></a>
+              <div class="dropdown-menu block-connect">
+                <div class="list-connect">
+                  <div class="row">
+                    <div class="col"><a class="connect-item" href="#"><img src="images/github.png" alt="" /><span>GitHub</span></a></div>
+                    <div class="col"><a class="connect-item" href="#"><img src="images/bitbucket.png" alt="" /><span>BitBucket</span></a></div>
+                    <div class="col"><a class="connect-item" href="#"><img src="images/slack.png" alt="" /><span>Slack</span></a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col"><a class="connect-item" href="#"><img src="images/dribbble.png" alt="" /><span>Dribbble</span></a></div>
+                    <div class="col"><a class="connect-item" href="#"><img src="images/mail_chimp.png" alt="" /><span>Mail Chimp</span></a></div>
+                    <div class="col"><a class="connect-item" href="#"><img src="images/dropbox.png" alt="" /><span>Dropbox</span></a></div>
+                  </div>
+                </div>
+                <div class="footer"><a href="#">More</a></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <h1>Homepage</h1>
     <script src="js/main.js"></script>
   </body>

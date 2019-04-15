@@ -51,13 +51,14 @@
     "npm": "^3.10.6",
     "postcss-assets": "^5.0.0",
     "pug": "^2.0.3",
+    "perfect-scrollbar": "^1.4.0",
     "run-sequence": "^1.2.2",
     "stylelint": "^8.4.0",
     "stylelint-config-recommended-scss": "^3.0.0",
     "stylelint-config-standard": "^18.0.0",
     "stylelint-order": "^0.8.0",
     "stylelint-scss": "^2.3.0",
-    "jquery-waypoints": "^2.0.3"
+    "waypoints": "^4.0.0"
   },
   "dependencies": {
     "bootstrap-slider": "^10.6.1"
