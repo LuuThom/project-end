@@ -1,3 +1,5 @@
+import PerfectScrollbar from "perfect-scrollbar";
+
 $(function () {
   $('.datetimepicker').datetimepicker();
   //slider
@@ -14,6 +16,12 @@ $(function () {
     })
 
   });
+  // Js crollbar notifi
+  var scroll = document.querySelector('.js-list-notifi');
+  var ps = new PerfectScrollbar(scroll);
+  const ps = new PerfectScrollbar('.js-list-notifi', {
+    wheelPropagation: false,
+  });
 
   // sparkline
   $('#spark1').sparkline([0,5,3,7,5,10,3,6,10], { 
@@ -25,6 +33,8 @@ $(function () {
     highlightLineColor: 'blue',
     highlightSpotColor: 'blue',
     fillColor: false,
+    width: '85',
+    height: '35',
   });
   $('#spark2').sparkline([5,8,7,10,9,10,8,6,4,6,8,7,6,8], { 
     type:'bar', barColor:'#fbbc05',
@@ -34,6 +44,8 @@ $(function () {
     maxSpotColor: false,
     fillColor: false,
     highlightColor: '#fbbc05',
+    width: '81',
+    height: '35',
   });
   $('#spark3').sparkline([2,3,4,5,4,3,2,3,4,5,4,3,2,3,4,5,4,3,2], { 
     type:'discrete', lineColor: '#007f00',
@@ -43,6 +55,8 @@ $(function () {
     maxSpotColor: false,
     fillColor: false,
     highlightColor: '#007f00',
+    width: '85',
+    height: '35',
   });
   $('#spark4').sparkline([0,5,3,7,5,10,3,6,10], { 
     type:'line',
@@ -53,7 +67,9 @@ $(function () {
     maxSpotColor: false,
     fillColor: false,
     highlightSpotColor: 'red',
-
+    width: '85',
+    height: '35',
+    lineHeight: '10',
   });
   
   // countup
@@ -61,6 +77,8 @@ $(function () {
     delay: 10,
     time: 1000
   });
+
+
   // custom file
 
   $('input[multiple="multiple"]').each(function (index, element) {
