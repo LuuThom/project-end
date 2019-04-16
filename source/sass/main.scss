@@ -12,7 +12,7 @@
 @import 'material-design-iconic-font/scss/material-design-iconic-font';
 @import 'vendor/bootstrap-slider';
 @import 'vendor/bootstrap-datetimepicker';
-@import 'vendor/perfect-scrollbar.css';
+@import 'vendor/perfect-scrollbar';
 
 
 // 2. Abstracts
@@ -33,6 +33,7 @@
 // ---------
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/sidebarRight';
 
 // 5. Components
 // -------------

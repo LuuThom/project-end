@@ -1,0 +1,235 @@
+.sidebarRight {
+  position: fixed;
+  background-color: #fafafa;
+  margin-top: 61px;
+  padding-bottom: 61px;
+  width: 290px;
+  height: calc(100% - 61px);
+  right: -290px;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #e8e8e8;
+  z-index: 1000;
+  transition: all .35s ease;
+
+  &-content {
+    height: 100%;
+  }
+
+  .nav {
+    border-bottom: 1px solid #dee2e642;
+
+    &-link {
+      background-color: #f2f2f2;
+      border-width: 0;
+      padding: 15px 10px;
+      min-width: auto;
+      font-size: 1.077rem;
+      margin-right: 0;
+      text-align: center;
+      border-radius: 0;
+      color: #404040;
+
+      &:focus {
+        border: 0;
+      }
+
+      &:hover {
+        border: 0;
+        background-color: #f6f6f6;
+        color: #3b3b3b;
+      }
+    }
+
+    &-link.active {
+      color: #4285f4;
+      background-color: transparent;
+    }
+  }
+  .tab-pane,
+  .tab-panel,
+  .tab-content {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tab-chat {
+    white-space: nowrap;
+    font-size: 0;
+    width: 290px;
+
+    h2 {
+      margin: 30px 20px 15px;
+      line-height: 1.1;
+    }
+  }
+
+  .chat-section {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .chat-content {
+    flex: 1;
+
+    h2 {
+      font-size: 1.154rem;
+      font-weight: 400;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ebebeb;
+      padding-left: 5px;
+      margin-bottom: 20px;
+      margin-top: 18px;
+    }
+
+    .contact-list-recent {
+      margin-bottom: 30px;
+      font-size: .9231rem;
+    }
+  }
+
+  .chat-contacts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+
+  .chat-search {
+    position: relative;
+    border-top: 1px solid #f2f2f2;
+
+    input {
+      border: 0;
+      background-color: #fafafa;
+      color: #404040;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 15px 20px;
+      outline: 0;
+    }
+  }
+  .chat-window {
+    position: absolute;
+    left: 290px;
+  }
+}
+
+.user {
+  a {
+    display: block;
+    padding: 11px 25px;
+    overflow: hidden;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    float: left;
+  }
+
+  &-data {
+    padding-left: 40px;
+    line-height: 16px;
+
+    .status {
+      background-color: #00b777;
+      border-radius: 50%;
+      float: right;
+      width: 7px;
+      height: 7px;
+      position: relative;
+      top: 5px;
+      &.away {
+        background-color: #f2c329;
+      }
+      &.offline {
+        background-color: #e65a5a;
+      }
+    }
+    .name {
+      color: #404040;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .message {
+      display: block;
+      color: #999;
+      font-size: 1rem;
+    }
+  }
+}
+.todo-content {
+  height: 100%;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.todo-inner,
+.tab-settings {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 0;
+  overflow: hidden;
+  h3 {
+    display: block;
+    font-size: 1.154rem;
+    font-weight: 400;
+    color: gray;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 15px;
+  }
+}
+.todo-list {
+  list-style: none;
+  padding: 4px 0 1px;
+  margin-bottom: 15px;
+  .custom-control {
+    margin-bottom: 13px;
+    margin-right: 4px;
+  }
+}
+.todo-list > li .custom-control input[type='checkbox']:checked ~ .custom-control-label {
+  text-decoration: line-through;
+  color: #999;
+}
+.custom-control-label {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tab-settings-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+  line-height: 20px;
+  li {
+    margin: 0;
+    padding: 5px 0;
+    line-height: 24px;
+    font-size: 1.077rem;
+    .switch-button {
+      float: right;
+      margin-left: 5px;
+    }
+    .name {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+.sidebar-show {
+  right: 0;
+}

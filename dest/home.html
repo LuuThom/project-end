@@ -26,8 +26,8 @@
             </li>
           </ul>
           <ul class="nav navbar-nav float-right icon-nav">
-            <li class="nav-item dropdown"><a class="nav-link nav-link-setting jsnav-link-setting" href="#" role="button" aria-expanded="false"><i class="icon zmdi zmdi-settings"></i></a></li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmid zmdi-notifications"></i><span class="indicator"></span></a>
+            <li class="nav-item dropdown js-settings"><a class="nav-link nav-link-setting jsnav-link-setting" href="#" role="button" aria-expanded="false"><i class="icon zmdi zmdi-settings"></i></a></li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-notifications"></i><span class="indicator"></span></a>
               <div class="dropdown-menu block-notifications">
                 <div class="title">Notifications<span class="badge badge-pill">3</span></div>
                 <div class="list js-list-notifi">
@@ -84,7 +84,257 @@
         </div>
       </div>
     </nav>
+    <nav class="sidebarRight js-sidebar-show">
+      <div class="sidebarRight-content">
+        <div class="tab-navigation">
+          <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li class="nav-item" role="presentaion"><a class="nav-link active" href="#tab1" aria-control="tab1" role="tab" data-toggle="tab">Chat</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tab2" aria-control="tab2" role="tab" data-toggle="tab">Todo</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tab3" aria-control="tab3" role="tab" data-toggle="tab">Settings</a></li>
+          </ul>
+        </div>
+        <div class="tab-panel">
+          <div class="tab-content">
+            <div class="tab-pane tab-chat active" id="tab1" role="tabpanel">
+              <div class="chat-contacts">
+                <div class="chat-section js-chat-section">
+                  <div class="chat-content">
+                    <h2>Recent</h2>
+                    <div class="contact-list contact-list-recent">
+                      <div class="user"><a href="#"><img src="images/avatar1.png" alt="Avatar" />
+                          <div class="user-data"><span class="status away"></span><span class="name">Claire Sassu</span><span class="message">Can you share the...</span></div>
+                        </a></div>
+                      <div class="user"><a href="#"><img src="images/avatar2.png" alt="Avatar" />
+                          <div class="user-data"><span class="status"></span><span class="name">Maggie jackson</span><span class="message">I confirmed the info.</span></div>
+                        </a></div>
+                      <div class="user"><a href="#"><img src="images/avatar3.png" alt="Avatar" />
+                          <div class="user-data"><span class="status offline"></span><span class="name">Joel King </span><span class="message">Ready for the meeti...</span></div>
+                        </a></div>
+                    </div>
+                    <h2>Contact</h2>
+                    <div class="contact-list">
+                      <div class="user"><a href="#"><img src="images/avatar4.png" alt="Avatar" />
+                          <div class="user-data"><span class="status"></span><span class="name">Mike Bolthort</span></div>
+                        </a></div>
+                      <div class="user"><a href="#"><img src="images/avatar5.png" alt="Avatar" />
+                          <div class="user-data"><span class="status"></span><span class="name">Maggie jackson</span></div>
+                        </a></div>
+                      <div class="user"><a href="#"><img src="images/avatar3.png" alt="Avatar" />
+                          <div class="user-data"><span class="status offline"></span><span class="name">Jhon Voltemar</span></div>
+                        </a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-search">
+                  <input class="form__control input-chat" id="chatsearch" type="text" placeholder="Search..." name="q" /><i class="zmdi zmdi-search"></i>
+                </div>
+              </div>
+              <div class="chat-window">
+                <div class="title">
+                  <div class="user"><img src="images/avatar2.png" alt="" />
+                    <h2>Maggie jackson</h2><span>Active 1h ago</span>
+                  </div><i class="icon return zmdi zmdi-chevron-left"></i>
+                </div>
+                <div class="chat-messages">
+                  <div class="block-messages ps ps--active-y">
+                    <div class="content">
+                      <ul>
+                        <li class="friend">
+                          <p class="msg">Hello</p>
+                        </li>
+                        <li class="self">
+                          <p class="msg">Hi, how are you?</p>
+                        </li>
+                        <li class="friend">
+                          <p class="msg">Good, I'll need support with my pc</p>
+                        </li>
+                        <li class="self">
+                          <p class="msg">Sure, just tell me what is going on with your computer?</p>
+                        </li>
+                        <li class="friend">
+                          <p class="msg">I don't know it just turns off suddenly</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-input"><i class="zmdi zmdi-camera send-camera"></i>
+                  <div class="input-wrapper">
+                    <input class="form__control" type="text" placeholder="Message..." name="q" autocomplete="off" /><i class="zmdi zmdi-mail-send send-msg"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane tab-todo fade" id="tab2" role="tabpanel">
+              <div class="todo-content">
+                <div class="todo-inner">
+                  <h3>Today</h3>
+                  <ul class="todo-list">
+                    <li>
+                      <div class="custom-control">
+                        <input class="custom-control-input custom-control--input-line" type="checkbox" id="check1" checked="checked" />
+                        <label class="custom-control-label" for="check1">Initialize the project</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom-control">
+                        <input class="custom-control-input custom-control--input-line" type="checkbox" id="check2" />
+                        <label class="custom-control-label" for="check2">Create the main structure</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom-control">
+                        <input class="custom-control-input custom-control--input-line" type="checkbox" id="check3" />
+                        <label class="custom-control-label" for="check3">Updates changes to GitHub</label>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="todo-list">
+                    <li>
+                      <div class="custom-control">
+                        <input class="custom-control-input custom-control--input-line" type="checkbox" id="check4" />
+                        <label class="custom-control-label" for="check4">Initialize the project</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom-control">
+                        <input class="custom-control-input custom-control--input-line" type="checkbox" id="check5" />
+                        <label class="custom-control-label" for="check5">Create the main structure</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom-control">
+                        <input class="custom-control-input custom-control--input-line" type="checkbox" id="check6" />
+                        <label class="custom-control-label" for="check6">Updates changes to GitHub</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom-control" title="This task is too long to be displayed in a normal space!">
+                        <input class="custom-control-input custom-control--input-line" type="checkbox" id="check7" />
+                        <label class="custom-control-label" for="check7">This task is too long to be displayed in a normal space!</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="todo-input">
+                  <input class="form__control input-todo" id="todoip" type="text" placeholder="Create new task..." name="q" /><i class="zmdi zmdi-plus"></i>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane tab-settings fade" id="tab3" role="tabpanel">
+              <div class="tab-settings-wrapp">
+                <h3>General</h3>
+                <ul class="tab-settings-list">
+                  <li><span class="name">Available</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="onoffswitch-checkbox" type="checkbox" checked="checked" id="swt01" name="swt01" />
+                      <label class="onoffswitch-label label--sm" for="swt01"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                    </div>
+                  </li>
+                  <li><span class="name">Enable notifications</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="onoffswitch-checkbox" type="checkbox" checked="checked" id="swt02" name="swt02" />
+                      <label class="onoffswitch-label label--sm" for="swt02"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                    </div>
+                  </li>
+                  <li><span class="name">Login with Facebook</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="onoffswitch-checkbox" type="checkbox" checked="checked" id="swt03" name="swt03" />
+                      <label class="onoffswitch-label label--sm" for="swt03"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                    </div>
+                  </li>
+                </ul>
+                <h3>Notifications</h3>
+                <ul class="tab-settings-list">
+                  <li><span class="name">Email notifications</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="onoffswitch-checkbox" type="checkbox" id="swt04" name="swt04" />
+                      <label class="onoffswitch-label label--sm" for="swt04"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                    </div>
+                  </li>
+                  <li><span class="name">Project updates</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="onoffswitch-checkbox" type="checkbox" checked="checked" id="swt05" name="swt05" />
+                      <label class="onoffswitch-label label--sm" for="swt05"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                    </div>
+                  </li>
+                  <li><span class="name">New comments</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="onoffswitch-checkbox" type="checkbox" checked="checked" id="swt06" name="swt06" />
+                      <label class="onoffswitch-label label--sm" for="swt06"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                    </div>
+                  </li>
+                  <li><span class="name">Chat messages</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="onoffswitch-checkbox" type="checkbox" id="swt07" name="swt07" />
+                      <label class="onoffswitch-label label--sm" for="swt07"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                    </div>
+                  </li>
+                </ul>
+                <h3>Workflow</h3>
+                <ul class="tab-settings-list">
+                  <li><span class="name">Deploy on commit</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="onoffswitch-checkbox" type="checkbox" id="swt08" name="swt08" />
+                      <label class="onoffswitch-label label--sm" for="swt08"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <h1>Homepage</h1>
+    <div class="main-content container-fluid">
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="widget widget-title">
+            <div class="chart sparkline" id="spark1">
+              <canvas></canvas>
+            </div>
+            <div class="data-info">
+              <h4 class="desc">New Users</h4>
+              <div class="value"><span class="indicator indicator-equal mdi mdi-chevron-right"></span><span id="number" data-toggle="counter" data-end="113" width="85" height="35">113</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="widget widget-title">
+            <div class="chart sparkline" id="spark2">
+              <canvas></canvas>
+            </div>
+            <div class="data-info">
+              <h4 class="desc">New Users</h4>
+              <div class="value"><span class="indicator indicator-equal mdi mdi-chevron-up"></span><span class="number" data-toggle="counter" data-end="80" data-suffix="%">80%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="widget widget-title">
+            <div class="chart sparkline" id="spark3">
+              <canvas></canvas>
+            </div>
+            <div class="data-info">
+              <h4 class="desc">New Users</h4>
+              <div class="value"><span class="indicator indicator-equal mdi mdi-chevron-up"></span><span class="number" data-toggle="counter" data-end="532">532</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="widget widget-title">
+            <div class="chart sparkline" id="spark4">
+              <canvas></canvas>
+            </div>
+            <div class="data-info">
+              <h4 class="desc">New Users</h4>
+              <div class="value"><span class="indicator indicator-equal mdi mdi-chevron-down"></span><span class="number" data-toggle="counter" data-end="113">113</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

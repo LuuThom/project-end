@@ -1,8 +1,8 @@
 mixin sidebarRight()
-  nav.sidebarRight
+  nav.sidebarRight.js-sidebar-show
     .sidebarRight-content
       .tab-navigation
-        ul.nav.mav-tabs.nav-justified(role="tablist")
+        ul.nav.nav-tabs.nav-justified(role="tablist")
           li.nav-item(role="presentaion")
             a.nav-link.active(href="#tab1" aria-control="tab1" role="tab" data-toggle="tab") Chat
           li.nav-item(role="presentation")
@@ -13,7 +13,7 @@ mixin sidebarRight()
         .tab-content
           .tab-pane.tab-chat.active#tab1(role="tabpanel")
             .chat-contacts
-              .chat-section
+              .chat-section.js-chat-section
                 .chat-content
                   h2 Recent
                   .contact-list.contact-list-recent
@@ -39,25 +39,25 @@ mixin sidebarRight()
                           span.name Joel King		
                           span.message Ready for the meeti...
                   h2 Contact
-                    .contact-list
-                      .user
-                        a(href="#")
-                          img(src="images/avatar4.png", alt="Avatar")
-                          .user-data
-                            span.status
-                            span.name Mike Bolthort
-                      .user
-                        a(href="#")
-                          img(src="images/avatar5.png", alt="Avatar")
-                          .user-data
-                            span.status
-                            span.name Maggie jackson
-                      .user
-                        a(href="#")
-                          img(src="images/avatar3.png", alt="Avatar")
-                          .user-data
-                            span.status.offline
-                            span.name Jhon Voltemar
+                  .contact-list
+                    .user
+                      a(href="#")
+                        img(src="images/avatar4.png", alt="Avatar")
+                        .user-data
+                          span.status
+                          span.name Mike Bolthort
+                    .user
+                      a(href="#")
+                        img(src="images/avatar5.png", alt="Avatar")
+                        .user-data
+                          span.status
+                          span.name Maggie jackson
+                    .user
+                      a(href="#")
+                        img(src="images/avatar3.png", alt="Avatar")
+                        .user-data
+                          span.status.offline
+                          span.name Jhon Voltemar
               .chat-search
                 +input-field({
                   id: 'chatsearch',
@@ -92,7 +92,7 @@ mixin sidebarRight()
                     placeholder: 'Message...'
                   })(name="q" autocomplete="off")
                   i.zmdi.zmdi-mail-send.send-msg
-          .tab-pane.tab-todo#tab2(role="tabpanel")
+          .tab-pane.tab-todo.fade#tab2(role="tabpanel")
             .todo-content
               .todo-inner
                 h3 Today
@@ -154,14 +154,14 @@ mixin sidebarRight()
                       label: 'This task is too long to be displayed in a normal space!',
                       lineThrough: true
                     })(title='This task is too long to be displayed in a normal space!')
-                .todo-input
-                  +input-field({
-                    id: 'todoip',
-                    placeholder: 'Create new task...'
-                  })(class='input-todo' name='q')
-                  i.zmdi.zmdi-plus
-          .tab-pan.tab-settings#tab3(role="tabpanel")
-            .tab-settings
+              .todo-input
+                +input-field({
+                  id: 'todoip',
+                  placeholder: 'Create new task...'
+                })(class='input-todo' name='q')
+                i.zmdi.zmdi-plus
+          .tab-pane.tab-settings.fade#tab3(role="tabpanel")
+            .tab-settings-wrapp
               h3 General
               ul.tab-settings-list
                 li
