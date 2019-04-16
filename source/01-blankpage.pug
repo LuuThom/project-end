@@ -1,0 +1,13 @@
+extends modules/layout/_page-default
+                               
+block head
+  +head('Beagle')
+
+block main
+  +header('Blank Page')
+  +sidebarRight()
+  +sidebarLeft()
+  h1 Homepage
+  .be-content
+    .main-content.container-fluid
+      h3.text-center Content goes here!

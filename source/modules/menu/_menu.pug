@@ -1,435 +1,66 @@
--
-  var datamenu = [
-    {
-      link: "index.html"
-      item: "Dashboard",
-      icon: "mdi-home"
-    },
-    {
-      link: "#"
-      item: "UI Elements",
-      icon: "mdi-face",
-      sub: [
-        {
-          item: "Alerts",
-          link: "ui-alerts.html"
-        },
-        {
-          item: "Buttons",
-          link: "ui-buttonsd.html"
-        },
-        {
-          item: "Cards",
-          link: "ui-cards.html",
-          badge: "New"
-        },
-        {
-          item: "Panels",
-          link: "ui-panels.html"
-        },
-        {
-          item: "General",
-          link: "ui-general.html"
-        },
-        {
-          item: "Modals"
-          link: "ui-modals.html"
-        },
-        {
-          item: "Notifications",
-          link: "ui-notifications.html"
-        },
-        {
-          item: "Icon",
-          link: "ui-icons.html"
-          
-        },
-        {
-          item: "Grid",
-          link: "ui-grid.html"
-
-        },
-        {
-          item: "Tabs & Accordions",
-          link: "ui-tabs-accordions.html"
-
-        },
-        {
-          item: "Nestable List",
-          link: "ui-nestable-list.html"
-
-        },
-        {
-          item: "Typography",
-          link: "ui-typography.html"
-
-        },
-        {
-          item: "Drag & Drop",
-          link: "ui-dragdrop.html",
-          badge: "New"
-        },
-        {
-          item: "Sweetalert 2",
-          link: "ui-sweetalert2.html",
-          badge: "New"
-        },
-      ]
-    },
-    {
-      link: "#",
-      item: "Chart",
-      icon: "mdi-chart-donut",
-      sub: [
-        {
-          item: "Flot",
-          link: "charts-flot.html"
-        },
-        {
-          item: "Sparklines",
-          link: "charts-sparklines.html"
-
-        },
-        {
-          item: "Chart.js",
-          link: "charts-chartjs.html"
-
-        },
-        {
-          item: "Morris.js",
-          link: "charts-morrisjs.html"
-
-        }
-      ]
-    },
-    {
-      link: "#",
-      item: "Forms",
-      icon: "mdi-dot-circle",
-      sub: [
-        {
-          item: "Element",
-          link: "form-elements.html"
-        },
-        {
-          item: "Validation",
-          link: "form-validation.html"
-
-        },
-        {
-          item: "Multiselect",
-          link: "form-multiselect.html"
-
-        },
-        {
-          item: "Wizard",
-          link: "form-wizard.html"
-
-        },
-        {
-          item: "Input Masks",
-          link: "form-masks.html"
-
-        },
-        {
-          item: "WYSIWYG Editor",
-          link: "form-wysiwyg.html"
-
-        },
-        {
-          item: "Multi Upload",
-          link: "form-upload.html"
-
-        }
-      ]
-    },
-    {
-      link: "#",
-      item: "Tables",
-      icon: "mdi-border-all",
-      sub: [
-        {
-          item: "General",
-          link: "tables-general.html"
-        },
-        {
-          item: "Data Tables",
-          link: "tables-datatables.html"
-        },
-        {
-          item: "Tables",
-          link: "tables-filters.html",
-          badge: "New"
-        }
-      ]
-    },
-    {
-      link: "#",
-      item: "Pages",
-      icon: "mdi-layers",
-      sub: [
-        {
-          item: "Blank Page",
-          link: "pages-blank.html"
-
-        },
-        {
-          item: "Blank Page Header",
-          link: "pages-blank-header.html"
-
-        },
-        {
-          item: "Login",
-          link: "pages-login.html"
-
-        },
-        {
-          item: "Login v2",
-          link: "pages-login2.html"
-
-        },
-        {
-          item: "404 Page",
-          link: "pages-404.html"
-
-        },
-        {
-          item: "Sign Up",
-          link: "pages-sign-up.html"
-
-        },
-        {
-          item: "Forgot Password",
-          link: "pages-forgot-password.html"
-
-        },
-        {
-          item: "Profile",
-          link: "pages-profile.html"
-        }
-        {
-          item: "Pricing Tables",
-          link: "pages-pricing-tables.html"
-
-        },
-        {
-          item: "Pricing Tables v2",
-          link: "pages-pricing-tables2.html"
-
-        },
-        {
-          item: "Timeline",
-          link: "pages-timeline.html"
-
-        },
-        {
-          item: "pages-timeline.html",
-          link: "pages-timeline2.html"
-
-        },
-        {
-          item: "Invoice",
-          link: "pages-invoice.html",
-
-          badge: "New"
-        },
-        {
-          item: "Calendar",
-          link: "pages-calendar.html"
-
-        },
-        {
-          item: "Gallery",
-          link: "pages-gallery.html"
-
-        },
-        {
-          item: "Code Editor",
-          link: "pages-code-editor.html",
-          badge: "New"
-        },
-        {
-          item: "Booking",
-          link: "pages-booking.html",
-          badge: "New"
-        },
-        {
-          item: "Loaders",
-          link: "pages-loaders.html",
-          badge: "New"
-        },
-        {
-          item: "AJAX Loader",
-          link: "pages-ajax-loader.html",
-          badge: "New"
-        }
-      ]
-    }
-  ];
--
-  var features = [
-    {
-      item: "Email",
-      link: "#",
-      icon: "mdi-inbox",
-      sub: [
-        {
-          item: "Inbox",
-          link: "#"
-        },
-        {
-          item: "Email Detail",
-          link: "#"
-        },
-        {
-          item: "Email Compose",
-          link: "#"
-        }
-      ]
-    },
-    {
-      link: "#",
-      item: "Layouts",
-      icon: "mdi-view-web",
-      sub: [
-        {
-          item: "Primary Header",
-          link: "#",
-        },
-        {
-          item: "Success Header",
-          link: "#",
-        },
-        {
-          item: "Warning Header",
-          link: "#",
-        },
-        {
-          item: "Danger Header",
-          link: "#",
-        },
-        {
-          item: "Search Input",
-          link: "#",
-        },
-        {
-          item: "Off Canvas Menu",
-          link: "#",
-        },
-        {
-          item: "Top Menu",
-          link: "#",
-          badge: "New"
-        },
-        {
-          item: "Without Left Sidebar",
-          link: "#"
-        },
-        {
-          item: "Without Right Sidebar",
-          link: "#"
-        },
-        {
-          item: "Without Both Sidebars",
-          link: "#"
-        },
-        {
-          item: ">Fixed Left Sidebar",
-          link: "#",
-        },
-        {
-          item: "Boxed Layout",
-          link: "#",
-          badge: "New"
-        },
-        {
-          item: "Collapsible Sidebar",
-          link: "#"
-        },
-        {
-          item: "Sub Navigation",
-          link: "#",
-          badge: "New"
-        },
-        {
-          item: "Mega Menu",
-          link: "#",
-          badge: "New"
-        },
-      ]
-    }
-    {
-      item: "Maps",
-      link: "#",
-      icon: "mdi-pin"
-      dropdown: [
-        {
-          itemChild: "Google Maps",
-          link: "#"
-        },
-        {
-          itemChild: "Vector Maps",
-          link: "#"
-        },
-      ]
-    },
-    {
-      item: "Menu Levels",
-      link: "#",
-      icon: "mdi-folder",
-      dropdown: [
-        {
-          itemChild: "Level 1",
-          icon: "mdi-undefined",
-          dropdownChild: [
-            {
-              child: "Level 2",
-              link: "#"
-            },
-            {
-              child: "level 2",
-              icon: "mdi-undefined",
-              level3: [
-                {
-                  level3Item: "Level 3",
-                  link: "#"
-                },
-                {
-                  level3Item: "Level 3",
-                  link: "#"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          itemChild: "Level 1",
-          icon: "mdi-undefined",
-          dropdownChild: [
-            {
-              child: "Level 2",
-              link: "#"
-            },
-            {
-              child: "level 2",
-              icon: "mdi-undefined",
-              level3: [
-                {
-                  level3Item: "Level 3",
-                  link: "#"
-                },
-                {
-                  level3Item: "Level 3",
-                  link: "#"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      item: "Documentation",
-      link: "#",
-    }
-  ]
+//-------------------------------------------------------
+//- Modules :: Menu
+//-------------------------------------------------------
+mixin menu(page, link)
+  ul.nav
+    each val in listitem.datamenu
+      if (typeof val.link === "undefined")
+        li.divider= val.item
+      else
+        li.nav__item.parent(
+          class= (val.link === page) ? "active" : null
+          class= val.sub ? "has-child" : null
+        )
+          a.nav__link(
+            href= (val.collapse === false) ? (val.link ? val.link : "javascript:void(0")  : (val.link ? `#${val.link}` : "javascript:void(0)")
+            data-toggle= (val.collapse !== false) ? "collapse" : null
+            aria-expanded= (val.collapse !== false) ? "false" : null
+          )
+            if val.icon
+              i(class= val.icon ? val.icon : null)
+            span.nav__text= val.item
+          if val.sub
+            .collapse.js-collapse01(
+              id= val.link
+              class= (val.link === page) ? "show" : null 
+            )
+              ul.sub-menu.parent
+                each val1 in val.sub
+                  li.nav__item.child(
+                    class= val1.dropdown ? "has-child" : null
+                  )
+                    a.nav__link(
+                      href= val1.dropdown ? `#${val1.link}` : null
+                      data-toggle= val1.dropdown ? "collapse" : null
+                      aria-expanded= val1.dropdown ? "false" : null
+                      class= (val1.link === link) ? "active" : null
+                    )
+                      span.nav__text= val1.item
+                      if val1.badge
+                        span.badge.badge-primary New
+                    if val1.dropdown
+                      .collapse.js-collapse02(
+                        id= val1.link
+                      )
+                        ul.sub-menu.child
+                          each val2 in val1.dropdown
+                            li.nav__item.child2(
+                              class= val2.dropdownChild ? "has-child" : null
+                            )
+                              a.nav__link(
+                                href= val2.dropdownChild ? `#${val2.link}` : `${val2.link}`
+                                data-toggle= val2.dropdownChild ? "collapse" : null
+                                aria-expanded= val2.dropdownChild ? "false" : null
+                              )
+                                span.nav__text= val2.item
+                              if val2.dropdownChild
+                                .collapse.js-collapse03(
+                                  id= val2.link
+                                )
+                                  ul.sub-menu.child3
+                                    each val3 in val2.dropdownChild
+                                      li.nav__item.child4
+                                        a.nav__link(
+                                          href= val3.link ? `${val3.link}` : `javascript:void(0)`
+                                        )
+                                          span.nav__text= val3.item

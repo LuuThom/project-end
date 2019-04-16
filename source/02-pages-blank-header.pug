@@ -1,0 +1,22 @@
+extends modules/layout/_page-default
+                                
+block head
+  +head('Beagle')
+
+block main
+  +header('Blank Page Header')
+  +sidebarRight()
+  +sidebarLeft()
+  .be-content
+    .page-head
+      h2.page-head-title Blank Page
+      nav(aria-label="breadcrumb" role="navigation")
+        ul.breadcrumb.page-head-nav
+          li.breadcrumb-item
+            a(href="#") Home
+          li.breadcrumb-item
+            a(href="#") Pages
+          li.breadcrumb-item
+            a(href="#") Blank Page Header
+      .main-content.container-fluid
+        h3.text-center Content goes here!

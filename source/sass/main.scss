@@ -33,7 +33,8 @@
 // ---------
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/sidebarRight';
+@import 'layout/sidebar';
+@import 'layout/blank-page';
 
 // 5. Components
 // -------------
@@ -49,6 +50,9 @@
 // 6. Pages
 // --------
 @import 'pages/home';
+@import 'pages/blank-page-header';
+@import 'pages/06-pages-404';
+@import 'pages/06-pages-pricing-table';
 
 // 7. Themes
 // ---------

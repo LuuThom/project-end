@@ -1,0 +1,40 @@
+.be-content {
+  margin-left: 0;
+  top: 0;
+}
+.error {
+  &-container {
+    text-align: center;
+    margin-top: 100px;
+  }
+  &-number {
+    color: #404040;
+    display: block;
+    font-size: 11.54rem;
+    font-weight: 700;
+    line-height: 240px;
+    margin-bottom: 30px;
+    max-height: 240px;
+    background: url('../images/404-bg.png') no-repeat center center;
+    background-size: contain;
+  }
+  &-description {
+    font-size: 2.308rem;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 30px;
+  }
+  &-goback-text {
+    font-size: 1.692rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+  &-goback-button {
+    margin-bottom: 30px;
+    .btn {
+      min-width: 153px;
+      text-align: center;
+    }
+  }
+}

@@ -241,3 +241,16 @@ mixin sidebarRight()
                     checked: false
                   })
                     
+mixin sidebarLeft(page, link)
+  aside.sidebar-left
+    .sidebar-left-inner
+      .sidebar-nav
+        +menu(page, link)
+      .sidebar-progress
+        .sidebar-progress__data
+          span.value 60%
+          span.name Current Project
+        .sidebar-progress__status.progress
+          .progress-bar.progress-bar-primary(
+            style= "width: 60%"
+          )

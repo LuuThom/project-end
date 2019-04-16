@@ -7,8 +7,44 @@
         "title": "Home",
         "url": "home"
       }, {
-        "title": "Login",
-        "url": "login"
+        "title": "Blank Page",
+        "url": "01-blankpage"
+      }, {
+        "title": "pages-blank Header",
+        "url": "02-pages-blank-header"
+      }, {
+        "title": "pages-login",
+        "url": "pages-login"
+      }, {
+        "title": "pages-login2",
+        "url": "pages-login"
+      }, {
+        "title": "pages-404",
+        "url": "06-pages-404"
+      }, {
+        "title": "pages-sign-up",
+        "url": "pages-sign-up"
+      }, {
+        "title": "pages-forgot-password",
+        "url": "pages-forgot-password"
+      }, {
+        "title": "pages-profile",
+        "url": "pages-profile"
+      }, {
+        "title": "pages-pricing-table",
+        "url": "10-pages-pricing-table"
+      }, {
+        "title": "pages-pricing-table2",
+        "url": "pages-pricing-table2"
+      },{
+        "title": "pages-timeline",
+        "url": "pages-timeline"
+      },{
+        "title": "pages-timeline2",
+        "url": "pages-timeline2"
+      },{
+        "title": "pages-invoice",
+        "url": "pages-invoice"
       }
     ]
   }

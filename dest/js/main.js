@@ -41,13 +41,16 @@ $(function () {
 
   });
   // Js scrollbar notifi
-  // var listScroll = document.querySelectorAll(".js-list, .js-chat-section");
-  // for (var i = 0; i < listScroll.length; i++) {
-  //   new PerfectScrollbar(listScroll[i], {
-  //     wheelPropagation: false
-  //   });
-  // }
-  var ps = new PerfectScrollbar('.js-list');
+  function scrollbar(element) {
+    var listScroll = document.querySelectorAll(element);
+    for (var i = 0; i < listScroll.length; i++) {
+      new PerfectScrollbar(listScroll[i], {
+        wheelPropagation: false
+      });
+    }
+  }
+  
+  scrollbar(".js-list, .js-chat-section, .js-list, .sidebar-nav")
 
   // Js scrollbar chat
   // var pt = new PerfectScrollbar('.js-chat-section');

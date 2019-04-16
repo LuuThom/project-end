@@ -2,13 +2,13 @@
 //- Modules :: Header
 //-------------------------------------------------------
 
-mixin header()
+mixin header(title)
   nav.navbar.navbar-expand.fixed-top
     .container-fluid
       .navbar-wrap
         a.navbar-brand(href="home.html")
       .page-title
-        span Dasboard
+        span=title
       .navbar-more
         ul.nav.navbar-nav.float-right.user-nav
           li.nav-item.dropdown

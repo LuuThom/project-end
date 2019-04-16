@@ -233,3 +233,128 @@
 .sidebar-show {
   right: 0;
 }
+.sidebar-left {
+  height: 100%;
+  margin-top: 61px;
+  padding-bottom: 61px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1029;
+  background-color: #f5f5f5;
+  width: 230px;
+  left: 0;
+  border-right: 1px solid #e3e3e3;
+  &:before {
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    width: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: inherit;
+    border-right: 1px solid #e3e3e3;
+  }
+  &-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.sidebar-nav {
+  position: relative;
+  .nav {
+    display: flex;
+    flex-direction: column;
+    .divider {
+      padding: 20px 20px 0;
+      color: #7b7b7b;
+      line-height: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: .8462rem;
+    }
+  }
+}
+.nav {
+  &__link {
+    display: block;
+    padding: 0 20px;
+    color: #696969;
+    font-size: 1.077rem;
+    line-height: 38px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+  &__item.active .nav__link {
+    padding-left: 20px;
+    font-weight: 500;
+    color: #4285f4;
+  }
+  &__item.parent > a:before {
+    content: '\f2f2';
+    float: right;
+    font-family: $font-icon;
+    font-size: 1.615rem;
+    color: #b0b0b0;
+  }
+  .zmdi {
+    line-height: 18px;
+    font-size: 19px;
+    min-width: 19px;
+    margin-right: 9px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .sub-menu {
+    background-color: #eee;
+    padding: 10px 0;
+    list-style: none;
+    line-height: 20px;
+    .child {
+      .nav__link {
+        padding: 2px 15px 2px 49px;
+        color: #696969;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .badge {
+        display: inline-block;
+        border-radius: 2px;
+        font-weight: 500;
+        line-height: 9px;
+        font-size: .85rem;
+        padding: 2px 7px;
+        margin-left: auto;
+        margin-top: 1px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.sidebar-progress {
+  padding: 20px;
+  cursor: pointer;
+  &__data {
+    color: #696969;
+    .value {
+      float: right;
+    }
+  }
+  &__status {
+    margin: 10px 0 0;
+    height: 8px;
+    background-color: #ebebeb;
+    border-radius: 2px;
+  }
+}

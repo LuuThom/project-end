@@ -1,11 +1,13 @@
 extends modules/layout/_page-other
-
+    
 block head
   +head('List links')
 
   style.
-    .page-list {
+    body {
       background: linear-gradient(270deg, #1d3349 0%, #0d1723 100%);
+    }
+    .page-list {
       position: relative;
       overflow: hidden;
       margin: 0 -15px;
