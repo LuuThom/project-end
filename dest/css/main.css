@@ -18078,6 +18078,115 @@ body {
     text-align: center; }
 
 .be-content {
+  top: 0;
+  margin-left: 0; }
+
+.login {
+  max-width: 401px;
+  margin: 50px auto; }
+  .login-forgot-password {
+    line-height: 2.1;
+    text-align: right; }
+  .login-submit {
+    margin-bottom: 1.3842rem; }
+    .login-submit .btn {
+      width: 100%; }
+
+.card {
+  margin-bottom: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
+  border-width: 0;
+  border-radius: 3px;
+  display: block; }
+  .card-header {
+    font-size: 18px;
+    font-weight: 300;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 1.538rem;
+    border-bottom-width: 0;
+    background-color: transparent;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 0; }
+    .card-header:first-child {
+      border-radius: calc(3px - 1px) calc(3px - 1px) 0 0; }
+    .card-header img {
+      width: 102px;
+      height: 27px;
+      vertical-align: middle;
+      border-style: none; }
+    .card-header .login-notice {
+      text-align: center;
+      display: block;
+      line-height: 20px;
+      font-size: 1rem;
+      color: #5a5a5a;
+      margin-top: 11px;
+      padding-bottom: 10px; }
+  .card .form-group {
+    margin-bottom: 1.538rem; }
+  .card .custom-checbox {
+    display: inline-block;
+    margin: 0; }
+
+.footer {
+  text-align: center; }
+
+.card.card-primary {
+  border-top: 3px solid #4285f4; }
+
+.btn-secondary:hover {
+  background: #fff;
+  border-color: #404040;
+  color: #404040; }
+
+.card-header {
+  margin-bottom: 0; }
+
+.login-title {
+  text-align: center;
+  display: block;
+  font-size: 1.308rem;
+  font-weight: 300; }
+
+.btn {
+  width: 100%; }
+  .btn-facebook {
+    color: #fff;
+    background-color: #5d82d1;
+    border-color: #5d82d1; }
+    .btn-facebook:hover {
+      color: #fff;
+      box-shadow: inset 0 -2px 0 #3864c3;
+      background-color: #6588d3;
+      border-color: #6588d3;
+      border-bottom-color: #3864c3; }
+  .btn-google-plus {
+    color: #fff;
+    background-color: #eb5e4c;
+    border-color: #eb5e4c; }
+    .btn-google-plus:hover {
+      color: #fff;
+      box-shadow: inset 0 -2px 0 #e6351e;
+      background-color: #ec6655;
+      border-color: #ec6655;
+      border-bottom-color: #e6351e; }
+  .btn .icon {
+    font-size: 1.615rem;
+    line-height: 15px; }
+  .btn .icon-left {
+    margin-right: 4px; }
+
+.signup .title {
+  text-align: center;
+  display: block;
+  font-size: 1.308rem;
+  font-weight: 300; }
+
+.be-content {
   top: 60px;
   margin-left: 230px; }
 
@@ -18358,5 +18467,95 @@ body {
     left: 131px; }
   .timeline-loadmore:before {
     display: none; }
+
+.timeline-variant {
+  max-width: none;
+  padding-bottom: 0; }
+  .timeline-variant:before {
+    left: 50%;
+    z-index: -1;
+    top: 70px; }
+  .timeline-variant .timeline-header {
+    padding-top: 0;
+    line-height: 16px; }
+  .timeline-variant .timeline-time {
+    float: none;
+    display: block;
+    line-height: 21px; }
+  .timeline-variant .timeline-item {
+    padding-left: 0;
+    margin: 30px 0 0; }
+    .timeline-variant .timeline-item.left {
+      left: 0;
+      padding-right: calc(50% + 45px); }
+    .timeline-variant .timeline-item.left .timeline-content:before {
+      right: -5px;
+      left: inherit; }
+    .timeline-variant .timeline-item.left .timeline-icon {
+      left: initial;
+      right: -67px; }
+    .timeline-variant .timeline-item-detailed .timeline-header {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px; }
+  .timeline-variant .timeline-loadmore {
+    text-align: center;
+    margin-bottom: 40px; }
+  .timeline-variant .timeline-activity {
+    display: inline;
+    line-height: 16px; }
+
+.timeline-summary {
+  margin-top: 20px; }
+
+.timeline-month {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  margin: 30px 0 15px;
+  padding: 11px 0 12px;
+  font-size: 1.385rem;
+  background-color: #eee;
+  font-weight: 300; }
+  .timeline-month:first-child {
+    margin-top: 0;
+    padding-bottom: 5px; }
+
+.timeline-item {
+  padding-left: 0;
+  margin: 30px 0 0; }
+  .timeline-item:before {
+    display: none; }
+
+.timeline-item.right {
+  right: 0;
+  padding-left: calc(50% + 45px); }
+
+.timeline-icon {
+  position: absolute;
+  color: #fff;
+  top: 20px;
+  left: -67px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.538rem;
+  border: 2px solid #fff;
+  text-align: center;
+  background-color: #ededed;
+  border-radius: 50%; }
+  .timeline-icon .icon {
+    line-height: 40px;
+    vertical-align: middle; }
+
+.file .timeline-icon {
+  background-color: #4285f4; }
+
+.comment .timeline-icon {
+  background-color: #fbbc05; }
+
+.timeline .gallery .timeline-icon {
+  background-color: #34a853; }
+
+.timeline .quote .timeline-icon {
+  background-color: #ea4335; }
 
 /*# sourceMappingURL=main.css.map */

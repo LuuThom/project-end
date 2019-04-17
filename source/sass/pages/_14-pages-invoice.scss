@@ -1,0 +1,155 @@
+
+.invoice {
+  background-color: $color-white;
+  padding: 100px 100px 70px;
+  color: $cl-total;
+  &-logo {
+    height: 54px;
+    min-width: 204px;
+    background-image: url('../images/logo-xx.png ');
+    background-repeat: no-repeat;
+    background-position: 0;
+  }
+  &-header {
+    margin-bottom: 100px;
+  }
+  &-order {
+    text-align: right;
+  }
+  &-id {
+    display: block;
+    font-size: 2.308rem;
+    line-height: 2.308rem;
+  }
+  &-date {
+    display: block;
+    font-size: 1.385rem;
+  }
+  &-data {
+    margin-bottom: 110px;
+  }
+  &-person {
+    & span {
+      font-size: 1.385rem;
+      line-height: 2rem;
+      display: block;
+    }
+    & .name {
+      font-weight: $font-weight-base + 1;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+  &-payment-direction {
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+    .icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: $cl-white-light;
+      font-size: 3.846rem;
+      color: $cl-icon;
+      line-height: 80px;
+    }
+  }
+  &-details {
+    width: 100%;
+    font-size: 1.231rem;
+    th {
+      text-align: right;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $cl-gray4;
+    }
+    td {
+      padding: 20px 0;
+    }
+    .amount,
+    .description,
+    .hours,
+    .summary {
+      border-bottom: 1px solid $cl-gray4;
+    }
+    & .hours,
+    & .amount {
+      text-align: right;
+    }
+    & .summary {
+      color: $cl-summary;
+    }
+    & .total {
+      color: $cl-total;
+      font-weight: $font-weight-base + 1;
+    }
+    & .total-value {
+      font-size: 1.692rem;
+      color: $cl-total-value;
+    }
+    & th:first-child {
+      text-align: left;
+    }
+  }
+  &-payment-method {
+    margin-bottom: 75px;
+    span {
+      font-size: 1.385rem;
+      line-height: 2rem;
+      display: block;
+    }
+    .title {
+      font-weight: $font-weight-base + 1;
+    }
+  }
+  &-message {
+    font-size: 1.231rem;
+    margin-bottom: 62px;
+    .title {
+      font-weight: $font-weight-base + 1;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 12px;
+    }
+    p {
+      line-height: 2rem;
+    }
+  }
+  &-company-info {
+    margin-bottom: 70px;
+    div:first-child {
+      border-left: none;
+    }
+    .summary {
+      padding: 0 30px;
+      line-height: 16px;
+    }
+    div {
+      border-left: 1px solid $cl-gray4;
+      padding: 8px 40px;
+    }
+  }
+  & .phone {
+
+    span {
+      display: block;
+    }
+  }
+  & .email {
+    .mail {
+      display: block;
+    }
+  }
+
+  &-footer {
+    text-align: center;
+    & .btn {
+      min-width: 96px;
+      font-size: 1.077rem;
+    }
+    .btn-space {
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
