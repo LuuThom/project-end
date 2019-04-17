@@ -1,0 +1,120 @@
+extends modules/layout/_page-default
+
+block head
+  +head('Beagle')
+
+block main
+  +header('Timeline')
+  +sidebarRight()
+  +sidebarLeft("home.html")
+  .be-content
+    .page-head
+      h2.page-head-title Timeline
+      nav(aria-label="breadcrumb" role="navigation")
+        ul.breadcrumb.page-head-nav
+          li.breadcrumb-item
+            a(href="#") Home
+          li.breadcrumb-item
+            a(href="#") Pages
+          li.breadcrumb-item
+            a(href="#") Timeline
+    .main-content.container-fluid
+      .row
+        .col-12
+          ul.timeline.timeline-variant
+            li.timeline-month
+              span September, 2018
+            li.timeline-item.right
+              .timeline-content.timeline-type.file
+                .timeline-icon
+                  i.icon.zmdi.zmdi-file
+                .timeline-avatar
+                  img.circle(src="images/avatar6.png", alt="Avatar")
+                .timeline-header
+                  span.timeline-autor Penelope Thornton
+                  p.timeline-activity
+                    | Pellentesque imperdiet 
+                    a(href="#") Amet nisl sed mattis
+                    | .
+                  span.timeline-time September 16, 2018 - 4:34 PM
+            li.timeline-item.timeline-item-detailed.left
+              .timeline-content.timeline-type.comment
+                .timeline-icon
+                  i.icon.zmdi.zmdi-comment-text-alt
+                .timeline-avatar
+                  img.circle(src="images/avatar.png", alt="Avatar")
+                .timeline-header
+                  span.timeline-autor Kristopher Donny  
+                  p.timeline-activity
+                    | Mauris condimentum est 
+                    a(href="#") Viverra erat fermentum
+                    | .
+                  span.timeline-time September 13, 2018 - 9:54 AM
+                .timeline-summary
+                  p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus sit amet tellus vel leo posuere fames commodo in eget ante. Vivamus vehicula sed velit at pulvinar.
+            li.timeline-month
+              span August, 2018
+            li.timeline-item.timeline-item-detailed.timeline-item-gallery.right
+              .timeline-content.timeline-type.gallery
+                .timeline-icon
+                  i.icon.zmdi.zmdi-image
+                .timeline-avatar
+                  img.circle(src="images/avatar6.png", alt="Avatar")
+                .timeline-header
+                  span.timeline-autor Sherwood Clifford  
+                  p.timeline-activity
+                    | pellentesque tortor 
+                    a(href="#") enim
+                    | .
+                  span.timeline-time August 23, 2018 - 10:42 AM
+                .timeline-gallery
+                  img.gallery-thumbnail(src="images/img2.jpg", alt="Thumbnail")
+                  img.gallery-thumbnail(src="images/img4.jpg", alt="Thumbnail")
+                  img.gallery-thumbnail(src="images/img11.jpg", alt="Thumbnail")
+                  img.gallery-thumbnail(src="images/img12.jpg", alt="Thumbnail")
+            li.timeline-item.timeline-item-detailed.left
+              .timeline-content.timeline-type.comment
+                .timeline-icon
+                  i.icon.zmdi.zmdi-comment-text-alt
+                .timeline-avatar
+                  img.circle(src="images/avatar4.png", alt="Avatar")
+                .timeline-header
+                  span.timeline-autor Benji Harper 
+                  p.timeline-activity
+                    | Mauris condimentum est 
+                    a(href="#") Vestibulum justo neque
+                    | .
+                  span.timeline-time August 19, 2018 - 7:15 PM
+                .timeline-summary
+                  p Praesent luctus efficitur turpis, nec convallis mauris commodo a. Aliquam sed consectetur tellus, et condimentum diam. Sed efficitur augue urna, et lacinia ex dictum at. Nulla a molestie arcu. 
+            li.timeline-item.right
+              .timeline-content.timeline-type.file
+                .timeline-icon
+                  i.icon.zmdi.zmdi-file
+                .timeline-avatar
+                  img.circle(src="images/avatar5.png", alt="Avatar")
+                .timeline-header
+                  span.timeline-autor Justine Myranda 
+                  p.timeline-activity
+                    | Pellentesque imperdiet sit 
+                    a(href="#") Amet nisl sed mattiss
+                    | .
+                  span.timeline-time August 6, 2018 - 12:02 PM
+            li.timeline-item.timeline-item-detailed.left
+              .timeline-content.timeline-type.quote
+                .timeline-icon
+                  i.icon.zmdi.zmdi-quote
+                .timeline-avatar
+                  img.circle(src="images/avatar3.png" alt="Avatar")
+                .timeline-header
+                  span.timeline-autor Sherwood Clifford 
+                  p.timeline-activity
+                    | pellentesque tortor 
+                    a(href="#") Aliquam viverra
+                    | .
+                  span.timeline-time August 1, 2018 - 6:25 AM
+                  blockquote.blockquote.timeline-blockquote.mb-0
+                    p Quisque condimentum enim nec porttitor egestas.
+                    footer.blockquote-footer Aliquam viverra ornare dolor.
+            li.timeline-item.timeline-loadmore
+                  a.load-more-btn(href="#") Load more

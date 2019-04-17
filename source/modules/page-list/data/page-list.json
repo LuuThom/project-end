@@ -14,37 +14,37 @@
         "url": "02-pages-blank-header"
       }, {
         "title": "pages-login",
-        "url": "pages-login"
+        "url": "04-pages-login"
       }, {
-        "title": "pages-login2",
-        "url": "pages-login"
+        "title": "Pages-login2",
+        "url": "05-pages-login"
       }, {
-        "title": "pages-404",
+        "title": "Pages-404",
         "url": "06-pages-404"
       }, {
-        "title": "pages-sign-up",
-        "url": "pages-sign-up"
+        "title": "Pages Sign-up",
+        "url": "07-pages-sign-up"
       }, {
-        "title": "pages-forgot-password",
-        "url": "pages-forgot-password"
+        "title": "Pages forgot password",
+        "url": "08-pages-forgot-password"
       }, {
-        "title": "pages-profile",
-        "url": "pages-profile"
+        "title": "Pages Profile",
+        "url": "09-pages-profile"
       }, {
-        "title": "pages-pricing-table",
+        "title": "Pages Pricing Table",
         "url": "10-pages-pricing-table"
       }, {
-        "title": "pages-pricing-table2",
-        "url": "pages-pricing-table2"
+        "title": "Pages Pricing Table2",
+        "url": "11-pages-pricing-table2"
       },{
-        "title": "pages-timeline",
-        "url": "pages-timeline"
+        "title": "Pages Timeline",
+        "url": "12-pages-timeline"
       },{
-        "title": "pages-timeline2",
-        "url": "pages-timeline2"
+        "title": "Pages Timeline2",
+        "url": "13-pages-timeline2"
       },{
-        "title": "pages-invoice",
-        "url": "pages-invoice"
+        "title": "Pages Invoice",
+        "url": "14-pages-invoice"
       }
     ]
   }

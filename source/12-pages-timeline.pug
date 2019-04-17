@@ -1,0 +1,116 @@
+extends modules/layout/_page-default
+                                
+block head
+  +head('Beagle')
+
+block main
+  +header('Timeline')
+  +sidebarRight()
+  +sidebarLeft("home.html")
+  .be-content
+    .page-head
+      h2.page-head-title Timeline
+      nav(aria-label="breadcrumb" role="navigation")
+        ul.breadcrumb.page-head-nav
+          li.breadcrumb-item
+            a(href="#") Home
+          li.breadcrumb-item
+            a(href="#") Pages
+          li.breadcrumb-item
+            a(href="#") Timeline
+      .main-content.container-fluid
+        .row
+          .col-12
+            ul.timeline
+              li.timeline-item
+                .timeline-date
+                  span September 16, 2018
+                .timeline-content
+                  .timeline-avatar
+                    img(src="images/avatar6.png" alt="Avatar")
+                  .timeline-header
+                    span.timeline-time 4:34 PM
+                    span.timeline-autor Penelope Thornton
+                    p.timeline-activity
+                      | Pellentesque imperdiet sit
+                      a(href="#") Amet nisl sed mattis
+                      | .
+              li.timeline-item.timeline-item-detailed
+                .timeline-date
+                  span September 13, 2018
+                .timeline-content
+                  .timeline-avatar
+                    img(src="images/avatar.png" alt="Avatar")
+                  .timeline-header
+                    span.timeline-time 9:54 AM
+                    span.timeline-autor Kristopher Donny 
+                    p.timeline-activity
+                      | Mauris condimentum est
+                      a(href="#") Viverra erat fermentum
+                      | .
+                    .timeline-summary
+                      p Suspendisse ac libero sed mauris tempor vehicula porttitor non sapien. Aliquam viver... 
+              li.timeline-item.timeline-item-detailed.timeline-item-gallery
+                .timeline-date
+                  span August 23, 2018
+                .timeline-content
+                  .timeline-avatar
+                    img.circle(src="images/avatar3.png" alt="Avatar")
+                  .timeline-header
+                    span.timeline-time 10:42 AM
+                    span.timeline-autor Sherwood Clifford  
+                    p.timeline-activity
+                      | pellentesque tortor
+                      a(href="#") enim
+                      | .
+                    .timeline-gallery
+                      img.gallery-thumbnail(src="images/img2.jpg", alt="Thumbnail")
+                      img.gallery-thumbnail(src="images/img4.jpg", alt="Thumbnail")
+                      img.gallery-thumbnail(src="images/img11.jpg", alt="Thumbnail")
+                      img.gallery-thumbnail(src="images/img12.jpg", alt="Thumbnail")
+              li.timeline-item.timeline-item-detailed
+                .timeline-date
+                  span August 6, 2018
+                .timeline-content
+                  .timeline-avatar
+                    img.circle(src="images/avatar4.png" alt="Avatar")
+                  .timeline-header
+                    span.timeline-time 7:15 PM
+                    span.timeline-autor Benji Harper
+                    p.timeline-activity
+                      | Mauris condimentum est 
+                      a(href="#") Vestibulum justo neque
+                      | .
+                    .timeline-summary
+                      p Quisque condimentum enim nec porttitor egestas. Morbi fermentum in ante volutpat... 
+              li.timeline-item
+                .timeline-date
+                  span August 4, 2018
+                .timeline-content
+                  .timeline-avatar
+                    img.circle(src="images/avatar5.png" alt="Avatar")
+                  .timeline-header
+                    span.timeline-time 12:02 PM
+                    span.timeline-autor Justine Myranda
+                    p.timeline-activity
+                      | Pellentesque imperdiet sit
+                      a(href="#") Amet nisl sed mattis
+                      | .
+              li.timeline-item.timeline-item-detailed
+                .timeline-date
+                  span June 11, 2018
+                .timeline-content
+                  .timeline-avatar
+                    img.circle(src="images/avatar3.png" alt="Avatar")
+                  .timeline-header
+                    span.timeline-time 6:25 AM
+                    span.timeline-autor Sherwood Clifford
+                    p.timeline-activity
+                      | pellentesque tortor
+                      a(href="#") Aliquam viverra
+                      | .
+                    blockquote.blockquote.timeline-blockquote.mb-0
+                      p Quisque condimentum enim nec porttitor egestas.
+                      footer.blockquote-footer Aliquam viverra ornare dolor.
+                li.timeline-item.timeline-loadmore
+                  a.load-more-btn(href="#") Load more

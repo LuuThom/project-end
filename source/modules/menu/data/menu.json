@@ -5,7 +5,7 @@
         "item": "Menu"
       },
       {
-        "link": "index.html",
+        "link": "home.html",
         "item": "Dashboard",
         "icon": "zmdi zmdi-home",
         "collapse": false
@@ -161,58 +161,58 @@
         "sub": [
           {
             "item": "Blank Page",
-            "link": "pages-blank.html"
+            "link": "01-blankpage.html"
           },
           {
             "item": "Blank Page Header",
-            "link": "pages-blank-header.html"
+            "link": "02-pages-blank-header.html"
           },
           {
             "item": "Login",
-            "link": "pages-login.html"
+            "link": "04-pages-login.html"
           },
           {
             "item": "Login v2",
-            "link": "pages-login2.html"
+            "link": "05-pages-login.html"
           },
           {
             "item": "404 Page",
-            "link": "pages-404.html"
+            "link": "06-pages-404.html"
           },
           {
             "item": "Sign Up",
-            "link": "pages-sign-up.html"
+            "link": "07-pages-sign-up.html"
           },
           {
             "item": "Forgot Password",
-            "link": "pages-forgot-password.html"
+            "link": "08-pages-forgot-password.html"
           },
           {
             "item": "Profile",
-            "link": "pages-profile.html"
+            "link": "09-pages-profile.html"
           },
           {
             "item": "Pricing Tables",
-            "link": "pages-pricing-tables.html"
+            "link": "10-pages-pricing-table.html"
 
           },
           {
             "item": "Pricing Tables v2",
-            "link": "pages-pricing-tables2.html"
+            "link": "11-pages-pricing-table2.html"
 
           },
           {
             "item": "Timeline",
-            "link": "pages-timeline.html"
+            "link": "12-pages-timeline.html"
 
           },
           {
             "item": "Timeline v2",
-            "link": "pages-timeline2.html"
+            "link": "13-pages-timeline2.html"
           },
           {
             "item": "Invoice",
-            "link": "pages-invoice.html",
+            "link": "14-pages-invoice.html",
             "badge": true
           },
           {

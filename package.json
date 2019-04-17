@@ -51,6 +51,7 @@
     "npm": "^3.10.6",
     "postcss-assets": "^5.0.0",
     "pug": "^2.0.3",
+    "popper.js": "^1.14.7",
     "perfect-scrollbar": "^1.4.0",
     "run-sequence": "^1.2.2",
     "stylelint": "^8.4.0",

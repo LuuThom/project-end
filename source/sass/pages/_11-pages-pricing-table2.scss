@@ -1,0 +1,97 @@
+.pricing-table-primary {
+  &--change {
+    background-color: $cl-pri-pricing;
+    border-color: $cl-pri-pricing;
+    color: $color-white;
+    path {
+      fill: $color-white;
+    }
+    .value {
+      color: $color-white;
+    }
+    .btn {
+      border-color: rgba($color-white, .5);
+      box-shadow: none;
+      border-style: solid;
+      background-color: rgba($color-white, .1);
+      border-width: 2px;
+      transition: none;
+      &:hover {
+        border-color: $color-white;
+      }
+    }
+  }
+}
+.pricing-table-warning {
+  &--change {
+    background-color: $cl-warning-pricing;
+    border-color: $cl-warning-pricing;
+    color: $color-white;
+    path {
+      fill: $color-white;
+    }
+    .value {
+      color: $color-white;
+    }
+    .btn {
+      border-color: rgba($color-white, .5);
+      box-shadow: none;
+      border-style: solid;
+      background-color: rgba($color-white, .1);
+      border-width: 2px;
+      transition: none;
+      &:hover {
+        border-color: $color-white;
+      }
+    }
+  }
+}
+.pricing-table-success {
+  &--change {
+    background-color: $cl-success-pricing;
+    border-color: $cl-success-pricing;
+    color: $color-white;
+    path {
+      fill: $color-white;
+    }
+    .value {
+      color: $color-white;
+    }
+    .btn {
+      border-color: rgba($color-white, .5);
+      box-shadow: none;
+      border-style: solid;
+      background-color: rgba($color-white, .1);
+      border-width: 2px;
+      transition: none;
+      &:hover {
+        border-color: $color-white;
+      }
+    }
+  }
+}
+.pricing-table-danger {
+  &--change {
+    background-color: $cl-danger-pricing;
+    border-color: $cl-danger-pricing;
+    color: $color-white;
+    path {
+      fill: $color-white;
+    }
+    .value {
+      color: $color-white;
+    }
+    .btn {
+      border-color: rgba($color-white, .5);
+      box-shadow: none;
+      border-style: solid;
+      background-color: rgba($color-white, .1);
+      border-width: 2px;
+      transition: none;
+      &:hover {
+        border-color: $color-white;
+      }
+    }
+  }
+}
+

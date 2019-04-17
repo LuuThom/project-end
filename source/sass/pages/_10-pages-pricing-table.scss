@@ -1,0 +1,97 @@
+.be-content {
+  top: 60px;
+  margin-left: 230px;
+}
+.display {
+  &-heading {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 20px 0 15px;
+  }
+  &-description {
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 29px;
+    margin: 0 0 50px;
+  }
+}
+.pricing-table {
+  box-shadow: 0 0 4px 0 rgba($color-white, .04);
+  border-radius: 3px;
+  border-top: 3px solid #c9c9c9;
+  padding: 35px 20px;
+  background: #fff;
+  text-align: center;
+  margin: 0 0 20px;
+  &-image {
+    margin-bottom: 15px;
+  }
+  &-primary {
+    border-color: #4285f4;
+    path {
+      fill: #4285f4;
+    }
+  }
+  &-warning {
+    border-color: #fbbc05;
+    path {
+      fill: #fbbc05;
+    }
+  }
+  &-success {
+    border-color: #34a853;
+    path {
+      fill: #34a853;
+    }
+  }
+  &-danger {
+    border-color: #ea4335;
+    path {
+      fill: #ea4335;
+    }
+  }
+  &-title {
+    font-size: 1.538rem;
+    font-weight: 300;
+  }
+  &-price {
+    padding: 5px 0 20px;
+    .currency {
+      vertical-align: top;
+    }
+    .value {
+      font-size: 35px;
+      line-height: 40px;
+      color: #404040;
+    }
+    .frecuency {
+      font-size: 1.538rem;
+      font-weight: 300;
+    }
+  }
+  &-features {
+    li {
+      font-size: 1.077rem;
+      font-weight: 300;
+      line-height: 33px;
+    }
+  }
+  & .btn {
+    line-height: 36px;
+    min-width: 120px;
+  }
+  .card-divider {
+    margin: 10px 0;
+    border-top: 1px solid #f2f2f2;
+    &-xl {
+      margin: 20px 0;
+    }
+  }
+}
+.pricing-tables {
+  margin: 30px 0 20px;
+  & > div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

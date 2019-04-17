@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand fixed-top">
       <div class="container-fluid">
         <div class="navbar-wrap"><a class="navbar-brand" href="home.html"></a></div>
-        <div class="page-title"><span>Blank Page</span></div>
+        <div class="page-title"><span>Timeline</span></div>
         <div class="navbar-more">
           <ul class="nav navbar-nav float-right user-nav">
             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img class="user-img" src="images/avatar.png" alt="Avatar" /><span class="user-name">Túpac Amaru</span></a>
@@ -526,10 +526,92 @@
         </div>
       </div>
     </aside>
-    <h1>Homepage</h1>
     <div class="be-content">
+      <div class="page-head">
+        <h2 class="page-head-title">Timeline</h2>
+        <nav aria-label="breadcrumb" role="navigation">
+          <ul class="breadcrumb page-head-nav">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item"><a href="#">Timeline</a></li>
+          </ul>
+        </nav>
+      </div>
       <div class="main-content container-fluid">
-        <h3 class="text-center">Content goes here!</h3>
+        <div class="row">
+          <div class="col-12">
+            <ul class="timeline timeline-variant">
+              <li class="timeline-month"><span>September, 2018</span></li>
+              <li class="timeline-item right">
+                <div class="timeline-content timeline-type file">
+                  <div class="timeline-icon"><i class="icon zmdi zmdi-file"></i></div>
+                  <div class="timeline-avatar"><img class="circle" src="images/avatar6.png" alt="Avatar"></div>
+                  <div class="timeline-header"><span class="timeline-autor">Penelope Thornton</span>
+                    <p class="timeline-activity">Pellentesque imperdiet <a href="#">Amet nisl sed mattis</a>.</p><span class="timeline-time">September 16, 2018 - 4:34 PM</span>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item timeline-item-detailed left">
+                <div class="timeline-content timeline-type comment">
+                  <div class="timeline-icon"><i class="icon zmdi zmdi-comment-text-alt"></i></div>
+                  <div class="timeline-avatar"><img class="circle" src="images/avatar.png" alt="Avatar"></div>
+                  <div class="timeline-header"><span class="timeline-autor">Kristopher Donny </span>
+                    <p class="timeline-activity">Mauris condimentum est <a href="#">Viverra erat fermentum</a>.</p><span class="timeline-time">September 13, 2018 - 9:54 AM</span>
+                  </div>
+                  <div class="timeline-summary">
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus sit amet tellus vel leo posuere fames commodo in eget ante. Vivamus vehicula sed velit at pulvinar.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-month"><span>August, 2018</span></li>
+              <li class="timeline-item timeline-item-detailed timeline-item-gallery right">
+                <div class="timeline-content timeline-type gallery">
+                  <div class="timeline-icon"><i class="icon zmdi zmdi-image"></i></div>
+                  <div class="timeline-avatar"><img class="circle" src="images/avatar6.png" alt="Avatar"></div>
+                  <div class="timeline-header"><span class="timeline-autor">Sherwood Clifford </span>
+                    <p class="timeline-activity">pellentesque tortor <a href="#">enim</a>.</p><span class="timeline-time">August 23, 2018 - 10:42 AM</span>
+                  </div>
+                  <div class="timeline-gallery"><img class="gallery-thumbnail" src="images/img2.jpg" alt="Thumbnail"><img class="gallery-thumbnail" src="images/img4.jpg" alt="Thumbnail"><img class="gallery-thumbnail" src="images/img11.jpg" alt="Thumbnail"><img class="gallery-thumbnail" src="images/img12.jpg" alt="Thumbnail"></div>
+                </div>
+              </li>
+              <li class="timeline-item timeline-item-detailed left">
+                <div class="timeline-content timeline-type comment">
+                  <div class="timeline-icon"><i class="icon zmdi zmdi-comment-text-alt"></i></div>
+                  <div class="timeline-avatar"><img class="circle" src="images/avatar4.png" alt="Avatar"></div>
+                  <div class="timeline-header"><span class="timeline-autor">Benji Harper </span>
+                    <p class="timeline-activity">Mauris condimentum est <a href="#">Vestibulum justo neque</a>.</p><span class="timeline-time">August 19, 2018 - 7:15 PM</span>
+                  </div>
+                  <div class="timeline-summary">
+                    <p>Praesent luctus efficitur turpis, nec convallis mauris commodo a. Aliquam sed consectetur tellus, et condimentum diam. Sed efficitur augue urna, et lacinia ex dictum at. Nulla a molestie arcu. </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item right">
+                <div class="timeline-content timeline-type file">
+                  <div class="timeline-icon"><i class="icon zmdi zmdi-file"></i></div>
+                  <div class="timeline-avatar"><img class="circle" src="images/avatar5.png" alt="Avatar"></div>
+                  <div class="timeline-header"><span class="timeline-autor">Justine Myranda </span>
+                    <p class="timeline-activity">Pellentesque imperdiet sit <a href="#">Amet nisl sed mattiss</a>.</p><span class="timeline-time">August 6, 2018 - 12:02 PM</span>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item timeline-item-detailed left">
+                <div class="timeline-content timeline-type quote">
+                  <div class="timeline-icon"><i class="icon zmdi zmdi-quote"></i></div>
+                  <div class="timeline-avatar"><img class="circle" src="images/avatar3.png" alt="Avatar"></div>
+                  <div class="timeline-header"><span class="timeline-autor">Sherwood Clifford </span>
+                    <p class="timeline-activity">pellentesque tortor <a href="#">Aliquam viverra</a>.</p><span class="timeline-time">August 1, 2018 - 6:25 AM</span>
+                    <blockquote class="blockquote timeline-blockquote mb-0">
+                      <p>Quisque condimentum enim nec porttitor egestas.</p>
+                      <footer class="blockquote-footer">Aliquam viverra ornare dolor.</footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item timeline-loadmore"><a class="load-more-btn" href="#">Load more</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <script src="js/main.js"></script>

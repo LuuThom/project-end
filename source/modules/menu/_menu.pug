@@ -30,7 +30,7 @@ mixin menu(page, link)
                     class= val1.dropdown ? "has-child" : null
                   )
                     a.nav__link(
-                      href= val1.dropdown ? `#${val1.link}` : null
+                      href= val1.dropdown ? `#${val1.link}` : val1.link
                       data-toggle= val1.dropdown ? "collapse" : null
                       aria-expanded= val1.dropdown ? "false" : null
                       class= (val1.link === link) ? "active" : null

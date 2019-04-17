@@ -57,7 +57,8 @@ $(function () {
     height: '35',
   });
   $('#spark2').sparkline([5, 8, 7, 10, 9, 10, 8, 6, 4, 6, 8, 7, 6, 8], {
-    type: 'bar', barColor: '#fbbc05',
+    type: 'bar',
+    barColor: '#fbbc05',
     pointDot: false,
     spotColor: false,
     minSpotColor: false,
@@ -67,8 +68,9 @@ $(function () {
     width: '81',
     height: '35',
   });
-  $('#spark3').sparkline([2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 4, 3, 2], {
-    type: 'discrete', lineColor: '#007f00',
+  $('#spark3').sparkline([2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 6, 5, 4, 3, 4, 5, 6, 5, 4, 4, 5], {
+    type: 'discrete',
+    lineColor: '#007f00',
     pointDot: false,
     spotColor: false,
     minSpotColor: false,
@@ -77,6 +79,8 @@ $(function () {
     highlightColor: '#007f00',
     width: '85',
     height: '35',
+    lineHeight: '10',
+    xwidth: 18
   });
   $('#spark4').sparkline([0, 5, 3, 7, 5, 10, 3, 6, 10], {
     type: 'line',
@@ -89,7 +93,6 @@ $(function () {
     highlightSpotColor: 'red',
     width: '85',
     height: '35',
-    lineHeight: '10',
   });
 
   // countup
