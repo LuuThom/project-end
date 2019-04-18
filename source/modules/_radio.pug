@@ -10,6 +10,6 @@ mixin radio({id, name, checked, disabled, icon, typeInput, text, color, valid})
       disabled= (disabled === true) ? true : false
       class= typeof valid !== 'undefined' ? ((valid==true) ? 'is--valid' : 'is--invalid') : null  
     )
-    span.custom-control-label(class= (color === true) ? `custom-control-color` : null)= text
+    span.custom-control-label.custom-radio(class= (color === true) ? `custom-control-color` : null)= text
       if icon
         i.zmdi(class= `zmdi-${icon}`)

@@ -1537,74 +1537,6 @@ valid: true
 })</pre>
                   </div>
                 </div>
-                <div class="col-md-6 col-12">
-                  <div class="code-example">
-                    <h3>Checkbox Base Full Color </h3>
-                    <div class="demo">
-                      <div class="custom-control-checkbox">
-                        <input class="custom-checkbox-input custom-control" type="checkbox" id="cl1" checked="checked" />
-                      </div>
-                      <div class="custom-control-checkbox">
-                        <input class="custom-checkbox-input custom-control" type="checkbox" id="cl2" />
-                      </div>
-                      <div class="custom-control-checkbox">
-                        <input class="custom-checkbox-input custom-control" type="checkbox" id="cl3" />
-                      </div>
-                    </div>
-                    <pre><code></code>+checkbox({
-  checked: true,
-  id: cl1,
-  text: 'Option1'
- color: true
-})
-+checkbox({
-  checked: false,
-  id: cl2,
-  text: 'Option1'
-  color: true
-})
-+checkbox({
-  checked: false,
-  id: cl3,
-  text: 'Option1'
-  color: true
-})</pre>
-                  </div>
-                </div>
-                <div class="col-md-6 col-12">
-                  <div class="code-example">
-                    <h3>Checkbox Inline Full Color</h3>
-                    <div class="demo custom-demo">
-                      <div class="custom-control-checkbox custom-checkbox--inline">
-                        <input class="custom-checkbox-input custom-control" type="checkbox" id="cl-1" checked="checked" />
-                      </div>
-                      <div class="custom-control-checkbox custom-checkbox--inline">
-                        <input class="custom-checkbox-input custom-control" type="checkbox" id="cl-2" />
-                      </div>
-                      <div class="custom-control-checkbox custom-checkbox--inline">
-                        <input class="custom-checkbox-input custom-control" type="checkbox" id="cl-3" />
-                      </div>
-                    </div>
-                    <pre><code></code>+checkbox({
-  checked: true,
-  id: cl-1,
-  text: 'Option1'
-  color: true
-})
-+checkbox({
-  checked: false,
-  id: cl-2,
-  text: 'Option1'
-  color: true
-})
-+checkbox({
-  checked: false,
-  id: cl-3,
-  text: 'Option1'
-  color: true
-})</pre>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-switch" aria-labelledby="v-pills-switch-tab">
@@ -2148,10 +2080,10 @@ valid: true
                     <div class="demo">
                       <div class="form-check form-check-inline">
                         <label class="custom-control-radio custom-control-radio-icon custom-radio-icon custom-control-inline">
-                          <input class="custom-radio-input" id="radioIcon1" type="radio" name="radio-icon" checked="checked" /><span class="custom-control-label"><i class="zmdi zmdi-female"></i></span>
+                          <input class="custom-radio-input" id="radioIcon1" type="radio" name="radio-icon" checked="checked" /><span class="custom-control-label custom-radio"><i class="zmdi zmdi-female"></i></span>
                         </label>
                         <label class="custom-control-radio custom-control-radio-icon custom-radio-icon custom-control-inline">
-                          <input class="custom-radio-input" id="radioIcon2" type="radio" name="radio-icon2" /><span class="custom-control-label"><i class="zmdi zmdi-male-alt"></i></span>
+                          <input class="custom-radio-input" id="radioIcon2" type="radio" name="radio-icon2" /><span class="custom-control-label custom-radio"><i class="zmdi zmdi-male-alt"></i></span>
                         </label>
                       </div>
                       <pre><code>+radio({
@@ -2174,13 +2106,13 @@ valid: true
                     <div class="demo">
                       <div class="form-check form-check-inline">
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input" type="radio" name="radio-stacked" checked="checked" /><span class="custom-control-label">Option1</span>
+                          <input class="custom-radio-input" type="radio" name="radio-stacked" checked="checked" /><span class="custom-control-label custom-radio">Option1</span>
                         </label>
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input" type="radio" name="radio-stacked1" /><span class="custom-control-label">Option2</span>
+                          <input class="custom-radio-input" type="radio" name="radio-stacked1" /><span class="custom-control-label custom-radio">Option2</span>
                         </label>
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input" type="radio" name="radio-stacked2" disabled="disabled" /><span class="custom-control-label">Option3</span>
+                          <input class="custom-radio-input" type="radio" name="radio-stacked2" disabled="disabled" /><span class="custom-control-label custom-radio">Option3</span>
                         </label>
                       </div>
                       <pre><code>+radio({
@@ -2208,13 +2140,13 @@ valid: true
                       <h4>Radio full color</h4>
                       <div class="form-check form-check-inline">
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input" type="radio" name="radio-stacked3" checked="checked" /><span class="custom-control-label custom-control-color">Option1</span>
+                          <input class="custom-radio-input" type="radio" name="radio-stacked3" checked="checked" /><span class="custom-control-label custom-radio custom-control-color">Option1</span>
                         </label>
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input" type="radio" name="radio-stacked4" /><span class="custom-control-label custom-control-color">Option2</span>
+                          <input class="custom-radio-input" type="radio" name="radio-stacked4" /><span class="custom-control-label custom-radio custom-control-color">Option2</span>
                         </label>
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input" type="radio" name="radio-stacked5" disabled="disabled" /><span class="custom-control-label custom-control-color">Option3</span>
+                          <input class="custom-radio-input" type="radio" name="radio-stacked5" disabled="disabled" /><span class="custom-control-label custom-radio custom-control-color">Option3</span>
                         </label>
                       </div>
                       <pre><code>+radio({
@@ -2242,13 +2174,13 @@ valid: true
                       <h4>Radio valid</h4>
                       <div class="form-check form-check-inline">
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input is--valid" type="radio" name="radio-stacked6" checked="checked" /><span class="custom-control-label">Option1</span>
+                          <input class="custom-radio-input is--valid" type="radio" name="radio-stacked6" checked="checked" /><span class="custom-control-label custom-radio">Option1</span>
                         </label>
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input is--invalid" type="radio" name="radio-stacked7" /><span class="custom-control-label">Option2</span>
+                          <input class="custom-radio-input is--invalid" type="radio" name="radio-stacked7" /><span class="custom-control-label custom-radio">Option2</span>
                         </label>
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input is--valid" type="radio" name="radio-stacked8" disabled="disabled" /><span class="custom-control-label">Option3</span>
+                          <input class="custom-radio-input is--valid" type="radio" name="radio-stacked8" disabled="disabled" /><span class="custom-control-label custom-radio">Option3</span>
                         </label>
                       </div>
                       <pre><code>+radio({
@@ -2279,13 +2211,13 @@ valid: true
                       <h4>Radio valid full color</h4>
                       <div class="form-check form-check-inline">
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input is--valid" type="radio" name="radio-stacked9" checked="checked" /><span class="custom-control-label custom-control-color">Option1</span>
+                          <input class="custom-radio-input is--valid" type="radio" name="radio-stacked9" checked="checked" /><span class="custom-control-label custom-radio custom-control-color">Option1</span>
                         </label>
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input is--invalid" type="radio" name="radio-stacked10" /><span class="custom-control-label custom-control-color">Option2</span>
+                          <input class="custom-radio-input is--invalid" type="radio" name="radio-stacked10" /><span class="custom-control-label custom-radio custom-control-color">Option2</span>
                         </label>
                         <label class="custom-control-radio">
-                          <input class="custom-radio-input is--valid" type="radio" name="radio-stacked11" disabled="disabled" /><span class="custom-control-label custom-control-color">Option3</span>
+                          <input class="custom-radio-input is--valid" type="radio" name="radio-stacked11" disabled="disabled" /><span class="custom-control-label custom-radio custom-control-color">Option3</span>
                         </label>
                       </div>
                       <pre><code></code> +radio({
