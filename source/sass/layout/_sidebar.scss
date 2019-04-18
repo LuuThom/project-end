@@ -71,7 +71,6 @@
     width: 100%;
     flex-grow: 1;
   }
-
   .chat-content {
     flex: 1;
 
@@ -113,6 +112,15 @@
       font-weight: 400;
       padding: 15px 20px;
       outline: 0;
+    }
+    i {
+      position: absolute;
+      color: #aaa;
+      right: 15px;
+      top: 50%;
+      font-size: 1.538rem;
+      margin-top: -10px;
+      cursor: pointer;
     }
   }
 
@@ -196,18 +204,18 @@
     padding-bottom: 15px;
     border-bottom: 1px solid #ebebeb;
     margin-bottom: 15px;
+    margin-top: 0;
   }
 }
 
 .todo-list {
   list-style: none;
   padding: 4px 0 1px;
-  margin-bottom: 15px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 
-  .custom-control {
+  .custom-control-check {
     margin-top: .1875rem;
     margin-bottom: 1.1105rem;
     position: relative;
@@ -215,7 +223,7 @@
     padding-left: 0;
     cursor: pointer;
   }
-  .custom-control-label {
+  .custom-checkbox-label {
     line-height: 1.4;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -228,11 +236,11 @@
     outline: 0;
     cursor: pointer;
     margin-left: 0;
-    padding-left: 25px;
+    padding-left: 5px;
     padding-bottom: 2px;
     &:after {
       position: absolute;
-      top: 0;
+      top: 1px;
       left: 2px;
       display: block;
       content: '';
@@ -260,7 +268,7 @@
       border: #a1a1a1 solid 1px;
     }
   }
-  .custom-control-input:checked ~ .custom-control-label:after {
+  .custom-checkbox-input:checked ~ .custom-checkbox-label:after {
     font-size: 15px;
     line-height: 1.2;
   }

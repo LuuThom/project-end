@@ -7,9 +7,12 @@
   font-size: 1.308rem;
   font-weight: $font-weight-light;
 }
-.btn.btn-signup {
-  width: 100%;
+.btn {
+  &--signup {
+    width: 100%;
+  }
   &-facebook {
+    width: 100%;
     color: $color-white;
     background-color: $cl-face;
     border-color: $cl-face;
@@ -21,7 +24,8 @@
       border-bottom-color: $cl-face-bd;
     }
   }
-  &-google-plus {
+  &--google {
+    width: 100%;
     color: $color-white;
     background-color: $cl-gg;
     border-color: $cl-gg;

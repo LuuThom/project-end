@@ -16984,7 +16984,7 @@ body {
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
     bottom: -13px; }
-  .dropdown.show .icon {
+  .dropdown.show .nav-link .icon {
     color: #4285f4; }
 
 .block-notifications, .block-connect {
@@ -17249,6 +17249,14 @@ body {
       font-weight: 400;
       padding: 15px 20px;
       outline: 0; }
+    .sidebarRight .chat-search i {
+      position: absolute;
+      color: #aaa;
+      right: 15px;
+      top: 50%;
+      font-size: 1.538rem;
+      margin-top: -10px;
+      cursor: pointer; }
   .sidebarRight .chat-window {
     position: absolute;
     left: 290px; }
@@ -17312,23 +17320,23 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #ebebeb;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    margin-top: 0; }
 
 .todo-list {
   list-style: none;
   padding: 4px 0 1px;
-  margin-bottom: 15px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis; }
-  .todo-list .custom-control {
+  .todo-list .custom-control-check {
     margin-top: .1875rem;
     margin-bottom: 1.1105rem;
     position: relative;
     display: block;
     padding-left: 0;
     cursor: pointer; }
-  .todo-list .custom-control-label {
+  .todo-list .custom-checkbox-label {
     line-height: 1.4;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -17341,11 +17349,11 @@ body {
     outline: 0;
     cursor: pointer;
     margin-left: 0;
-    padding-left: 25px;
+    padding-left: 5px;
     padding-bottom: 2px; }
-    .todo-list .custom-control-label:after {
+    .todo-list .custom-checkbox-label:after {
       position: absolute;
-      top: 0;
+      top: 1px;
       left: 2px;
       display: block;
       content: '';
@@ -17356,7 +17364,7 @@ body {
       line-height: 1.2;
       width: 1.38462rem;
       height: 1.38462rem; }
-    .todo-list .custom-control-label:before {
+    .todo-list .custom-checkbox-label:before {
       top: 0;
       left: 2px;
       position: absolute;
@@ -17370,7 +17378,7 @@ body {
       content: '';
       background-color: #fff;
       border: #a1a1a1 solid 1px; }
-  .todo-list .custom-control-input:checked ~ .custom-control-label:after {
+  .todo-list .custom-checkbox-input:checked ~ .custom-checkbox-label:after {
     font-size: 15px;
     line-height: 1.2; }
 
@@ -18384,33 +18392,39 @@ body {
   font-size: 1.308rem;
   font-weight: 300; }
 
-.btn.btn-signup {
+.btn--signup {
   width: 100%; }
-  .btn.btn-signup-facebook {
+
+.btn-facebook {
+  width: 100%;
+  color: #fff;
+  background-color: #5d82d1;
+  border-color: #5d82d1; }
+  .btn-facebook:hover {
     color: #fff;
-    background-color: #5d82d1;
-    border-color: #5d82d1; }
-    .btn.btn-signup-facebook:hover {
-      color: #fff;
-      box-shadow: inset 0 -2px 0 #3864c3;
-      background-color: #6588d3;
-      border-color: #6588d3;
-      border-bottom-color: #3864c3; }
-  .btn.btn-signup-google-plus {
+    box-shadow: inset 0 -2px 0 #3864c3;
+    background-color: #6588d3;
+    border-color: #6588d3;
+    border-bottom-color: #3864c3; }
+
+.btn--google {
+  width: 100%;
+  color: #fff;
+  background-color: #eb5e4c;
+  border-color: #eb5e4c; }
+  .btn--google:hover {
     color: #fff;
-    background-color: #eb5e4c;
-    border-color: #eb5e4c; }
-    .btn.btn-signup-google-plus:hover {
-      color: #fff;
-      box-shadow: inset 0 -2px 0 #e6351e;
-      background-color: #ec6655;
-      border-color: #ec6655;
-      border-bottom-color: #e6351e; }
-  .btn.btn-signup .icon {
-    font-size: 1.615rem;
-    line-height: 15px; }
-  .btn.btn-signup .icon-left {
-    margin-right: 4px; }
+    box-shadow: inset 0 -2px 0 #e6351e;
+    background-color: #ec6655;
+    border-color: #ec6655;
+    border-bottom-color: #e6351e; }
+
+.btn .icon {
+  font-size: 1.615rem;
+  line-height: 15px; }
+
+.btn .icon-left {
+  margin-right: 4px; }
 
 .signup .title {
   text-align: center;
@@ -18789,5 +18803,116 @@ body {
 
 .timeline.timeline2 .quote .timeline-icon {
   background-color: #ea4335; }
+
+.invoice {
+  background-color: #fff;
+  padding: 100px 100px 70px;
+  color: #8c8c8c; }
+  .invoice-logo {
+    height: 54px;
+    min-width: 204px;
+    background-image: url("../images/logo-xx.png ");
+    background-repeat: no-repeat;
+    background-position: 0; }
+  .invoice-header {
+    margin-bottom: 100px; }
+  .invoice-order {
+    text-align: right; }
+  .invoice-id {
+    display: block;
+    font-size: 2.308rem;
+    line-height: 2.308rem; }
+  .invoice-date {
+    display: block;
+    font-size: 1.385rem; }
+  .invoice-data {
+    margin-bottom: 110px; }
+  .invoice-person span {
+    font-size: 1.385rem;
+    line-height: 2rem;
+    display: block; }
+  .invoice-person .name {
+    font-weight: 401; }
+  .invoice-person:last-child {
+    text-align: right; }
+  .invoice-payment-direction {
+    text-align: center;
+    position: relative;
+    padding-top: 20px; }
+    .invoice-payment-direction .icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #f7f7f7;
+      font-size: 3.846rem;
+      color: #c2c2c2;
+      line-height: 80px; }
+  .invoice-details {
+    width: 100%;
+    font-size: 1.231rem; }
+    .invoice-details th {
+      text-align: right;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f0f0f0; }
+    .invoice-details td {
+      padding: 20px 0; }
+    .invoice-details .amount,
+    .invoice-details .description,
+    .invoice-details .hours,
+    .invoice-details .summary {
+      border-bottom: 1px solid #f0f0f0; }
+    .invoice-details .hours,
+    .invoice-details .amount {
+      text-align: right; }
+    .invoice-details .summary {
+      color: #c4c4c4; }
+    .invoice-details .total {
+      color: #8c8c8c;
+      font-weight: 401; }
+    .invoice-details .total-value {
+      font-size: 1.692rem;
+      color: #4285f4; }
+    .invoice-details th:first-child {
+      text-align: left; }
+  .invoice-payment-method {
+    margin-bottom: 75px; }
+    .invoice-payment-method span {
+      font-size: 1.385rem;
+      line-height: 2rem;
+      display: block; }
+    .invoice-payment-method .title {
+      font-weight: 401; }
+  .invoice-message {
+    font-size: 1.231rem;
+    margin-bottom: 62px; }
+    .invoice-message .title {
+      font-weight: 401;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 12px; }
+    .invoice-message p {
+      line-height: 2rem; }
+  .invoice-company-info {
+    margin-bottom: 70px; }
+    .invoice-company-info div:first-child {
+      border-left: none; }
+    .invoice-company-info .summary {
+      padding: 0 30px;
+      line-height: 16px; }
+    .invoice-company-info div {
+      border-left: 1px solid #f0f0f0;
+      padding: 8px 40px; }
+  .invoice .phone span {
+    display: block; }
+  .invoice .email .mail {
+    display: block; }
+  .invoice-footer {
+    text-align: center; }
+    .invoice-footer .btn {
+      min-width: 96px;
+      font-size: 1.077rem; }
+    .invoice-footer .btn-space {
+      margin-right: 5px;
+      margin-bottom: 5px; }
 
 /*# sourceMappingURL=main.css.map */

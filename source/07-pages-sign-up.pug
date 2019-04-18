@@ -8,7 +8,8 @@ block main
     .login.signup
       .card.card-primary
         .card-header
-          img.login-img(src="images/logo-xx.png", alt="")
+          a(href="home.html")
+            img.login-img(src="images/logo-xx.png", alt="")
           span.login-notice Please enter your user information.
         .card-body
           form(action="home.html" method="get")
@@ -42,7 +43,7 @@ block main
                 type: 'primary',
                 text: 'Sign Up',
                 size: 'xl'
-              })
+              })(class='btn--signup')
             .title.pb-3 Or
             .form-group.row.signup-social
               .col-6

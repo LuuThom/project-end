@@ -56,7 +56,7 @@ $(function () {
     }
   }
 
-  scrollbar(".js-list, .js-chat-section, .js-list, .sidebar-nav")
+  scrollbar(".js-list, .js-chat-section, .js-list, todo-inner, .sidebar-nav")
 
   // Js scrollbar chat
   // var pt = new PerfectScrollbar('.js-chat-section');
