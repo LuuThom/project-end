@@ -1,7 +1,7 @@
 //-  
 //- This page only for Frontend Developer                      
 extends modules/layout/_page-other 
-                     
+               
 block head         
   +head('Styleguides')
   style.
@@ -13,7 +13,7 @@ block head
       background-image: none;
     }
     .demo {
-      text-align: center;
+      text-align: left;
     }   
     .code-example {
       margin-bottom: 25px;
@@ -51,8 +51,8 @@ block main
         title: 'Checkbox'
       },
       {
-        id: 'selectbox',
-        title: 'Selectbox'
+        id: 'switch',
+        title: 'Switch'
       },
       {
         id: 'slide',
@@ -111,9 +111,9 @@ block main
                 when 'input'
                   include styleguides/_input
                 when 'checkbox'
-                  include styleguides/_colors 
-                when 'selectbox'
-                  include styleguides/_selectbox
+                  include styleguides/_checkbox 
+                when 'switch'
+                  include styleguides/_switch
                 when 'slide'
                   include styleguides/_slider
                 when 'datetime'

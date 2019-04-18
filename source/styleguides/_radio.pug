@@ -12,7 +12,7 @@ h2 Radio
           })(class= "custom-radio-icon custom-control-inline")
           +radio({
             id: 'radioIcon2',
-            name: 'radio-icon',
+            name: 'radio-icon2',
             checked: false,
             icon: 'male-alt',
           })(class= "custom-radio-icon custom-control-inline")
@@ -26,27 +26,28 @@ h2 Radio
             |})
             |+radio({
             |   id: 'radioIcon2',
-            |   name: 'radio-icon',
+            |   name: 'radio-icon2',
             |   checked: false,
             |   icon: 'male-alt',
             |})
   .col-md-6.col-12
     .code-example
       .demo
-        .form-check
+        .form-check.form-check-inline
           +radio({
             name: 'radio-stacked',
             checked: true,
             text: 'Option1'
           })
           +radio({
-            name: 'radio-stacked',
+            name: 'radio-stacked1',
             checked: false,
             text: 'Option2'
           })
           +radio({
-            name: 'radio-stacked',
+            name: 'radio-stacked2',
             checked: false,
+            disabled: true,
             text: 'Option3'
           })
         pre
@@ -54,14 +55,154 @@ h2 Radio
             |+radio({
             |   name: 'radio-stacked',
             |   checked: true,
+            |   text: 'Option1'
             |})
             |+radio({
-            |   name: 'radio-stacked',
+            |   name: 'radio-stacked1',
             |   checked: false,
+            |   text: 'Option2'
             |})
             |+radio({
-            |  name: 'radio-stacked',
+            |  name: 'radio-stacked2',
             |  checked: false,
-            |  text: 'Option1'
+            |  disabled: true,
+            |  text: 'Option3'
             |})
-
+  .col-md-6.col-12
+    .code-example
+      .demo
+        h4 Radio full color
+        .form-check.form-check-inline
+          +radio({
+            name: 'radio-stacked3',
+            checked: true,
+            color: true,
+            text: 'Option1'
+          })
+          +radio({
+            name: 'radio-stacked4',
+            checked: false,
+            color: true,
+            text: 'Option2'
+          })
+          +radio({
+            name: 'radio-stacked5',
+            checked: false,
+            color: true,
+            disabled: true,
+            text: 'Option3'
+          })
+        pre
+          code
+            |+radio({
+            |   name: 'radio-stacked3',
+            |   checked: true,
+            |   text: 'Option1'
+            |})
+            |+radio({
+            |   name: 'radio-stacked4',
+            |   checked: false,
+            |   text: 'Option2'
+            |})
+            |+radio({
+            |  name: 'radio-stacked5',
+            |  checked: false,
+            |  disabled: true,
+            |  text: 'Option3'
+            |})
+  .col-md-6.col-12
+    .code-example
+      .demo
+        h4 Radio valid
+        .form-check.form-check-inline
+          +radio({
+            name: 'radio-stacked6',
+            checked: true,
+            valid: true,
+            text: 'Option1'
+          })
+          +radio({
+            name: 'radio-stacked7',
+            checked: false,
+            valid: false,
+            text: 'Option2'
+          })
+          +radio({
+            name: 'radio-stacked8',
+            checked: false,
+            valid: true,
+            disabled: true,
+            text: 'Option3'
+          })
+        pre
+          code
+            |+radio({
+            |   name: 'radio-stacked6',
+            |   checked: true,
+            |   valid:true,
+            |   text: 'Option1'
+            |})
+            |+radio({
+            |   name: 'radio-stacked7',
+            |   checked: false,
+            |   valid: false,
+            |   text: 'Option2'
+            |})
+            |+radio({
+            |  name: 'radio-stacked8',
+            |  checked: false,
+            |  disabled: true,
+            |  valid: true,
+            |  text: 'Option3'
+            |})
+  .col-md-6.col-12
+    .code-example
+      .demo
+        h4 Radio valid full color
+        .form-check.form-check-inline
+          +radio({
+            name: 'radio-stacked9',
+            checked: true,
+            valid:true,
+            color: true,
+            text: 'Option1'
+          })
+          +radio({
+            name: 'radio-stacked10',
+            checked: false,
+            valid: false,
+            color: true,
+            text: 'Option2'
+          })
+          +radio({
+            name: 'radio-stacked11',
+            checked: false,
+            color: true,
+            valid: true,
+            disabled: true,
+            text: 'Option3'
+          })
+        pre
+          code
+          |  +radio({
+          |    name: 'radio-stacked9',
+          |    checked: true,
+          |    valid:true,
+          |    color: true,
+          |    text: 'Option1'
+          |  })
+          |  +radio({
+          |    name: 'radio-stacked10',
+          |    checked: false,
+          |    valid: false,
+          |    color: true,
+          |    text: 'Option2'
+          |  })
+          |  +radio({
+          |    name: 'radio-stacked11',
+          |    checked: false,
+          |    color: true,
+          |    valid: true,
+          |    disabled: true,
+          |    text: 'Option3'
+          |  })

@@ -1,0 +1,27 @@
+- 
+  var listType = ['primary', 'success', 'warning', 'danger', 'yesno']
+  var listSize = ['xs', 'sm', 'md', 'lg']
+
+h2 Switch
+each item, index in listType
+  .row
+    each val, index1 in listSize
+      .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+        .code-example
+          .demo
+            +switch({
+              id: `switch${index}${index1}`,
+              name: `switch${index}${index1}`,
+              size: val,
+              type: item,
+              checked: true
+            })
+          pre
+            code
+              |+switch({
+              |  id: 'switch#{index}#{index1}',
+              |  name: 'switch#{index}#{index1}',
+              |  size: '#{val}',
+              |  type: '#{item}',
+              |  checked: true
+              |})

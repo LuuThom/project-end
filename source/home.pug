@@ -1,5 +1,5 @@
 extends modules/layout/_page-default
-    
+            
 block head
   +head('Home')
 block main
@@ -7,41 +7,42 @@ block main
   +sidebarRight()
   +sidebarLeft("home.html")
   h1 Homepage
-  .main-content.container-fluid
-    .row
-      .col-xl-3.col-sm-6.col-12
-        .widget.widget-title
-          .chart.sparkline#spark1
-            canvas
-          .data-info
-            h4.desc New Users
-            .value
-              span.indicator.indicator-equal.mdi.mdi-chevron-right
-              span#number(data-toggle= "counter" data-end= "113" width="85" height= "35") 113
-      .col-xl-3.col-sm-6.col-12
-        .widget.widget-title
-          .chart.sparkline#spark2
-            canvas
-          .data-info
-            h4.desc New Users
-            .value
-              span.indicator.indicator-equal.mdi.mdi-chevron-up
-              span.number(data-toggle= "counter" data-end= "80" data-suffix= "%") 80%
-      .col-xl-3.col-sm-6.col-12
-        .widget.widget-title
-          .chart.sparkline#spark3
-            canvas
-          .data-info
-            h4.desc New Users
-            .value
-              span.indicator.indicator-equal.mdi.mdi-chevron-up
-              span.number(data-toggle= "counter" data-end= "532") 532
-      .col-xl-3.col-sm-6.col-12
-        .widget.widget-title
-          .chart.sparkline#spark4
-            canvas
-          .data-info
-            h4.desc New Users
-            .value
-              span.indicator.indicator-equal.mdi.mdi-chevron-down
-              span.number(data-toggle= "counter" data-end= "113") 113
+  .be-content.content-home
+    .main-content.container-fluid
+      .row
+        .col-xl-3.col-sm-6.col-12
+          .widget.widget-title
+            .chart.sparkline#spark1
+              canvas
+            .data-info
+              h4.desc New Users
+              .value
+                span.indicator.indicator-equal.zmdi.zmdi-chevron-right
+                span.number(data-toggle= "counter" data-end= "113" width="85" height= "35") 113
+        .col-xl-3.col-sm-6.col-12
+          .widget.widget-title
+            .chart.sparkline#spark2
+              canvas
+            .data-info
+              h4.desc Monthly Sales
+              .value
+                span.indicator.indicator-equal.zmdi.zmdi-chevron-up
+                span.number(data-toggle= "counter" data-end= "80" data-suffix= "%") 80%
+        .col-xl-3.col-sm-6.col-12
+          .widget.widget-title
+            .chart.sparkline#spark3
+              canvas
+            .data-info
+              h4.desc Impressions
+              .value
+                span.indicator.indicator-equal.zmdi.zmdi-chevron-up
+                span.number(data-toggle= "counter" data-end= "532") 532
+        .col-xl-3.col-sm-6.col-12
+          .widget.widget-title
+            .chart.sparkline#spark4
+              canvas
+            .data-info
+              h4.desc Downloads
+              .value
+                span.indicator.indicator-equal.zmdi.zmdi-chevron-down
+                span.number(data-toggle= "counter" data-end= "113") 113

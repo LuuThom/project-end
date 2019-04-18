@@ -51,6 +51,7 @@ ol {
   content: '\f2fa';
   font-size: $font-size-base;
 }
+
 .be-content {
   position: relative;
   left: 0;
@@ -58,6 +59,39 @@ ol {
   min-height: 100%;
   top: 20px;
 }
+
 .main-content {
   padding: 25px;
+}
+
+.scrollTop {
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: $color-white;
+  background-color: $cl-back-top;
+  padding: 0 14px;
+  display: none;
+  transition: background-color .2s ease;
+  border-radius: 4px;
+  z-index: 1071;
+  &:before {
+    content: '\f2fc';
+    font-family: $font-icon;
+    font-size: 2.538rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:focus,
+  &:hover {
+    color: $color-white;
+  }
+  &:hover {
+    background-color: rgba($color-black, .8);
+  }
+}
+.page-list__link {
+  display: inline;
 }

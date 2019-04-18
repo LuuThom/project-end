@@ -1,186 +1,210 @@
+
 .switch-button {
-  position: relative;
+  display: inline-block;
+  border-radius: 50px;
+  background-color: $cl-switch-after;
   width: 60px;
   height: 27px;
-  .onoffswitch {
-    position: relative;
-    width: 56px;
-
-    &-checkbox {
-      display: none;
-    }
-
-    &-label {
-      display: block;
-      overflow: hidden;
-      cursor: pointer;
-      border-radius: 20px;
-      padding: 0;
-      position: relative;
-      height: 100%;
-      transition: margin .5s ease-in 0s;
-    }
-
-    &-inner {
-      display: block;
-      &:before {
-        background: #ccc;
-      }
-    }
-
-    &-switch {
-      display: block;
-      width: 19px;
-      height: 19px;
-      margin: 4px 0 5px 6px;
-      background: $bg-white;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border: 2px solid $color-white;
-      border-radius: 20px;
-      transition: all .3s ease-in 0s;
-    }
+  padding: 4px;
+  position: relative;
+  vertical-align: middle;
+  label {
+    border: 0;
   }
-  input[type='checkbox']:checked + label {
-    border-radius: 50px;
-    background-color: #4285f4;
-    display: block;
+  &--success &-input:checked ~ span {
+    background-color: $cl-valid;
+  }
+
+  &--success &-input:checked ~ span .label {
+    border-color: $cl-valid;
+  }
+
+  &--success &-input:checked:focus ~ span label:before {
+    box-shadow: 0 0 0 .15rem $cl-sw1-succ;
+  }
+
+  &--warning &-input:checked ~ span {
+    background-color: $cl-warning-pricing;
+  }
+
+  &--warning &-input:checked ~ span .label {
+    border-color: $cl-warning-pricing;
+  }
+
+  &--warning &-input:checked:focus ~ span label:before {
+    box-shadow: 0 0 0 .15rem $cl-sw-waring;
+  }
+
+  &--danger &-input:checked ~ span {
+    background-color: $cl-danger1;
+  }
+
+  &--danger &-input:checked ~ span .label {
+    border-color: $cl-danger1;
+  }
+
+  &--danger &-input:checked:focus ~ span label:before {
+    box-shadow: 0 0 0 .15rem $cl-danger2;
+  }
+
+  &--yesno &-input ~ span label:before {
+    content: 'NO';
+  }
+
+  &--yesno &-input:checked ~ span label:before {
+    content: 'YES';
+  }
+
+  &--xs {
+    height: 20px;
+    line-height: 16px;
+    width: 50px;
+  }
+
+  &--xs &-input ~ span label:after {
+    height: 12px;
+    width: 12px;
+  }
+
+  &--xs &-input ~ span label:after:before {
+    line-height: 21px;
+  }
+
+  &--sm {
+    height: 24px;
+    width: 57px;
+    line-height: 20px;
+  }
+
+  &--sm &-input ~ span label:after {
+    height: 16px;
+    width: 16px;
+  }
+
+  &--sm &-input ~ span label:after:before {
+    line-height: 25px;
+  }
+
+  &--lg {
+    height: 30px;
+    line-height: 26px;
+    width: 65px;
+  }
+
+  &--lg &-input ~ span label:after {
+    height: 22px;
+    width: 22px;
+  }
+
+  &--lg &-input ~ span label:after:before {
+    line-height: 31px;
+  }
+
+  &-input {
     position: absolute;
+    opacity: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  &-input:focus ~ span label:before {
+    box-shadow: 0 0 0 .15rem $cl-focus1;
+  }
+
+  &-input:checked:focus ~ span label:before {
+    box-shadow: 0 0 0 .15rem $cl-focus2;
+  }
+
+  &-input ~ span .label {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    margin: 0;
+    cursor: pointer;
   }
-  input[type='checkbox']:checked + label .onoffswitch-switch {
-    left: 50%;
-  }
-  input[type='checkbox']:checked + label .onoffswitch-inner:before {
+
+  &-input ~ span .label:after {
+    left: 4px;
+    top: 4px;
     position: absolute;
-    font-size: 1rem;
-    font-weight: 600;
-    z-index: 0;
-    content: 'ON';
-    line-height: 18px;
-    color: #fff;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    text-align: left;
-    transition: all 1s;
-    background: blue;
+    content: '';
+    white-space: nowrap;
+    border-radius: 100%;
+    background-color: #fff;
+    height: 19px;
+    width: 19px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .3s ease;
   }
-  label .onoffswitch-inner:before {
+
+  &-input ~ span .label:before {
     position: absolute;
-    font-size: 1rem;
-    font-weight: 600;
-    z-index: 0;
+    font-size: .8462rem;
+    font-weight: $font-weight-bold;
     content: 'OFF';
     right: 0;
     display: block;
     width: 100%;
     height: 100%;
-    line-height: 18px;
     top: 0;
     text-align: right;
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 10px;
     color: #fff;
     border-radius: 50px;
-    transition: all 1s;
   }
-  label {
-    padding: 0;
+
+  &-input ~ span .label--xs:before {
+    line-height: 21px;
   }
-  &--success {
-    .onoffswitch-inner:before {
-      background: $bg-success;
-    }
+
+  &-input ~ span .label--sm:before {
+    line-height: 24px;
   }
-  &--warning {
-    .onoffswitch-inner:before {
-      background: $bg-warning;
-    }
+
+  &-input ~ span .label--md:before {
+    line-height: 27px;
   }
-  &--danger {
-    .onoffswitch-inner:before {
-      background: $bg-danger;
-    }
+
+  &-input ~ span .label--lg:before {
+    line-height: 30px;
   }
-  &--primary {
-    .onoffswitch-inner:before {
-      background: $bg-primary;
-    }
+
+  &-input:checked ~ span {
+    border-radius: 100px;
+    background-color: $cl-slide;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
   }
-}
-.switch-button--sx {
-  height: 20px;
-  line-height: 16px;
-  width: 50px;
-  .onoffswitch-inner {
-    &:before {
-      font-size: 1rem;
-      line-height: 17px;
-    }
+
+  &-input:checked ~ span .label:before {
+    content: 'ON';
+    left: 0;
+    text-align: left;
+    padding-left: 10px;
   }
-  .onoffswitch-switch {
-    width: 12px;
-    height: 12px;
-    margin: 4px 0 4px 9px;
+
+  &-input:checked ~ span .label--xs:after {
+    left: calc(100% - 16px);
   }
-  input[type='checkbox']:checked + label .onoffswitch-inner:before {
-    line-height: 11px;
+
+  &-input:checked ~ span .label--sm:after {
+    left: calc(100% - 20px);
   }
-  label .onoffswitch-inner:before {
-    line-height: 11px;
+
+  &-input:checked ~ span .label--md:after {
+    left: calc(100% - 24px);
   }
-}
-.switch-button--sm {
-  height: 24px;
-  line-height: 20px;
-  width: 57px;
-  .onoffswitch {
-    &-inner {
-      &:before {
-        font-size: 1rem;
-        line-height: 17px;
-      }
-    }
-    &-switch {
-      width: 16px;
-      height: 16px;
-      margin: 4px 0 3px 8px;
-    }
-  }
-  input[type='checkbox']:checked + label .onoffswitch-inner:before {
-    line-height: 15px;
-  }
-  label .onoffswitch-inner:before {
-    line-height: 15px;
-  }
-}
-.switch-button--lg {
-  height: 30px;
-  line-height: 26px;
-  width: 65px;
-  .onoffswitch {
-    &-inner {
-      &:before {
-        font-size: 1rem;
-        line-height: 17px;
-      }
-    }
-    &-switch {
-      width: 22px;
-      height: 22px;
-      margin: 4px 0 3px 8px;
-    }
-  }
-  input[type='checkbox']:checked + label .onoffswitch-inner:before {
-    line-height: 20px;
-  }
-  label .onoffswitch-inner:before {
-    line-height: 20px;
+
+  &-input:checked ~ span .label--lg:after {
+    left: calc(100% - 26px);
   }
 }

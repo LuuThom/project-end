@@ -2,25 +2,7 @@
   var listColor = ['success', 'primary', 'warning', 'danger']
 -
   var listSize = ['sx','sm','md','lg']
-h2 Switch
-.row
-  each item, index in listSize
-    .col-md-6.col-12
-      h3 Color Switch
-      .code-example
-        .demo
-          +switch({
-            checked: true,
-            id: `swt${index}`,
-            type: item
-          })
-        pre
-          code
-            |+switch({
-            |   checked: true,
-            |   id: 'swt#{index}',
-            |   type: '#{item}'
-            |})
+
 h2 Checkbox
 .row
   .col-md-6.col-12
@@ -99,89 +81,4 @@ h2 Checkbox
         |  label: 'Option3'
         |  disabled: true
         |})
-  .col-md-6.col-12
-    .code-example
-      h3 Checkbox Base Full Color 
-      .demo
-        +checkboxColor({
-          checked: true,
-          id: 'cl1',
-          text: 'Option1',
-          color: true
-        })
-        +checkboxColor({
-          checked: false,
-          id: 'cl2',
-          text: 'Option2',
-          color: true
-        })
-        +checkboxColor({
-          checked: false,
-          id: 'cl3',
-          text: 'Option3',
-          color: true
-        })
-      pre
-        code
-        |+checkboxColor({
-        |   checked: true,
-        |   id: cl1,
-        |   text: 'Option1'
-        |  color: true
-        |})
-        |+checkboxColor({
-        |   checked: false,
-        |   id: cl2,
-        |   text: 'Option1'
-        |   color: true
-        |})
-        |+checkboxColor({
-        |   checked: false,
-        |   id: cl3,
-        |   text: 'Option1'
-        |   color: true
-        |})
-  .col-md-6.col-12
-    .code-example
-      h3 Checkbox Inline Full Color
-      .demo.custom-demo
-        +checkboxColor({
-          checked: true,
-          id: 'cl-1',
-          text: 'Option1',
-          color: true
-        })(class="custom-checkbox--inline")
-        +checkboxColor({
-          checked: false,
-          id: 'cl-2',
-          text: 'Option2',
-          color: true
-        })(class="custom-checkbox--inline")
-        +checkboxColor({
-          checked: false,
-          id: 'cl-3',
-          text: 'Option3',
-          color: true
-        })(class="custom-checkbox--inline")
-      pre
-        code
-        |+checkboxColor({
-        |   checked: true,
-        |   id: cl-1,
-        |   text: 'Option1'
-        |   color: true
-        |})
-        |+checkboxColor({
-        |   checked: false,
-        |   id: cl-2,
-        |   text: 'Option1'
-        |   color: true
-        |})
-        |+checkboxColor({
-        |   checked: false,
-        |   id: cl-3,
-        |   text: 'Option1'
-        |   color: true
-        |})
-  
   

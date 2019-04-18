@@ -19,6 +19,10 @@
       width: 100%;
     }
   }
+  .custom-control-label {
+    overflow: visible;
+    margin-left: 17px;
+  }
 }
 
 .card {
@@ -57,7 +61,7 @@
       display: block;
       line-height: 20px;
       font-size: 1rem;
-      color: #5a5a5a;
+      color: $cl-gray7;
       margin-top: 11px;
       padding-bottom: 10px;
     }
@@ -79,3 +83,4 @@
 .card.card-primary {
   border-top: 3px solid $bg-primary;
 }
+

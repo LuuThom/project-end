@@ -30,6 +30,7 @@
       border-radius: 0;
       color: #404040;
       cursor: pointer;
+
       &:focus {
         border: 0;
       }
@@ -46,6 +47,7 @@
       background-color: transparent;
     }
   }
+
   .tab-pane,
   .tab-panel,
   .tab-content {
@@ -113,6 +115,7 @@
       outline: 0;
     }
   }
+
   .chat-window {
     position: absolute;
     left: 290px;
@@ -145,13 +148,16 @@
       height: 7px;
       position: relative;
       top: 5px;
+
       &.away {
         background-color: #f2c329;
       }
+
       &.offline {
         background-color: #e65a5a;
       }
     }
+
     .name {
       color: #404040;
       font-weight: 500;
@@ -165,12 +171,14 @@
     }
   }
 }
+
 .todo-content {
   height: 100%;
   display: table;
   table-layout: fixed;
   width: 100%;
 }
+
 .todo-inner,
 .tab-settings {
   height: 100%;
@@ -178,6 +186,7 @@
   flex-direction: column;
   padding: 10px 20px 0;
   overflow: hidden;
+
   h3 {
     display: block;
     font-size: 1.154rem;
@@ -189,39 +198,96 @@
     margin-bottom: 15px;
   }
 }
+
 .todo-list {
   list-style: none;
   padding: 4px 0 1px;
   margin-bottom: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
   .custom-control {
-    margin-bottom: 13px;
-    margin-right: 4px;
+    margin-top: .1875rem;
+    margin-bottom: 1.1105rem;
+    position: relative;
+    display: block;
+    padding-left: 0;
+    cursor: pointer;
+  }
+  .custom-control-label {
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    vertical-align: top;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    outline: 0;
+    cursor: pointer;
+    margin-left: 0;
+    padding-left: 25px;
+    padding-bottom: 2px;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 2px;
+      display: block;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+      font-size: 15px;
+      line-height: 1.2;
+      width: 1.38462rem;
+      height: 1.38462rem;
+    }
+    &:before {
+      top: 0;
+      left: 2px;
+      position: absolute;
+      border-radius: 3px;
+      margin: 0;
+      color: #4285f4;
+      display: block;
+      width: 1.38462rem;
+      height: 1.38462rem;
+      pointer-events: none;
+      content: '';
+      background-color: #fff;
+      border: #a1a1a1 solid 1px;
+    }
+  }
+  .custom-control-input:checked ~ .custom-control-label:after {
+    font-size: 15px;
+    line-height: 1.2;
   }
 }
+
 .todo-list > li .custom-control input[type='checkbox']:checked ~ .custom-control-label {
   text-decoration: line-through;
   color: #999;
 }
-.custom-control-label {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+
 .tab-settings-list {
   list-style: none;
   padding-left: 0;
   margin-bottom: 15px;
   line-height: 20px;
+
   li {
     margin: 0;
     padding: 5px 0;
     line-height: 24px;
     font-size: 1.077rem;
+
     .switch-button {
       float: right;
       margin-left: 5px;
     }
+
     .name {
       display: block;
       overflow: hidden;
@@ -230,13 +296,16 @@
     }
   }
 }
+
 .sidebar-show {
   right: 0;
 }
+
 .sidebar-left {
   height: 100%;
   margin-top: 61px;
   padding-bottom: 61px;
+  padding-top: 8px;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -245,6 +314,7 @@
   width: 230px;
   left: 0;
   border-right: 1px solid #e3e3e3;
+
   &:before {
     content: ' ';
     position: fixed;
@@ -256,18 +326,27 @@
     background-color: inherit;
     border-right: 1px solid #e3e3e3;
   }
+
   &-inner {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+  .sub-menu.child {
+    li {
+      padding-left: 11px;
+    }
+  }
 }
+
 .sidebar-nav {
   position: relative;
+
   .nav {
     display: flex;
     flex-direction: column;
+
     .divider {
       padding: 20px 20px 0;
       color: #7b7b7b;
@@ -278,6 +357,7 @@
     }
   }
 }
+
 .nav {
   &__link {
     display: block;
@@ -288,15 +368,18 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+
     &:hover {
       background-color: #f0f0f0;
     }
   }
+
   &__item.active .nav__link {
     padding-left: 20px;
     font-weight: 500;
     color: #4285f4;
   }
+
   &__item.parent > a:before {
     content: '\f2f2';
     float: right;
@@ -304,6 +387,7 @@
     font-size: 1.615rem;
     color: #b0b0b0;
   }
+
   .zmdi {
     line-height: 18px;
     font-size: 19px;
@@ -312,11 +396,13 @@
     text-align: center;
     vertical-align: middle;
   }
+
   .sub-menu {
     background-color: #eee;
     padding: 10px 0;
     list-style: none;
     line-height: 20px;
+
     .child {
       .nav__link {
         padding: 2px 15px 2px 49px;
@@ -328,6 +414,7 @@
         overflow: hidden;
         white-space: nowrap;
       }
+
       .badge {
         display: inline-block;
         border-radius: 2px;
@@ -342,15 +429,19 @@
     }
   }
 }
+
 .sidebar-progress {
   padding: 20px;
   cursor: pointer;
+
   &__data {
     color: #696969;
+
     .value {
       float: right;
     }
   }
+
   &__status {
     margin: 10px 0 0;
     height: 8px;

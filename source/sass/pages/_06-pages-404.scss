@@ -6,12 +6,15 @@
   &-container {
     text-align: center;
     margin-top: 100px;
+    .btn {
+      width: auto;
+    }
   }
   &-number {
-    color: #404040;
+    color: $cl-pri-hover;
     display: block;
     font-size: 11.54rem;
-    font-weight: 700;
+    font-weight: $font-weight-bolded;
     line-height: 240px;
     margin-bottom: 30px;
     max-height: 240px;
@@ -20,13 +23,13 @@
   }
   &-description {
     font-size: 2.308rem;
-    font-weight: 300;
+    font-weight: $font-weight-light;
     line-height: 32px;
     margin-bottom: 30px;
   }
   &-goback-text {
     font-size: 1.692rem;
-    font-weight: 300;
+    font-weight: $font-weight-light;
     margin-bottom: 30px;
     margin-top: 15px;
   }

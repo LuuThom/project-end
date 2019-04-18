@@ -4,65 +4,64 @@ block head
   +head('Beagle')
 
 block main
-  .be-content
-    .main-content.container-fluid
-      .login.signup
-        .card.card-primary
-          .card-header
-            img.login-img(src="images/logo-xx.png", alt="")
-            span.login-notice Please enter your user information.
-          .card-body
-            form(action="home.html" method="get")
-              span.login-title.pb-4 Sign Up
-              .form-group
+  .main-content.container-fluid
+    .login.signup
+      .card.card-primary
+        .card-header
+          img.login-img(src="images/logo-xx.png", alt="")
+          span.login-notice Please enter your user information.
+        .card-body
+          form(action="home.html" method="get")
+            span.login-title.pb-4 Sign Up
+            .form-group
+              +input-field({
+                id: 'username',
+                placeholder: 'Username'
+              })
+            .form-group
+              +input-field({
+                id: 'email',
+                placeholder: 'E-mail',
+                type: 'email'
+              })
+            .form-group.row.signup-password
+              .col-6
                 +input-field({
-                  id: 'username',
-                  placeholder: 'Username'
+                  id: 'pass',
+                  placeholder: 'Password',
+                  type: 'password'
                 })
-              .form-group
+              .col-6
                 +input-field({
-                  id: 'email',
-                  placeholder: 'E-mail',
-                  type: 'email'
+                  id: 'confirm',
+                  placeholder: 'Confirm',
+                  type: 'password'
                 })
-              .form-group.row.signup-password
-                .col-6
-                  +input-field({
-                    id: 'pass',
-                    placeholder: 'Password',
-                    type: 'password'
-                  })
-                .col-6
-                  +input-field({
-                    id: 'confirm',
-                    placeholder: 'Confirm',
-                    type: 'password'
-                  })
-              .form-group.pt-2
+            .form-group.pt-2
+              +buttons({
+                type: 'primary',
+                text: 'Sign Up',
+                size: 'xl'
+              })(class="btn-signup")
+            .title.pb-3 Or
+            .form-group.row.signup-social
+              .col-6
                 +buttons({
                   type: 'primary',
-                  text: 'Sign Up',
-                  size: 'xl'
-                })
-              .title.pb-3 Or
-              .form-group.row.signup-social
-                .col-6
-                  +buttons({
-                    type: 'primary',
-                    text: 'Facebook',
-                    size: 'lg',
-                    icon: 'facebook'
-                  })(class='btn--facebook')
-                .col-6
-                  +buttons({
-                    type: 'primary',
-                    text: 'Google Plus',
-                    size: 'lg',
-                    icon: 'google-plus'
-                  })(class='btn--google')
-              .form-group.signup-term
-                +checkbox({
-                  id: 'check1',
-                  label: 'By creating an account, you agree the terms and conditions.'
-                })
-        .footer © 2018 Your Company
+                  text: 'Facebook',
+                  size: 'lg',
+                  icon: 'facebook'
+                })(class='btn--facebook')
+              .col-6
+                +buttons({
+                  type: 'primary',
+                  text: 'Google Plus',
+                  size: 'lg',
+                  icon: 'google-plus'
+                })(class='btn--google')
+            .form-group.signup-term
+              +checkbox({
+                id: 'check1',
+                label: 'By creating an account, you agree the terms and conditions.'
+              })
+      .footer © 2018 Your Company

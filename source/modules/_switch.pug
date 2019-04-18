@@ -1,0 +1,16 @@
+mixin switch({id, checked, type, size, name})
+  .switch-button(
+    class= size ? `switch-button--${size}` : null
+    class= type ? `switch-button--${type}` : null
+  )
+    input.switch-button-input(
+      type= 'checkbox'
+      checked= (checked === true) ? true : false
+      id= id ? id : null
+      name= id ? id : null
+    )
+    span
+      label.label(
+        for= id ? id :null
+        class= size ? `label--${size}` : null
+      )

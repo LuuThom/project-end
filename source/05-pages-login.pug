@@ -4,44 +4,43 @@ block head
   +head('Beagle')
 
 block main
-  .be-content
-    .main-content.container-fluid
-      .login
-        .card.card-primary
-          .card-header
-            img.login-img(src="images/logo-xx.png", alt="")
-            span.login-notice Please enter your user information.
-          .card-body
-            form
-              .form-group
-                +input-field({
-                  id: 'inputEmail',
-                  placeholder: 'Username'
+  .main-content.container-fluid
+    .login
+      .card.card-primary
+        .card-header
+          img.login-img(src="images/logo-xx.png", alt="")
+          span.login-notice Please enter your user information.
+        .card-body
+          form
+            .form-group
+              +input-field({
+                id: 'inputEmail',
+                placeholder: 'Username'
+              })
+            .form-group
+              +input-field({
+                id: 'inputPassword',
+                placeholder: 'Password',
+                type: 'password'
+              })
+            .form-group.row.login-tools
+              .col-6.login-remember
+                +checkbox({
+                  id: 'remember',
+                  label: 'Remember Me'
+                })(class="custom-checkbox")
+              .col-6.login-forgot-password
+                a(href='08-pages-forgot-password.html') Forgot Password?
+            .form-group.login-submit.row
+              .col-6
+                +buttons({
+                  type: 'secondary',
+                  text: 'Register',
+                  size: 'xl'
                 })
-              .form-group
-                +input-field({
-                  id: 'inputPassword',
-                  placeholder: 'Password',
-                  type: 'password'
+              .col-6
+                +buttons({
+                  type: 'primary',
+                  text: 'Sign in',
+                  size: 'xl'
                 })
-              .form-group.row.login-tools
-                .col-6.login-remember
-                  +checkbox({
-                    id: 'remember',
-                    label: 'Remember Me'
-                  })(class="custom-checkbox")
-                .col-6.login-forgot-password
-                  a(href='08-pages-forgot-password.html') Forgot Password?
-              .form-group.login-submit.row
-                .col-6
-                  +buttons({
-                    type: 'secondary',
-                    text: 'Register',
-                    size: 'xl'
-                  })
-                .col-6
-                  +buttons({
-                    type: 'primary',
-                    text: 'Sign in',
-                    size: 'xl'
-                  })

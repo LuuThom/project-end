@@ -1,29 +1,15 @@
-mixin radio({id, name, checked, icon, typeInput, text})
-  label.custom-control.custom-radio()&attributes(attributes)
-    input.custom-control-input(
+mixin radio({id, name, checked, disabled, icon, typeInput, text, color, valid})
+  label.custom-control-radio(
+    class= icon ? `custom-control-radio-icon` : null
+  )&attributes(attributes)
+    input.custom-radio-input(
       id= id ? id : null
       type= 'radio'
       name= name ? name : null
       checked= (checked === true) ? true : false
+      disabled= (disabled === true) ? true : false
+      class= typeof valid !== 'undefined' ? ((valid==true) ? 'is--valid' : 'is--invalid') : null  
     )
-    span.custom-control-label()= text
+    span.custom-control-label(class= (color === true) ? `custom-control-color` : null)= text
       if icon
         i.zmdi(class= `zmdi-${icon}`)
-//- mixin selectInput({label, id, type, name, checked, breackpointLabel, breackpointInput, icon})
-//-   .form-group
-//-     label(
-//-       class= breackpointLabel ? breackpointLabel : null
-//-     )= label
-//-     div(class= breackpointInput ? breackpointInput :null)
-//-       .form-check.form-check-inline
-mixin inputRadio({id, typeRadio, typeInput})
-  .input-group-text
-    label.custom-control.custom-radio()&attributes(attributes)
-      input.custom-control-input(
-        id= id ? id : null
-        type= typeRadio ? 'radio' : null
-      )
-    span.custom-control-label
-  input.form-control(
-    type= typeInput ? typeInput : null
-  )

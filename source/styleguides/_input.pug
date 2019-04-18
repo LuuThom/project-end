@@ -3,6 +3,7 @@ h2 Basic Input
   .col-md-6.col-12
     .code-example
       .demo
+        h4 Input Email
         +input-field({
           label: 'Email address',
           id: 'inputEmail',
@@ -20,6 +21,7 @@ h2 Basic Input
   .col-md-6.col-12
     .code-example
       .demo
+        h4 Input Password
         +input-field({
           label:'Password',
           id:'inputPassword',
@@ -37,36 +39,7 @@ h2 Basic Input
   .col-md-6.col-12
     .code-example
       .demo
-        +input-field({
-          label:'Input Text',
-          id:'inputText',
-          type:'text'
-        })
-      pre
-        code
-        |+input-field({
-        |  label:'Input Text',
-        |  id:'inputText3',
-        |  type:'text'
-        |})
-  .col-md-6.col-12
-    .code-example
-      .demo
-        +input-field({
-          label:'Input Password',
-          id:'inputPassword',
-          type:'password'
-        })
-      pre
-        code
-        |+input-field({
-        |  label:'Input Password',
-        |  id:'inputPassword',
-        |  type:'password'
-        |})
-  .col-md-6.col-12
-    .code-example
-      .demo
+        h4 Input Placeholder 
         +input-field({
           label:'Placeholder Input',
           id:'inputPlaceholder',
@@ -84,6 +57,7 @@ h2 Basic Input
   .col-md-6.col-12
     .code-example
       .demo
+        h4 Input Disable
         +input-field({
           label:'Disabled Input',
           id:'inputDisabled',
@@ -101,9 +75,9 @@ h2 Basic Input
         |   placeholder: 'Disabled input text'
         |})
   .col-md-6.col-12
-    h4 Readonly Input
     .code-example
       .demo
+        h4 Readonly Input
         +input-field({
           label: 'Readonly Input',
           id: 'inputReadonly3',
@@ -138,18 +112,18 @@ h2 Input upload file
             text: 'Browse files...'
           })
         pre
-          codes
-          |+input-filed({
-          |   label:'Readonly Input',
-          |   id:'file',
-          |   type:'file',
-          |   name: 'file',
-          |   multipleCap: '{count} files selected',
-          |   multiple: true,
-          |   typeColor: `#{val}`,
-          |   icon: 'upload',
-          |   text: 'Browse files...'
-          |})
+          code
+          |  +input-field({
+          |    label:'Input File',
+          |    id:`file${index}`,
+          |    type:'file',
+          |    name: 'file',
+          |    multipleCap: '{count} files selected',
+          |    multiple: true,
+          |    typeColor: val,
+          |    icon: 'upload',
+          |    text: 'Browse files...'
+          |  })
 -
   var inputSize = [
     {

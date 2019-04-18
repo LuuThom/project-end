@@ -6,3 +6,56 @@
 body {
   height: auto;
 }
+
+.be-content.content-home {
+  top: 15px;
+}
+
+.sub-menu.child {
+  li {
+    padding-left: 11px;
+  }
+}
+
+.widget.widget-title {
+  canvas {
+    margin-top: 10%;
+  }
+
+  .data-info {
+    text-align: right;
+  }
+
+  .desc {
+    font-size: 1.077rem;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: $font-weight-base;
+  }
+
+  .value {
+    font-size: 1.693rem;
+    font-weight: $font-weight-light;
+
+    .indicator {
+      font-size: 1.923rem;
+      margin-right: 7px;
+      line-height: 24px;
+      vertical-align: middle;
+    }
+
+    .zmdi-chevron-right {
+      color: $bg-primary;
+    }
+
+    .zmdi-chevron-up {
+      color: $cl-valid;
+    }
+
+    .zmdi-chevron-down {
+      color: $bd-danger;
+    }
+  }
+}

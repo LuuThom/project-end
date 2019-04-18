@@ -5,12 +5,12 @@
 .display {
   &-heading {
     font-size: 40px;
-    font-weight: 100;
+    font-weight: $font-weight-xs;
     margin: 20px 0 15px;
   }
   &-description {
     font-size: 18px;
-    font-weight: 100;
+    font-weight: $font-weight-xs;
     line-height: 29px;
     margin: 0 0 50px;
   }
@@ -18,41 +18,41 @@
 .pricing-table {
   box-shadow: 0 0 4px 0 rgba($color-white, .04);
   border-radius: 3px;
-  border-top: 3px solid #c9c9c9;
+  border-top: 3px solid $cl-gray8;
   padding: 35px 20px;
-  background: #fff;
+  background: $color-white;
   text-align: center;
   margin: 0 0 20px;
   &-image {
     margin-bottom: 15px;
   }
   &-primary {
-    border-color: #4285f4;
+    border-color: $bg-primary;
     path {
-      fill: #4285f4;
+      fill: $bg-primary;
     }
   }
   &-warning {
-    border-color: #fbbc05;
+    border-color: $bg-warning;
     path {
-      fill: #fbbc05;
+      fill: $bg-warning;
     }
   }
   &-success {
-    border-color: #34a853;
+    border-color: $cl-valid;
     path {
-      fill: #34a853;
+      fill: $cl-valid;
     }
   }
   &-danger {
-    border-color: #ea4335;
+    border-color: $bd-danger;
     path {
-      fill: #ea4335;
+      fill: $bd-danger;
     }
   }
   &-title {
     font-size: 1.538rem;
-    font-weight: 300;
+    font-weight: $font-weight-light;
   }
   &-price {
     padding: 5px 0 20px;
@@ -66,13 +66,13 @@
     }
     .frecuency {
       font-size: 1.538rem;
-      font-weight: 300;
+      font-weight: $font-weight-light;
     }
   }
   &-features {
     li {
       font-size: 1.077rem;
-      font-weight: 300;
+      font-weight: $font-weight-light;
       line-height: 33px;
     }
   }
@@ -82,7 +82,7 @@
   }
   .card-divider {
     margin: 10px 0;
-    border-top: 1px solid #f2f2f2;
+    border-top: 1px solid $cl-white1;
     &-xl {
       margin: 20px 0;
     }

@@ -7,8 +7,8 @@ include ../_sidebar
 include ../_button
 include ../_input
 include ../_checkbox
-include ../_selectbox
 include ../_radio
+include ../_switch
 
 doctype html
 html(lang='en')
@@ -17,6 +17,6 @@ html(lang='en')
 
   body
     block body
-
+    a.scrollTop.js-scrollTop(href="#")
     block scripts
       script(src='js/main.js')

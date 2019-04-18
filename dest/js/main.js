@@ -55,7 +55,7 @@ $(function () {
       });
     }
   }
-  
+
   scrollbar(".js-list, .js-chat-section, .js-list, .sidebar-nav")
 
   // Js scrollbar chat
@@ -74,19 +74,38 @@ $(function () {
         $('.js-sidebar-show').removeClass('sidebar-show');
       }
     }
-    });
+  });
+
+  // scroll to top
+  var scrollTop = $('.js-scrollTop');
+  $(window).scroll(function () {
+    var topPos = $(this).scrollTop();
+    if (topPos > 100) {
+      $(scrollTop).fadeIn();
+
+    } else {
+      $(scrollTop).fadeOut();
+    }
+
+  });
+  $(scrollTop).click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+    return false;
+  });
   // sparkline
-  $('#spark1').sparkline([0, 5, 3, 7, 5, 10, 3, 6, 10], {
+  $('#spark1').sparkline([0, 5, 3, 7, 5, 10, 3, 6, 5, 10], {
     type: 'line',
     pointDot: false,
     spotColor: false,
     minSpotColor: false,
     maxSpotColor: false,
-    highlightLineColor: 'blue',
-    highlightSpotColor: 'blue',
+    lineColor: '#4285f4',
+    highlightLineColor: '#4285f4',
+    highlightSpotColor: '#4285f4',
     fillColor: false,
     width: '85',
     height: '35',
+    lineWidth: 1.15
   });
   $('#spark2').sparkline([5, 8, 7, 10, 9, 10, 8, 6, 4, 6, 8, 7, 6, 8], {
     type: 'bar',
@@ -99,39 +118,56 @@ $(function () {
     highlightColor: '#fbbc05',
     width: '81',
     height: '35',
+    barWidth: 3,
+    barSpacing: 3,
+    chartRangeMin: 0,
   });
   $('#spark3').sparkline([2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 6, 5, 4, 3, 4, 5, 6, 5, 4, 4, 5], {
     type: 'discrete',
-    lineColor: '#007f00',
     pointDot: false,
     spotColor: false,
     minSpotColor: false,
     maxSpotColor: false,
     fillColor: false,
+    width: "85",
+    height: "35",
+    lineHeight: 20,
+    lineColor: '#007f00',
     highlightColor: '#007f00',
-    width: '85',
-    height: '35',
-    lineHeight: '10',
     xwidth: 18
   });
-  $('#spark4').sparkline([0, 5, 3, 7, 5, 10, 3, 6, 10], {
+  $('#spark4').sparkline([2, 5, 3, 7, 5, 10, 3, 6, 5, 7], {
     type: 'line',
-    lineColor: 'red',
+    lineColor: '#e12717',
     pointDot: false,
     spotColor: false,
     minSpotColor: false,
     maxSpotColor: false,
     fillColor: false,
-    highlightSpotColor: 'red',
+    highlightSpotColor: '#e12717',
     width: '85',
     height: '35',
+    lineWidth: 1.15
   });
 
   // countup
-  // $('#number').counterUp({
-  //   delay: 10,
-  //   time: 1000
-  // });
+  $('.number').each(function () {
+    var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
+    var _suffix = $(this).data('suffix') ? $(this).data('suffix') : '';
+    $(this).prop('Counter', 0).animate({
+      Counter: $(this).text()
+    },
+      {
+        duration: 3000,
+        step: function (func) {
+          if (_suffix.length > 0) {
+            $(this).text(parseFloat(func).toFixed(size) + `${_suffix}`);
+          } else {
+            $(this).text(parseFloat(func).toFixed(size));
+          }
+        }
+      });
+  });
 
 
   // custom file

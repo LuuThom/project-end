@@ -363,11 +363,11 @@
             "link": "level1",
             "dropdown": [
               {
-                "child": "Level 2",
+                "item": "Level 2",
                 "link": "#!"
               },
               {
-                "child": "level 2",
+                "item": "level 2",
                 "link": "level2",
                 "dropdownChild": [
                   {
@@ -384,15 +384,15 @@
           },
           {
             "item": "Level 1",
-            "link": "level1.1",
+            "link": "level3",
             "dropdown": [
               {
-                "child": "Level 2",
+                "item": "Level 2",
                 "link": "#!"
               },
               {
-                "child": "level 2",
-                "link": "level1.2",
+                "item": "level 2",
+                "link": "level4",
                 "dropdownChild": [
                   {
                     "item": "Level 3",

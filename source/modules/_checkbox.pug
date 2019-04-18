@@ -1,32 +1,17 @@
 mixin checkbox({id, type, label, checked, disabled, valid, color, lineThrough})
-  .custom-control()&attributes(attributes)
-      input.custom-control-input(
-        type= type ? type : "checkbox"
-        id= id ? id : null
-        checked= (checked === true) ? true : false
-        disabled= (disabled === true) ? true : false
-        class= (color === true) ? 'custom-control' : null
-        class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
-        class= lineThrough ? `custom-control--input-line` : null
-    )
-      label.custom-control-label(
-        for = id ? id : null 
-      )= label
-
-mixin switch({id, checked, type, size, name})
-  .switch-button(
-    class= size ? `switch-button--${size}` : null
-    class= type ? `switch-button--${type}` : null
-  )
-    input.onoffswitch-checkbox(
-      type= 'checkbox'
-      checked= (checked === true) ? true : false
+  .custom-control-checkbox()&attributes(attributes)
+    if icon
+      i(class= '${icon}')
+    input.custom-checkbox-input(
+      type= type ? type : "checkbox"
       id= id ? id : null
-      name= id ? id : null
+      checked= (checked === true) ? true : false
+      disabled= (disabled === true) ? true : false
+      class= (color === true) ? 'custom-control' : null
+      class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
+      class= lineThrough ? `custom-control--input-line` : null
     )
-    label.onoffswitch-label(
-      for= id ? id :null
-      class= size ? `label--${size}` : null
-    )
-      span.onoffswitch-inner
-      span.onoffswitch-switch
+    if label
+      label.custom-checkbox-label(
+        for = id ? id : null
+      )= label
