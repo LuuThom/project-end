@@ -7,9 +7,9 @@ mixin menu(page, link)
       if (typeof val.link === "undefined")
         li.divider= val.item
       else
-        li.nav__item.parent(
+        li.nav__item(
           class= (val.link === page) ? "active" : null
-          class= val.sub ? "has-child" : null
+          class= val.sub ? "parent" : null
         )
           a.nav__link(
             href= (val.collapse === false) ? (val.link ? val.link : "javascript:void(0")  : (val.link ? `#${val.link}` : "javascript:void(0)")

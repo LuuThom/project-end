@@ -17165,7 +17165,7 @@ body {
   margin-top: 61px;
   padding-bottom: 61px;
   width: 290px;
-  height: calc(100% - 61px);
+  height: calc(100% - 50px);
   right: -290px;
   top: 0;
   bottom: 0;
@@ -17257,9 +17257,126 @@ body {
       font-size: 1.538rem;
       margin-top: -10px;
       cursor: pointer; }
-  .sidebarRight .chat-window {
+
+.chat-window {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%;
+  position: absolute;
+  left: 290px; }
+  .chat-window .title {
+    padding: 20px 10px;
+    padding-right: 20px;
+    overflow: hidden; }
+  .chat-window .user {
+    display: inline-block;
+    float: right;
+    text-align: right;
+    line-height: 13px; }
+    .chat-window .user img {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      float: right;
+      margin-left: 10px; }
+    .chat-window .user h2 {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: 1.154rem;
+      font-weight: 400;
+      border: 0; }
+    .chat-window .user span {
+      display: block;
+      font-size: .9231rem;
+      color: #999; }
+    .chat-window .user .return {
+      font-size: 2.077rem;
+      width: 27px;
+      text-align: center;
+      color: #b3b3b3;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer; }
+  .chat-window .return {
+    font-size: 2.077rem;
+    width: 27px;
+    text-align: center;
+    color: #b3b3b3;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer; }
+  .chat-window .chat-messages {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1rem;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    .chat-window .chat-messages .block-messages {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      outline: 0; }
+    .chat-window .chat-messages .content {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      padding-top: 20px; }
+    .chat-window .chat-messages li {
+      display: block;
+      list-style: none;
+      padding: 2px 16px; }
+    .chat-window .chat-messages .smg {
+      position: relative;
+      display: inline-block;
+      background-color: #4c8bf5;
+      color: #fff;
+      font-size: 1rem;
+      padding: 6px 8px;
+      border-radius: 3px;
+      white-space: normal;
+      text-align: left;
+      margin-left: 40px; }
+    .chat-window .chat-messages li.friend .smg {
+      background-color: #f0f0f0;
+      color: #595858;
+      margin-left: 0;
+      margin-right: 40px; }
+    .chat-window .chat-messages li.self {
+      text-align: right; }
+  .chat-window .chat-input .input-wrapper {
+    border-top: 1px solid #f2f2f2;
+    position: relative; }
+  .chat-window .chat-input .send-camera {
+    left: 15px;
+    font-size: 1.692rem;
+    top: 50%;
+    right: auto; }
+  .chat-window .chat-input i {
     position: absolute;
-    left: 290px; }
+    color: #aaa;
+    right: 15px;
+    top: 50%;
+    font-size: 1.538rem;
+    margin-top: -10px;
+    cursor: pointer; }
+  .chat-window .chat-input input {
+    border: 0;
+    background-color: #fafafa;
+    color: #b3b3b3;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 15px 20px;
+    padding-left: 42px;
+    padding-right: 40px;
+    outline: 0; }
 
 .user a {
   display: block;
@@ -17298,9 +17415,33 @@ body {
 
 .todo-content {
   height: 100%;
-  display: table;
-  table-layout: fixed;
-  width: 100%; }
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .todo-content .todo-input {
+    position: relative;
+    bottom: 0;
+    border-top: 1px solid #f2f2f2; }
+    .todo-content .todo-input input {
+      border: 0;
+      color: #404040;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 15px 20px;
+      outline: 0; }
+    .todo-content .todo-input i {
+      position: absolute;
+      color: #aaa;
+      right: 15px;
+      top: 50%;
+      font-size: 1.538rem;
+      margin-top: -10px;
+      cursor: pointer; }
 
 .todo-inner,
 .tab-settings {
@@ -17465,19 +17606,24 @@ body {
   line-height: 38px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap; }
-  .nav__link:hover {
-    background-color: #f0f0f0; }
+  white-space: nowrap;
+  transition: transform .5s; }
+  .nav__link:hover, .nav__link:focus {
+    background-color: #f0f0f0;
+    color: #696969; }
+  .nav__link[aria-expanded='true']:before {
+    transition: transform .5s;
+    transform: rotate(180deg); }
 
 .nav__item.active .nav__link {
   padding-left: 20px;
-  font-weight: 500;
   color: #4285f4; }
 
 .nav__item.parent > a:before {
   content: '\f2f2';
   float: right;
   font-family: "Material-Design-Iconic-Font";
+  transition: transform .5s;
   font-size: 1.615rem;
   color: #b0b0b0; }
 
@@ -17505,6 +17651,8 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap; }
+  .nav .sub-menu .child .nav__link.active {
+    color: #4285f4; }
   .nav .sub-menu .child .badge {
     display: inline-block;
     border-radius: 2px;
@@ -18253,6 +18401,238 @@ body {
     color: #34a853; }
   .widget.widget-title .value .zmdi-chevron-down {
     color: #ea4335; }
+
+.tooltip-chart {
+  display: -ms-flexbox;
+  display: flex; }
+
+.tooltip-chart .content-chart {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 12px 5px;
+  position: relative; }
+
+.tooltip-chart .content-chart:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: -5px;
+  margin-left: 50%;
+  left: -5px; }
+
+.tooltip-chart .content-chart.arrow-none:before {
+  display: none; }
+
+.tooltip-chart .content-chart span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: -2px;
+  text-align: center;
+  color: #bad3fb; }
+
+.tooltip-chart .content-chart .label {
+  font-size: 11px;
+  text-align: center; }
+
+.tooltip-chart .content-chart .label .label-x,
+.tooltip-chart .content-chart .label .label-y {
+  display: inline-block; }
+
+.widget {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .widget.loading {
+    position: relative; }
+  .widget.widget-fullwidth {
+    padding: 0; }
+    .widget.widget-fullwidth .widget-head {
+      padding: 20px 20px 10px;
+      margin-bottom: 0; }
+  .widget .tools {
+    float: right;
+    margin-left: 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .widget .tools .dropdown-toggle:after {
+      display: none; }
+    .widget .tools .icon {
+      display: inline-block;
+      font-size: 1.538rem;
+      line-height: 25px;
+      vertical-align: middle;
+      cursor: pointer;
+      color: #bababa;
+      min-width: 1.538rem;
+      text-align: center; }
+      .widget .tools .icon:hover {
+        color: #a6a6a6; }
+  .widget .button-toolbar {
+    float: right; }
+    .widget .button-toolbar .btn-group {
+      margin-right: 7px; }
+    .widget .button-toolbar .btn {
+      border-color: #dbdbdb;
+      outline: 0; }
+    .widget .button-toolbar .btn:hover {
+      color: #272727;
+      border-color: #bababa;
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.06); }
+    .widget .button-toolbar .btn:focus,
+    .widget .button-toolbar .btn:active,
+    .widget .button-toolbar .btn.active {
+      color: #272727;
+      background-color: #e3e3e3;
+      border-color: #bababa;
+      box-shadow: none;
+      outline: 0; }
+  .widget .widget-head .title {
+    display: block;
+    font-size: 1.385rem;
+    font-weight: 300;
+    float: left; }
+  .widget-counter-group {
+    padding: 0 20px 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
+    .widget-counter-group .counter-big {
+      text-align: right;
+      margin-left: 22px; }
+    .widget-counter-group .value {
+      display: block;
+      font-size: 2.077rem;
+      line-height: 2.077rem;
+      font-weight: 300;
+      margin-bottom: 5px; }
+    .widget-counter-group .desc {
+      text-transform: uppercase;
+      font-size: .8462rem;
+      color: #9d9d9d; }
+  .widget .chart-legend-horizontal {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    padding-left: 20px;
+    margin-bottom: 0;
+    list-style: none;
+    line-height: 14px; }
+    .widget .chart-legend-horizontal li {
+      display: inline-block;
+      margin-right: 14px; }
+    .widget .chart-legend-horizontal .chart-color {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      margin-right: 4px; }
+    .widget .chart-legend-horizontal .chart-color1 {
+      background-color: #4285f4; }
+    .widget .chart-legend-horizontal .chart-color2 {
+      background-color: #81adf8; }
+    .widget .chart-legend-horizontal .chart-color3 {
+      background-color: #a2c3fa; }
+  .widget .widget-chart-container {
+    position: relative; }
+  .widget .chart-pie-counter {
+    display: block;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    line-height: 3.846rem;
+    margin-top: 0;
+    font-size: 3.846rem;
+    font-weight: 300; }
+
+.ui-datepicker {
+  position: relative;
+  margin: 10px 0 32px; }
+
+.ui-datepicker .ui-datepicker-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 5px;
+  margin-bottom: 20px; }
+
+.ui-datepicker table.ui-datepicker-calendar {
+  width: 100%; }
+
+.ui-datepicker table.ui-datepicker-calendar tr td:first-child,
+.ui-datepicker table.ui-datepicker-calendar tr th:first-child {
+  padding-left: 0; }
+
+.ui-datepicker table.ui-datepicker-calendar tr td:last-child,
+.ui-datepicker table.ui-datepicker-calendar tr th:last-child {
+  padding-right: 0; }
+
+.ui-datepicker table.ui-datepicker-calendar th {
+  border: 0;
+  padding: 3px;
+  text-align: center;
+  font-weight: 400;
+  color: #404040; }
+
+.ui-datepicker table.ui-datepicker-calendar th span {
+  font-size: 1.077rem; }
+
+.ui-datepicker table.ui-datepicker-calendar tr td {
+  border: 0;
+  padding: 6px 0;
+  text-align: center; }
+
+.ui-datepicker table.ui-datepicker-calendar tr td a {
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #737373;
+  width: 27px;
+  height: 27px;
+  line-height: 27px; }
+
+.ui-datepicker table.ui-datepicker-calendar tr td a:hover {
+  color: #404040; }
+
+.ui-datepicker table.ui-datepicker-calendar tr td a.ui-state-active,
+.ui-datepicker table.ui-datepicker-calendar tr td a.ui-state-highlight {
+  background-color: #e6e6e6;
+  border-radius: 50%; }
+
+.ui-datepicker table.ui-datepicker-calendar tr td a.ui-state-highlight {
+  background-color: #4285f4;
+  color: #fff; }
+
+.ui-datepicker table.ui-datepicker-calendar tr td.has-events a {
+  position: relative;
+  background-color: #ebf2fe;
+  border-radius: 50%; }
+
+.ui-datepicker table.ui-datepicker-calendar tr td.ui-datepicker-other-month a {
+  color: #ccc; }
+
+.ui-datepicker table.ui-datepicker-calendar tr td.ui-datepicker-other-month a.ui-state-highlight {
+  color: #fff; }
+
+.ui-datepicker.ui-datepicker-6rows {
+  margin-bottom: 28px; }
+
+.ui-datepicker.ui-datepicker-6rows table.ui-datepicker-calendar tr td {
+  padding: 3px 0; }
 
 .be-content {
   top: 63px; }

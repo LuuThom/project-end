@@ -1,12 +1,12 @@
 extends modules/layout/_page-default
-                               
+                           
 block head
   +head('Beagle')
 
 block main
   +header('Blank Page')
   +sidebarRight()
-  +sidebarLeft("home.html")
+  +sidebarLeft('pages','01-blankpage.html')
   h1 Homepage
   .be-content
     .main-content.container-fluid

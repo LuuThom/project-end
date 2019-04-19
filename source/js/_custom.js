@@ -1,4 +1,25 @@
 $(function () {
+
+  // datepicker
+  if ($("#calendar").length > 0) {
+    var p = new Date, h = p.getFullYear(), f = p.getMonth(), g = [h + "-" + (f + 1) + "-16", h + "-" + (f + 1) + "-20"]
+    $("#calendar").datepicker({
+      showOtherMonths: !0,
+      selectOtherMonths: !0,
+      beforeShowDay: function (e) {
+        var t = e.getMonth(),
+          o = e.getDate(),
+          i = e.getFullYear();
+        return -1 != $.inArray(i + "-" + (t + 1) + "-" + o, g) ? [!0, "has-events", "This day has events!"] : [!0, "", ""]
+      },
+      afterShow: function (e) {
+        var t;
+        t = e.dpDiv, 6 == $("tbody tr", t).length ? t.addClass("ui-datepicker-6rows") : t.removeClass("ui-datepicker-6rows")
+      }
+    });
+  }
+
+
   $('.datetimepicker').datetimepicker();
   //slider
   $('#slide1').slider({
@@ -44,6 +65,23 @@ $(function () {
     }
   });
 
+  // show chat window
+  $('.js-user-chat').on('click', function () {
+    $('.js-chat-window').animate({
+      left: '0'
+    }, 300);
+    $('.js-chat-contact').animate({
+      left: '-290px'
+    }, 300);
+  })
+  $('.js-chat-back').on('click', function () {
+    $('.js-chat-window').animate({
+      left: '290px'
+    }, 300);
+    $('.js-chat-contact').animate({
+      left: '0'
+    }, 300);
+  })
   // scroll to top
   var scrollTop = $('.js-scrollTop');
   $(window).scroll(function () {
@@ -154,30 +192,31 @@ $(function () {
       $('.option-list, .search-box').hide();
     }
   });
-  $('.select').click(function (event) {
-    //$('.option-list, .search-box').hide();
-    $(this).closest('.dropdown-select').find('.option-list, .search-box').toggle();
-    $('.option-list a').click(function () {
-      var select = $(this).text();
-      $(this).closest('.dropdown-select').children('.select').text(select);
-      $('.option-list, .search-box').hide();
-    });
+  //resize window
+  $(window).on('load resize', function () {
+    chartcustom('#main-chart');
+    chart_pie('#top-sales');
   });
-  //Search
-  $('.seach-control').keyup(function () {
-    var val = $(this).val().toLowerCase();
-    var list = $(this).closest('.dropdown-select').find('li')
-    list.each(function () {
-      var text = $(this).text().toLowerCase();
-      if (text.indexOf(val) == -1) {
-        $(this).hide();
-      }
-      else {
-        $(this).show();
-      }
-
-    })
-
-  });
+  //map 
+  $("#map").vectorMap({
+    map: "world_en",
+    backgroundColor: null,
+    color: "#4285f4",
+    hoverOpacity: .7,
+    selectedColor: "#4285f4",
+    enableZoom: !0,
+    showTooltip: !0,
+    values: {
+      ru: "14",
+      us: "14",
+      ca: "10",
+      br: "10",
+      au: "11",
+      uk: "3",
+      cn: "12"
+    },
+    scaleColors: ["#4285f4", "#71a3f6"],
+    normalizeFunction: "polynomial"
+  })
 
 });

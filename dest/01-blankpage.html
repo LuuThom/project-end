@@ -96,30 +96,30 @@
         <div class="tab-panel">
           <div class="tab-content">
             <div class="tab-pane tab-chat active" id="tab1" role="tabpanel">
-              <div class="chat-contacts">
+              <div class="chat-contacts js-chat-contact">
                 <div class="chat-section js-chat-section">
                   <div class="chat-content">
                     <h2>Recent</h2>
                     <div class="contact-list contact-list-recent">
-                      <div class="user"><a href="#"><img src="images/avatar1.png" alt="Avatar" />
+                      <div class="user js-user-chat"><a href="#"><img src="images/avatar1.png" alt="Avatar" />
                           <div class="user-data"><span class="status away"></span><span class="name">Claire Sassu</span><span class="message">Can you share the...</span></div>
                         </a></div>
-                      <div class="user"><a href="#"><img src="images/avatar2.png" alt="Avatar" />
+                      <div class="user js-user-chat"><a href="#"><img src="images/avatar2.png" alt="Avatar" />
                           <div class="user-data"><span class="status"></span><span class="name">Maggie jackson</span><span class="message">I confirmed the info.</span></div>
                         </a></div>
-                      <div class="user"><a href="#"><img src="images/avatar3.png" alt="Avatar" />
+                      <div class="user js-user-chat"><a href="#"><img src="images/avatar3.png" alt="Avatar" />
                           <div class="user-data"><span class="status offline"></span><span class="name">Joel King </span><span class="message">Ready for the meeti...</span></div>
                         </a></div>
                     </div>
                     <h2>Contact</h2>
                     <div class="contact-list">
-                      <div class="user"><a href="#"><img src="images/avatar4.png" alt="Avatar" />
+                      <div class="user js-user-chat"><a href="#"><img src="images/avatar4.png" alt="Avatar" />
                           <div class="user-data"><span class="status"></span><span class="name">Mike Bolthort</span></div>
                         </a></div>
-                      <div class="user"><a href="#"><img src="images/avatar5.png" alt="Avatar" />
+                      <div class="user js-user-chat"><a href="#"><img src="images/avatar5.png" alt="Avatar" />
                           <div class="user-data"><span class="status"></span><span class="name">Maggie jackson</span></div>
                         </a></div>
-                      <div class="user"><a href="#"><img src="images/avatar3.png" alt="Avatar" />
+                      <div class="user js-user-chat"><a href="#"><img src="images/avatar3.png" alt="Avatar" />
                           <div class="user-data"><span class="status offline"></span><span class="name">Jhon Voltemar</span></div>
                         </a></div>
                     </div>
@@ -129,14 +129,14 @@
                   <input class="form__control input-chat" id="chatsearch" type="text" placeholder="Search..." name="q" /><i class="zmdi zmdi-search"></i>
                 </div>
               </div>
-              <div class="chat-window">
+              <div class="chat-window js-chat-window">
                 <div class="title">
                   <div class="user"><img src="images/avatar2.png" alt="" />
                     <h2>Maggie jackson</h2><span>Active 1h ago</span>
-                  </div><i class="icon return zmdi zmdi-chevron-left"></i>
+                  </div><i class="icon return zmdi zmdi-chevron-left js-chat-back"></i>
                 </div>
                 <div class="chat-messages">
-                  <div class="block-messages ps ps--active-y">
+                  <div class="block-messages js-chat-window">
                     <div class="content">
                       <ul>
                         <li class="friend">
@@ -158,8 +158,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="chat-input"><i class="zmdi zmdi-camera send-camera"></i>
-                  <div class="input-wrapper">
+                <div class="chat-input">
+                  <div class="input-wrapper"><i class="zmdi zmdi-camera send-camera"></i>
                     <input class="form__control" type="text" placeholder="Message..." name="q" autocomplete="off" /><i class="zmdi zmdi-mail-send send-msg"></i>
                   </div>
                 </div>
@@ -171,45 +171,46 @@
                   <h3>Today</h3>
                   <ul class="todo-list">
                     <li>
-                      <div class="custom-control-checkbox">
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
                         <input class="custom-checkbox-input custom-control--input-line" type="checkbox" id="check1" checked="checked" />
                         <label class="custom-checkbox-label" for="check1">Initialize the project</label>
                       </div>
                     </li>
                     <li>
-                      <div class="custom-control-checkbox">
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
                         <input class="custom-checkbox-input custom-control--input-line" type="checkbox" id="check2" />
                         <label class="custom-checkbox-label" for="check2">Create the main structure</label>
                       </div>
                     </li>
                     <li>
-                      <div class="custom-control-checkbox">
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
                         <input class="custom-checkbox-input custom-control--input-line" type="checkbox" id="check3" />
                         <label class="custom-checkbox-label" for="check3">Updates changes to GitHub</label>
                       </div>
                     </li>
                   </ul>
+                  <h3>Tomorrow</h3>
                   <ul class="todo-list">
                     <li>
-                      <div class="custom-control-checkbox">
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
                         <input class="custom-checkbox-input custom-control--input-line" type="checkbox" id="check4" />
                         <label class="custom-checkbox-label" for="check4">Initialize the project</label>
                       </div>
                     </li>
                     <li>
-                      <div class="custom-control-checkbox">
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
                         <input class="custom-checkbox-input custom-control--input-line" type="checkbox" id="check5" />
                         <label class="custom-checkbox-label" for="check5">Create the main structure</label>
                       </div>
                     </li>
                     <li>
-                      <div class="custom-control-checkbox">
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
                         <input class="custom-checkbox-input custom-control--input-line" type="checkbox" id="check6" />
                         <label class="custom-checkbox-label" for="check6">Updates changes to GitHub</label>
                       </div>
                     </li>
                     <li>
-                      <div class="custom-control-checkbox" title="This task is too long to be displayed in a normal space!">
+                      <div class="custom-control-checkbox" title="This task is too long to be displayed in a normal space!"><i class="zmdi zmdi-delete"></i>
                         <input class="custom-checkbox-input custom-control--input-line" type="checkbox" id="check7" />
                         <label class="custom-checkbox-label" for="check7">This task is too long to be displayed in a normal space!</label>
                       </div>
@@ -291,9 +292,9 @@
         <div class="sidebar-nav">
           <ul class="nav">
             <li class="divider">Menu</li>
-            <li class="nav__item parent active"><a class="nav__link" href="home.html"><i class="zmdi zmdi-home"></i><span class="nav__text">Dashboard</span></a>
+            <li class="nav__item"><a class="nav__link" href="home.html"><i class="zmdi zmdi-home"></i><span class="nav__text">Dashboard</span></a>
             </li>
-            <li class="nav__item parent has-child"><a class="nav__link" href="#uielements" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-face"></i><span class="nav__text">UI Elements</span></a>
+            <li class="nav__item parent"><a class="nav__link" href="#uielements" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-face"></i><span class="nav__text">UI Elements</span></a>
               <div class="collapse js-collapse01" id="uielements">
                 <ul class="sub-menu parent">
                   <li class="nav__item child"><a class="nav__link" href="ui-alerts.html"><span class="nav__text">Alerts</span></a>
@@ -327,7 +328,7 @@
                 </ul>
               </div>
             </li>
-            <li class="nav__item parent has-child"><a class="nav__link" href="#chart" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-chart-donut"></i><span class="nav__text">Chart</span></a>
+            <li class="nav__item parent"><a class="nav__link" href="#chart" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-chart-donut"></i><span class="nav__text">Chart</span></a>
               <div class="collapse js-collapse01" id="chart">
                 <ul class="sub-menu parent">
                   <li class="nav__item child"><a class="nav__link" href="charts-flot.html"><span class="nav__text">Flot</span></a>
@@ -341,7 +342,7 @@
                 </ul>
               </div>
             </li>
-            <li class="nav__item parent has-child"><a class="nav__link" href="#forms" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-dot-circle"></i><span class="nav__text">Forms</span></a>
+            <li class="nav__item parent"><a class="nav__link" href="#forms" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-dot-circle"></i><span class="nav__text">Forms</span></a>
               <div class="collapse js-collapse01" id="forms">
                 <ul class="sub-menu parent">
                   <li class="nav__item child"><a class="nav__link" href="form-elements.html"><span class="nav__text">Element</span></a>
@@ -361,7 +362,7 @@
                 </ul>
               </div>
             </li>
-            <li class="nav__item parent has-child"><a class="nav__link" href="#tables" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-border-all"></i><span class="nav__text">Tables</span></a>
+            <li class="nav__item parent"><a class="nav__link" href="#tables" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-border-all"></i><span class="nav__text">Tables</span></a>
               <div class="collapse js-collapse01" id="tables">
                 <ul class="sub-menu parent">
                   <li class="nav__item child"><a class="nav__link" href="tables-general.html"><span class="nav__text">General</span></a>
@@ -373,10 +374,10 @@
                 </ul>
               </div>
             </li>
-            <li class="nav__item parent has-child"><a class="nav__link" href="#pages" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-layers"></i><span class="nav__text">Pages</span></a>
-              <div class="collapse js-collapse01" id="pages">
+            <li class="nav__item active parent"><a class="nav__link" href="#pages" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-layers"></i><span class="nav__text">Pages</span></a>
+              <div class="collapse js-collapse01 show" id="pages">
                 <ul class="sub-menu parent">
-                  <li class="nav__item child"><a class="nav__link" href="01-blankpage.html"><span class="nav__text">Blank Page</span></a>
+                  <li class="nav__item child"><a class="nav__link active" href="01-blankpage.html"><span class="nav__text">Blank Page</span></a>
                   </li>
                   <li class="nav__item child"><a class="nav__link" href="02-pages-blank-header.html"><span class="nav__text">Blank Page Header</span></a>
                   </li>
@@ -418,7 +419,7 @@
               </div>
             </li>
             <li class="divider">Featured</li>
-            <li class="nav__item parent has-child"><a class="nav__link" href="#email" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-inbox"></i><span class="nav__text">Email</span></a>
+            <li class="nav__item parent"><a class="nav__link" href="#email" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-inbox"></i><span class="nav__text">Email</span></a>
               <div class="collapse js-collapse01" id="email">
                 <ul class="sub-menu parent">
                   <li class="nav__item child"><a class="nav__link" href="#!"><span class="nav__text">Inbox</span></a>
@@ -430,7 +431,7 @@
                 </ul>
               </div>
             </li>
-            <li class="nav__item parent has-child"><a class="nav__link" href="#layouts" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-view-web"></i><span class="nav__text">Layouts</span></a>
+            <li class="nav__item parent"><a class="nav__link" href="#layouts" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-view-web"></i><span class="nav__text">Layouts</span></a>
               <div class="collapse js-collapse01" id="layouts">
                 <ul class="sub-menu parent">
                   <li class="nav__item child"><a class="nav__link" href="#!"><span class="nav__text">Primary Header</span></a>
@@ -466,7 +467,7 @@
                 </ul>
               </div>
             </li>
-            <li class="nav__item parent has-child"><a class="nav__link" href="#maps" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-pin"></i><span class="nav__text">Maps</span></a>
+            <li class="nav__item parent"><a class="nav__link" href="#maps" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-pin"></i><span class="nav__text">Maps</span></a>
               <div class="collapse js-collapse01" id="maps">
                 <ul class="sub-menu parent">
                   <li class="nav__item child"><a class="nav__link" href="#!"><span class="nav__text">Google Maps</span></a>
@@ -476,7 +477,7 @@
                 </ul>
               </div>
             </li>
-            <li class="nav__item parent has-child"><a class="nav__link" href="#menu-levels" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-folder"></i><span class="nav__text">Menu Levels</span></a>
+            <li class="nav__item parent"><a class="nav__link" href="#menu-levels" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-folder"></i><span class="nav__text">Menu Levels</span></a>
               <div class="collapse js-collapse01" id="menu-levels">
                 <ul class="sub-menu parent">
                   <li class="nav__item child has-child"><a class="nav__link" href="#level1" data-toggle="collapse" aria-expanded="false"><span class="nav__text">Level 1</span></a>
@@ -514,7 +515,7 @@
                 </ul>
               </div>
             </li>
-            <li class="nav__item parent"><a class="nav__link" href="#documentation" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-book"></i><span class="nav__text">Documentation</span></a>
+            <li class="nav__item"><a class="nav__link" href="#documentation" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-book"></i><span class="nav__text">Documentation</span></a>
             </li>
           </ul>
         </div>

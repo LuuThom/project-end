@@ -1,5 +1,5 @@
 extends modules/layout/_page-default
-   
+                         
 block head
   +head('Home')
 block main
@@ -46,3 +46,92 @@ block main
               .value
                 span.indicator.indicator-equal.zmdi.zmdi-chevron-down
                 span.number(data-toggle= "counter" data-end= "113") 113
+      .row
+        .col-md-12
+          .widget.widget-fullwidth.loading
+            .widget-head
+              .tools
+                .dropdown
+                  a.dropdown-toggle(data-toggle="dropdown" aria-expanded="false")
+                    span.icon-zmdi.zmdi-more-vert.d-inline-block.d-md-none
+                  .dropdown-menu(role="menu")
+                    a.dropdown-item(href="#") Week
+                    a.dropdown-item(href="#") Month
+                    a.dropdown-item(href="#") Year
+                    .dropdown-divider
+                    a.dropdown-item(href="#") Today
+                span.icon.zmdi.zmdi-chevron-down
+                span.icon.toggle-loading.zmdi.zmdi-refresh-sync
+                span.icon.zmdi.zmdi-close
+              .button-toolbar.d-none.d-md-block
+                .btn-group
+                  +buttons({
+                  type: 'secondary',
+                  text: 'Week'
+                  })
+                  +buttons({
+                    type: 'secondary',
+                    text: 'Month'
+                  })(class= 'active')
+                  +buttons({
+                    type: 'secondary',
+                    text: 'Year'
+                  })
+                +buttons({
+                  type: 'secondary',
+                  text: 'Today'
+                })
+              span.title Recent Movement
+            .widget-chart-container
+              .widget-chart-info
+                ul.chart-legend-horizontal
+                  li
+                    span.chart-color.chart-color1
+                    | Purchase
+                  li
+                    span.chart-color.chart-color2
+                    | Plans
+                  li
+                    span.chart-color.chart-color3
+                    | Services
+              .widget-counter-group.widget-counter-group-right
+                .counter.counter-big
+                  span.value 25%
+                  span.desc Purchase
+                .counter.counter-big
+                  span.value 5%
+                  span.desc Plans
+                .counter.counter-big
+                  span.value 5%
+                  span.desc Services
+              #main-chart(style="height:260px")
+            .spinner
+              svg(width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://-www.w3.org/2000/svg")
+                circle.circle(fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30")
+      .row
+        .col-lg-4.col-12
+          .widget.loading
+            .widget-head
+              .title Top Sales
+              .tools
+                span.icon.zmdi.zmdi-chevron-down
+                span.icon.toggle-loading.zmdi.zmdi-refresh-sync
+                span.icon.zmdi.zmdi-close
+            .widget-chart-container
+              #top-sales(style="height:178px")
+              .chart-pie-counter 36
+            .chart-legend
+              .chart-legend-color
+                span.text Premium Purchases
+                span.count 125
+              .chart-legend-color
+                span.text Standard Plans
+                span.count 1569
+              .chart-legend-color
+                span.text Services
+                span.count 824
+        .col-lg-4.col-12
+          #calendar
+        .col-6
+          #map(style="height: 265px")
+

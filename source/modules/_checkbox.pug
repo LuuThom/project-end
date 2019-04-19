@@ -1,7 +1,7 @@
-mixin checkbox({id, type, label, checked, disabled, valid, color, lineThrough})
+mixin checkbox({id, type, label, checked, disabled, valid, color, lineThrough, icon})
   .custom-control-checkbox()&attributes(attributes)
     if icon
-      i(class= '${icon}')
+      i(class= `${icon}`)
     input.custom-checkbox-input(
       type= type ? type : "checkbox"
       id= id ? id : null

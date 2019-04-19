@@ -12,26 +12,26 @@ mixin sidebarRight()
       .tab-panel
         .tab-content
           .tab-pane.tab-chat.active#tab1(role="tabpanel")
-            .chat-contacts
+            .chat-contacts.js-chat-contact
               .chat-section.js-chat-section
                 .chat-content
                   h2 Recent
                   .contact-list.contact-list-recent
-                    .user
+                    .user.js-user-chat
                       a(href="#")
                         img(src="images/avatar1.png", alt="Avatar")
                         .user-data
                           span.status.away
                           span.name Claire Sassu
                           span.message Can you share the...
-                    .user
+                    .user.js-user-chat
                       a(href="#")
                         img(src="images/avatar2.png", alt="Avatar")
                         .user-data
                           span.status.
                           span.name Maggie jackson
                           span.message I confirmed the info.
-                    .user
+                    .user.js-user-chat
                       a(href="#")
                         img(src="images/avatar3.png", alt="Avatar")
                         .user-data
@@ -40,19 +40,19 @@ mixin sidebarRight()
                           span.message Ready for the meeti...
                   h2 Contact
                   .contact-list
-                    .user
+                    .user.js-user-chat
                       a(href="#")
                         img(src="images/avatar4.png", alt="Avatar")
                         .user-data
                           span.status
                           span.name Mike Bolthort
-                    .user
+                    .user.js-user-chat
                       a(href="#")
                         img(src="images/avatar5.png", alt="Avatar")
                         .user-data
                           span.status
                           span.name Maggie jackson
-                    .user
+                    .user.js-user-chat
                       a(href="#")
                         img(src="images/avatar3.png", alt="Avatar")
                         .user-data
@@ -64,15 +64,15 @@ mixin sidebarRight()
                   placeholder: 'Search...'
                 })(class='input-chat' name='q')
                 i.zmdi.zmdi-search
-            .chat-window
+            .chat-window.js-chat-window
               .title
                 .user
                   img(src="images/avatar2.png", alt="")
                   h2 Maggie jackson
                   span Active 1h ago
-                i.icon.return.zmdi.zmdi-chevron-left
+                i.icon.return.zmdi.zmdi-chevron-left.js-chat-back
               .chat-messages
-                .block-messages.ps.ps--active-y
+                .block-messages.js-chat-window
                   .content
                     ul
                       li.friend
@@ -86,8 +86,8 @@ mixin sidebarRight()
                       li.friend
                         p.msg I don't know it just turns off suddenly
               .chat-input
-                i.zmdi.zmdi-camera.send-camera
                 .input-wrapper
+                  i.zmdi.zmdi-camera.send-camera
                   +input-field({
                     placeholder: 'Message...'
                   })(name="q" autocomplete="off")

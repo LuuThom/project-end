@@ -2,6 +2,9 @@
 // Pages :: Home
 // ======================================================
 // Start classname with prefix `p-`
+$table: 'table';
+$tr: 'tr';
+$td: 'td';
 
 body {
   height: auto;
@@ -58,4 +61,282 @@ body {
       color: $bd-danger;
     }
   }
+}
+
+.tooltip-chart {
+  display: flex;
+}
+
+.tooltip-chart .content-chart {
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 12px 5px;
+  position: relative;
+}
+
+.tooltip-chart .content-chart:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid #{$tr}ansparent;
+  border-right: 5px solid #{$tr}ansparent;
+  border-top: 5px solid rgba(0, 0, 0, .8);
+  position: absolute;
+  bottom: -5px;
+  margin-left: 50%;
+  left: -5px;
+}
+
+.tooltip-chart .content-chart.arrow-none:before {
+  display: none;
+}
+
+.tooltip-chart .content-chart span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: -2px;
+  text-align: center;
+  color: #bad3fb;
+}
+
+.tooltip-chart .content-chart .label {
+  font-size: 11px;
+  text-align: center;
+}
+
+.tooltip-chart .content-chart .label .label-x,
+.tooltip-chart .content-chart .label .label-y {
+  display: inline-block;
+}
+
+.widget {
+  $this: &;
+
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+
+  &.loading {
+    position: relative;
+  }
+
+  &#{$this}-fullwidth {
+    padding: 0;
+
+    .widget-head {
+      padding: 20px 20px 10px;
+      margin-bottom: 0;
+    }
+  }
+
+  .tools {
+    float: right;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .dropdown-toggle:after {
+      display: none;
+    }
+
+    .icon {
+      display: inline-block;
+      font-size: 1.538rem;
+      line-height: 25px;
+      vertical-align: middle;
+      cursor: pointer;
+      color: #bababa;
+      min-width: 1.538rem;
+      text-align: center;
+
+      &:hover {
+        color: #a6a6a6;
+      }
+    }
+  }
+
+  .button-toolbar {
+    float: right;
+
+    .btn-group {
+      margin-right: 7px;
+    }
+
+    .btn {
+      border-color: #dbdbdb;
+      outline: 0;
+    }
+
+    .btn:hover {
+      color: #272727;
+      border-color: #bababa;
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .06);
+    }
+
+    .btn:focus,
+    .btn:active,
+    .btn.active {
+      color: #272727;
+      background-color: #e3e3e3;
+      border-color: #bababa;
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+
+  .widget-head {
+    .title {
+      display: block;
+      font-size: 1.385rem;
+      font-weight: 300;
+      float: left;
+    }
+  }
+
+  &-counter-group {
+    padding: 0 20px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .counter-big {
+      text-align: right;
+      margin-left: 22px;
+    }
+
+    .value {
+      display: block;
+      font-size: 2.077rem;
+      line-height: 2.077rem;
+      font-weight: 300;
+      margin-bottom: 5px;
+    }
+
+    .desc {
+      text-#{$tr}ansform: uppercase;
+      font-size: .8462rem;
+      color: #9d9d9d;
+    }
+  }
+  .chart-legend-horizontal {
+    flex-direction: row;
+    padding-left: 20px;
+    margin-bottom: 0;
+    list-style: none;
+    line-height: 14px;
+    li {
+      display: inline-block;
+      margin-right: 14px;
+    }
+    .chart-color {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      margin-right: 4px;
+    }
+    .chart-color1 {
+      background-color: rgb(66, 133, 244);
+    }
+    .chart-color2 {
+      background-color: rgb(129, 173, 248);
+    }
+    .chart-color3 {
+      background-color: rgb(162, 195, 250);
+    }
+  }
+  .widget-chart-container {
+    position: relative;
+  }
+  .chart-pie-counter {
+    display: block;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    line-height: 3.846rem;
+    margin-top: 0;
+    font-size: 3.846rem;
+    font-weight: 300;
+  }
+}
+.ui-datepicker {
+  position: relative;
+  margin: 10px 0 32px;
+}
+.ui-datepicker .ui-datepicker-header {
+  border-bottom: 1px solid rgba(255, 255, 255, .6);
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar {
+  width: 100%;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td}:first-child,
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} th:first-child {
+  padding-left: 0;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td}:last-child,
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} th:last-child {
+  padding-right: 0;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar th {
+  border: 0;
+  padding: 3px;
+  text-align: center;
+  font-weight: 400;
+  color: #404040;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar th span {
+  font-size: 1.077rem;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td} {
+  border: 0;
+  padding: 6px 0;
+  text-align: center;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td} a {
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #737373;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td} a:hover {
+  color: #404040;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td} a.ui-state-active,
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td} a.ui-state-highlight {
+  background-color: #e6e6e6;
+  border-radius: 50%;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td} a.ui-state-highlight {
+  background-color: #4285f4;
+  color: #fff;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td}.has-events a {
+  position: relative;
+  background-color: #ebf2fe;
+  border-radius: 50%;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td}.ui-datepicker-other-month a {
+  color: #ccc;
+}
+.ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td}.ui-datepicker-other-month a.ui-state-highlight {
+  color: #fff;
+}
+.ui-datepicker.ui-datepicker-6rows {
+  margin-bottom: 28px;
+}
+.ui-datepicker.ui-datepicker-6rows #{$table}.ui-datepicker-calendar #{$tr} #{$td} {
+  padding: 3px 0;
 }
