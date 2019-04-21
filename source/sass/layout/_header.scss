@@ -27,6 +27,10 @@ body {
     display: flex;
     width: 230px;
     flex: 0 0 230px;
+
+    @include breakpoint-down(phone) {
+      display: none;
+    }
   }
 
   &-brand {
@@ -54,15 +58,34 @@ body {
     display: block;
     white-space: nowrap;
   }
+
+  @include breakpoint-down(phone) {
+    display: none;
+  }
 }
 
 .navbar-more {
   padding-right: 20px;
   flex: 0 0 auto;
 
+  @include breakpoint-down(phone) {
+    width: 100%;
+    padding-right: 0;
+    background: #4285f4;
+    .nav-item {
+      position: fixed;
+      left: 15px;
+    }
+  }
+  .icon {
+    margin-right: 5px;
+  }
+  .zmdi-apps {
+    margin-right: 9px;
+  }
   .user-img {
-    max-width: 38px;
-    max-height: 38px;
+    max-width: 32px;
+    max-height: 32px;
     border-radius: 50%;
   }
 
@@ -71,6 +94,11 @@ body {
     display: none;
     font-size: 1.077rem;
     line-height: 20px;
+
+    @include breakpoint-down(phone) {
+      display: inline-block;
+      color: #fff;
+    }
   }
 
   .dropdown-menu {
@@ -78,71 +106,77 @@ body {
     margin-top: 12px;
     line-height: 20px;
   }
+}
+.dropdown-admin {
+  border-radius: 3px;
+  margin-top: 12px;
+  line-height: 20px;
+  width: 220px;
+  padding: 0 0 7px;
+  left: -178px;
 
-  .dropdown-admin {
-    border-radius: 3px;
-    margin-top: 12px;
-    line-height: 20px;
-    width: 220px;
-    padding: 0 0 7px;
-    left: -178px;
+  @include breakpoint-down(phone) {
+    left: 0;
+  }
+  .user-info {
+    background-color: #4285f4;
+    color: #fff;
+    padding: 20px 15px 14px;
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 7px;
+  }
 
-    .user-info {
-      background-color: #4285f4;
-      color: #fff;
-      padding: 20px 15px 14px;
-      border-radius: 2px 2px 0 0;
-      margin-bottom: 7px;
-    }
+  .user-name {
+    display: block;
+    font-size: 1.462rem;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 0;
+  }
+  .dropdown-item {
+    color: #504e4e;
+    padding: 10px 20px;
+    min-width: 175px;
+    line-height: 18px;
+  }
+  .user-position {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 13px;
+    position: relative;
 
-    .user-name {
-      display: block;
-      font-size: 1.462rem;
-      line-height: 22px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      margin-left: 0;
-    }
-
-    .user-position {
-      display: block;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      padding-left: 13px;
-      position: relative;
-
-      &:before {
-        content: '';
-        position: absolute;
-        height: 7px;
-        width: 7px;
-        left: 0;
-        top: 5px;
-        border: 1px solid #6cd187;
-        border-radius: 50%;
-        display: block;
-        background-color: #6cd187;
-      }
-    }
-
-    &:after {
-      border-bottom: 8px solid #fff;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
-      top: -8px;
-      content: ' ';
-      left: 42px;
-      margin-left: -6px;
+    &:before {
+      content: '';
       position: absolute;
-      display: none;
-      right: 13px;
-      border-bottom-color: #4285f4;
+      height: 7px;
+      width: 7px;
+      left: 0;
+      top: 5px;
+      border: 1px solid #6cd187;
+      border-radius: 50%;
+      display: block;
+      background-color: #6cd187;
     }
   }
-}
 
+  &:after {
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    top: -8px;
+    content: ' ';
+    left: 42px;
+    margin-left: -6px;
+    position: absolute;
+    display: none;
+    right: 13px;
+    border-bottom-color: #4285f4;
+  }
+}
 .dropdown {
   color: #504e4e;
   line-height: 18px;
@@ -156,30 +190,12 @@ body {
     font-family: $font-icon;
   }
 
-  .icon-nav {
-    margin-right: 20px;
-    font-family: $font-icon;
-
-    .dropdown {
-      position: static;
-
-      a,
-      i {
-        color: #4285f4;
-      }
-    }
-  }
-
   .nav-link {
     cursor: pointer;
     padding: 0 10px;
     line-height: 60px;
     font-size: 14px;
     position: relative;
-
-    &.dropdown-toggle:after {
-      display: none;
-    }
 
     .indicator {
       background-color: #4285f4;
@@ -189,15 +205,32 @@ body {
       width: 6px;
       position: absolute;
       top: 18px;
-      right: 6px;
+      right: 14px;
+
+      @include breakpoint-down(phone) {
+        background-color: #fff;
+      }
     }
   }
 
+  .nav-link.dropdown-toggle:after {
+    border-top-color: #fff;
+    top: 28px;
+    position: absolute;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
   .nav-link .icon {
     font-size: 1.846rem;
     vertical-align: middle;
     color: #737373;
     font-family: $font-icon;
+
+    @include breakpoint-down(phone) {
+      color: #fff;
+    }
   }
 
   &.show > .nav-link:before {
@@ -211,9 +244,29 @@ body {
   }
   &.show .nav-link .icon {
     color: #4285f4;
+
+    @include breakpoint-down(phone) {
+      color: #fff;
+    }
   }
 }
 
+.icon-nav {
+  margin-right: 10px;
+
+  @include breakpoint-down(phone) {
+    margin-right: 0;
+  }
+
+  .dropdown {
+    position: static;
+
+    a,
+    i {
+      color: #4285f4;
+    }
+  }
+}
 %dropdown {
   width: 300px;
   padding: 0;
@@ -245,8 +298,13 @@ body {
 .block-notifications {
   @extend %dropdown;
 
-  right: -80px;
+  right: 25px;
   z-index: 99;
+
+  @include breakpoint-down(phone) {
+    right: 25px;
+  }
+
   &:hover .ps__rail-y {
     display: block;
     opacity: .9;
@@ -288,7 +346,7 @@ body {
     border-top: 1px solid #ebebeb;
     display: block;
     outline: 0;
-
+    font-family: inherit;
     &:hover {
       background-color: #f5f5f5;
     }
@@ -382,6 +440,16 @@ body {
     }
   }
 
+  @include breakpoint-down(phone) {
+    &:focus {
+      .user-name,
+      .time,
+      .text {
+        color: #fff;
+      }
+    }
+  }
+
   &:hover a:after {
     background: #fff;
   }
@@ -390,7 +458,7 @@ body {
 .block-connect {
   @extend %dropdown;
 
-  right: -40px;
+  right: 24px;
   z-index: 99;
   .list-connect {
     padding: 20px 15px;
@@ -440,7 +508,7 @@ body {
     border-top: 1px solid #ebebeb;
     display: block;
     outline: 0;
-
+    font-family: $font-family-base;
     &:hover {
       background-color: #f5f5f5;
     }

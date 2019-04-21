@@ -58,6 +58,10 @@ ol {
   margin-left: 230px;
   min-height: 100%;
   top: 20px;
+
+  @include breakpoint-down(phone) {
+    margin-left: 0;
+  }
 }
 
 .main-content {
@@ -76,6 +80,7 @@ ol {
   transition: background-color .2s ease;
   border-radius: 4px;
   z-index: 1071;
+
   &:before {
     content: '\f2fc';
     font-family: $font-icon;
@@ -88,10 +93,38 @@ ol {
   &:hover {
     color: $color-white;
   }
+
   &:hover {
     background-color: rgba($color-black, .8);
   }
 }
+
 .page-list__link {
   display: inline;
+}
+
+.card {
+  background-color: #fff;
+  margin-bottom: 25px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .04);
+  border-width: 0;
+  border-radius: 3px;
+  display: block;
+  .card-header {
+    background: none;
+  }
+}
+.layer {
+  position: fixed;
+  left: 0;
+  min-height: 100%;
+  top: 61px;
+  width: 100%;
+  background: #cccccca1;
+  z-index: 1000;
+  display: none;
+  transition: all .5s;
+  &.show {
+    display: block;
+  }
 }

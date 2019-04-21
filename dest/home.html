@@ -27,7 +27,7 @@
           </ul>
           <ul class="nav navbar-nav float-right icon-nav">
             <li class="nav-item dropdown js-settings"><a class="nav-link nav-link-setting jsnav-link-setting" href="#" role="button" aria-expanded="false"><i class="icon zmdi zmdi-settings"></i></a></li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-notifications"></i><span class="indicator"></span></a>
+            <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-notifications"></i><span class="indicator"></span></a>
               <div class="dropdown-menu block-notifications">
                 <div class="title">Notifications<span class="badge badge-pill">3</span></div>
                 <div class="list js-list-notifi">
@@ -63,7 +63,7 @@
                 <div class="footer"><a href="#">View all notifications</a></div>
               </div>
             </li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-apps"></i></a>
+            <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-apps"></i></a>
               <div class="dropdown-menu block-connect">
                 <div class="list-connect">
                   <div class="row">
@@ -80,6 +80,7 @@
                 <div class="footer"><a href="#">More</a></div>
               </div>
             </li>
+            <li class="nav-item dropdown js-menu d-inline-block d-md-none"><a class="nav-link nav-link-menu" href="#" role="button" aria-expanded="false"><i class="icon zmdi zmdi-menu"> </i></a></li>
           </ul>
         </div>
       </div>
@@ -167,7 +168,7 @@
             </div>
             <div class="tab-pane tab-todo fade" id="tab2" role="tabpanel">
               <div class="todo-content">
-                <div class="todo-inner">
+                <div class="todo-inner js-todo-inner">
                   <h3>Today</h3>
                   <ul class="todo-list">
                     <li>
@@ -287,10 +288,10 @@
         </div>
       </div>
     </nav>
-    <aside class="sidebar-left">
+    <aside class="sidebar-left js-sidebar-left">
       <div class="sidebar-left-inner">
         <div class="sidebar-nav">
-          <ul class="nav">
+          <ul class="nav" id="nav">
             <li class="divider">Menu</li>
             <li class="nav__item active"><a class="nav__link" href="home.html"><i class="zmdi zmdi-home"></i><span class="nav__text">Dashboard</span></a>
             </li>
@@ -531,8 +532,8 @@
     <div class="be-content content-home">
       <div class="main-content container-fluid">
         <div class="row">
-          <div class="col-xl-3 col-sm-6 col-12">
-            <div class="widget widget-title">
+          <div class="col-12 col-lg-6 col-xl-3">
+            <div class="widget widget-title widget-sparkine">
               <div class="chart sparkline" id="spark1">
                 <canvas></canvas>
               </div>
@@ -542,8 +543,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-sm-6 col-12">
-            <div class="widget widget-title">
+          <div class="col-12 col-lg-6 col-xl-3">
+            <div class="widget widget-title widget-sparkine">
               <div class="chart sparkline" id="spark2">
                 <canvas></canvas>
               </div>
@@ -553,8 +554,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-sm-6 col-12">
-            <div class="widget widget-title">
+          <div class="col-12 col-lg-6 col-xl-3">
+            <div class="widget widget-title widget-sparkine">
               <div class="chart sparkline" id="spark3">
                 <canvas></canvas>
               </div>
@@ -564,8 +565,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-sm-6 col-12">
-            <div class="widget widget-title">
+          <div class="col-12 col-lg-6 col-xl-3">
+            <div class="widget widget-title widget-sparkine">
               <div class="chart sparkline" id="spark4">
                 <canvas></canvas>
               </div>
@@ -581,8 +582,8 @@
             <div class="widget widget-fullwidth loading">
               <div class="widget-head">
                 <div class="tools">
-                  <div class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="icon-zmdi zmdi-more-vert d-inline-block d-md-none"></span></a>
-                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" href="#">Week</a><a class="dropdown-item" href="#">Month</a><a class="dropdown-item" href="#">Year</a>
+                  <div class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-display="static"><span class="icon zmdi zmdi-more-vert d-inline-block d-md-none"></span></a>
+                    <div class="dropdown-menu dropdown-calendar" role="menu"><a class="dropdown-item" href="#">Week</a><a class="dropdown-item" href="#">Month</a><a class="dropdown-item" href="#">Year</a>
                       <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Today</a>
                     </div>
                   </div><span class="icon zmdi zmdi-chevron-down"></span><span class="icon toggle-loading zmdi zmdi-refresh-sync"></span><span class="icon zmdi zmdi-close"></span>
@@ -624,6 +625,177 @@
           </div>
         </div>
         <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="card card-table">
+              <div class="card-header">
+                <div class="tools dropdown"><i class="icon zmdi zmdi-download"></i><a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static"><i class="icon zmdi zmdi-more-vert"></i></a>
+                  <div class="dropdown-menu dropdown-table" role="menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+                <div class="title">Purchases</div>
+              </div>
+              <div class="card-body table-responsive">
+                <table class="table table-striped table-borderless">
+                  <thead>
+                    <tr>
+                      <th style="width:40%">Product</th>
+                      <th class="price"> Price</th>
+                      <th class="date" style="width:20%">Date</th>
+                      <th style="width:20%">State</th>
+                      <th class="actions" style="width:5%"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Sony Xperia M4</td>
+                      <td class="price">$149</td>
+                      <td class="date">Aug 23, 2018</td>
+                      <td class="text-success">Completed</td>
+                      <td class="actions"><a class="icon" href="#"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td>Apple iPhone 6</td>
+                      <td class="price">$535</td>
+                      <td class="date">Aug 20, 2018</td>
+                      <td class="text-success">Completed</td>
+                      <td class="actions"><a class="icon" href="#"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td>Samsung Galaxy S7</td>
+                      <td class="price">$583</td>
+                      <td class="date">Aug 18, 2018</td>
+                      <td class="text-warning">Pending</td>
+                      <td class="actions"><a class="icon" href="#"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td>HTC One M9</td>
+                      <td class="price">$350</td>
+                      <td class="date">Aug 15, 2018</td>
+                      <td class="text-warning">Pending</td>
+                      <td class="actions"><a class="icon" href="#"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td>Sony Xperia Z5</td>
+                      <td class="price">$495</td>
+                      <td class="date">Aug 13, 2018</td>
+                      <td class="text-danger">Cancelled</td>
+                      <td class="actions"><a class="icon" href="#"><i class="zmdi zmdi-plus-circle-o"></i></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="card card-table">
+              <div class="card-header">
+                <div class="tools dropdown"><i class="icon zmdi zmdi-download"></i><a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-display="static"><i class="icon zmdi zmdi-more-vert"></i></a>
+                  <div class="dropdown-menu dropdown-table" role="menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+                <div class="title">Latest Commits</div>
+              </div>
+              <div class="card-body table-responsive">
+                <table class="table table-striped table-borderless">
+                  <thead>
+                    <tr>
+                      <th style="width:37%">User</th>
+                      <th style="width:36%">Commit</th>
+                      <th>Date</th>
+                      <th class="actions"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="user-avatar"><img class="d-none d-md-inline" src="images/avatar6.png" alt="">Penelope Thornton</td>
+                      <td>Topbar dropdown style</td>
+                      <td>Aug 16, 2018</td>
+                      <td class="actions"><a class="icon" href="#"><i class="zmdi zmdi-github-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="user-avatar"><img class="d-none d-md-inline" src="images/avatar4.png" alt="">Benji Harper</td>
+                      <td>Left sidebar adjusments</td>
+                      <td>Jul 15, 2018</td>
+                      <td class="actions"><a class="icon" href="#"><i class="zmdi zmdi-github-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="user-avatar"><img class="d-none d-md-inline" src="images/avatar5.png" alt="">Justine Myranda</td>
+                      <td>Main structure markup</td>
+                      <td>Jul 28, 2018</td>
+                      <td class="actions"><a class="icon" href="#"><i class="zmdi zmdi-github-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="user-avatar"><img class="d-none d-md-inline" src="images/avatar3.png" alt="">Sherwood Clifford</td>
+                      <td>Initial commit</td>
+                      <td>Jun 30, 2018</td>
+                      <td class="actions"><a class="icon" href="#"><i class="zmdi zmdi-github-alt"></i></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-12">
+            <div class="card">
+              <div class="card-header card-header-divider">Current Progress</div>
+              <div class="card-body card-progress">
+                <div class="row user-progress user-progressall">
+                  <div class="col-lg-5">
+                    <div class="title">Bootstrap Admin</div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="progress">
+                      <div class="progress-bar bg-success" style="width: 40%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row user-progress user-progressall">
+                  <div class="col-lg-5">
+                    <div class="title">Custom Work</div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="progress">
+                      <div class="progress-bar bg-success" style="width: 65%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row user-progress user-progressall">
+                  <div class="col-lg-5">
+                    <div class="title">Clients Module</div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="progress">
+                      <div class="progress-bar bg-success" style="width: 30%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row user-progress user-progressall">
+                  <div class="col-lg-5">
+                    <div class="title">Email Templates</div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="progress">
+                      <div class="progress-bar bg-success" style="width: 80%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row user-progress user-progressall">
+                  <div class="col-lg-5">
+                    <div class="title">Plans Module</div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="progress">
+                      <div class="progress-bar bg-success" style="width: 45%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-lg-4 col-12">
             <div class="widget loading">
               <div class="widget-head">
@@ -635,21 +807,75 @@
                 <div class="chart-pie-counter">36</div>
               </div>
               <div class="chart-legend">
-                <div class="chart-legend-color"><span class="text">Premium Purchases</span><span class="count">125</span></div>
-                <div class="chart-legend-color"><span class="text">Standard Plans</span><span class="count">1569</span></div>
-                <div class="chart-legend-color"><span class="text">Services</span><span class="count">824</span></div>
+                <div class="chart-legend-color"><span class="text cl1">Premium Purchases</span><span class="count">125</span></div>
+                <div class="chart-legend-color"><span class="text cl2">Standard Plans</span><span class="count">1569</span></div>
+                <div class="chart-legend-color"><span class="text cl2">Services</span><span class="count">824</span></div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-12">
-            <div id="calendar"></div>
+            <div class="widget widget-calendar">
+              <div id="calendar"></div>
+            </div>
           </div>
-          <div class="col-6">
-            <div id="map" style="height: 265px"></div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="card latest-activity">
+              <div class="card-header">Latest Activity</div>
+              <div class="card-body">
+                <ul class="user-timeline user-timeline-compact">
+                  <li class="latest">
+                    <div class="user-timeline-date">Just Now</div>
+                    <div class="user-timeline-title">Create New Page</div>
+                    <div class="user-timeline-description">Vestibulum lectus nulla, maximus in eros non, tristique.</div>
+                  </li>
+                  <li>
+                    <div class="user-timeline-date">Today - 15:35</div>
+                    <div class="user-timeline-title">Back Up Theme</div>
+                    <div class="user-timeline-description">Vestibulum lectus nulla, maximus in eros non, tristique.</div>
+                  </li>
+                  <li>
+                    <div class="user-timeline-date">Yesterday - 10:41</div>
+                    <div class="user-timeline-title">Changes In The Structure</div>
+                    <div class="user-timeline-description">Vestibulum lectus nulla, maximus in eros non, tristique. </div>
+                  </li>
+                  <li>
+                    <div class="user-timeline-date">Yesterday - 3:02</div>
+                    <div class="user-timeline-title">Fix the Sidebar</div>
+                    <div class="user-timeline-description">Vestibulum lectus nulla, maximus in eros non, tristique.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12">
+            <div class="widget loading convention">
+              <div class="widget-head">
+                <div class="tools"><span class="icon zmdi zmdi-chevron-down"></span><span class="icon zmdi zmdi-refresh-sync toggle-loading"></span><span class="icon zmdi zmdi-close"></span></div>
+                <div class="title">Conversions</div>
+              </div>
+              <div class="widget-chart-container">
+                <div class="widget-chart-info">
+                  <div class="indicator indicator-positive float-right"><span class="icon zmdi zmdi-chevron-up"></span><span class="number-per">15%</span></div>
+                  <div class="counter cuonter-inline">
+                    <div class="value">156K</div>
+                    <div class="desc">Impressions</div>
+                  </div>
+                </div>
+                <div id="map" style="height: 265px"></div>
+              </div>
+              <div class="spinner">
+                <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://-www.w3.org/2000/svg">
+                  <circle class="circle" fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div><a class="scrollTop js-scrollTop" href="#"></a>
+    <div class="layer js-layer"></div>
     <script src="js/main.js"></script>
   </body>
 </html>

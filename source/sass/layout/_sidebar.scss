@@ -1,4 +1,3 @@
-$li: 'li';
 .sidebarRight {
   position: fixed;
   background-color: #fafafa;
@@ -367,7 +366,6 @@ $li: 'li';
 .todo-list {
   list-style: none;
   padding: 4px 0 1px;
-  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 
@@ -453,7 +451,7 @@ $li: 'li';
     }
 
     .name {
-      display: block;
+      display: inline-block;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -464,7 +462,6 @@ $li: 'li';
 .sidebar-show {
   right: 0;
 }
-
 .sidebar-left {
   height: 100%;
   margin-top: 61px;
@@ -478,18 +475,7 @@ $li: 'li';
   width: 230px;
   left: 0;
   border-right: 1px solid #e3e3e3;
-
-  &:before {
-    content: ' ';
-    position: fixed;
-    z-index: -1;
-    width: inherit;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: inherit;
-    border-right: 1px solid #e3e3e3;
-  }
+  transition: all .35s ease;
 
   &-inner {
     height: 100%;
@@ -502,8 +488,14 @@ $li: 'li';
       padding-left: 11px;
     }
   }
-}
 
+  @include breakpoint-down(phone) {
+    left: -230px;
+  }
+}
+.sidebarLeft-show {
+  left: 0;
+}
 .sidebar-nav {
   position: relative;
 

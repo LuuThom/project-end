@@ -2,7 +2,7 @@
 //- Modules :: Menu
 //-------------------------------------------------------
 mixin menu(page, link)
-  ul.nav
+  ul.nav#nav
     each val in listitem.datamenu
       if (typeof val.link === "undefined")
         li.divider= val.item

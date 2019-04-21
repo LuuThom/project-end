@@ -1,4 +1,3 @@
-$(function () {
 
   // datepicker
   if ($("#calendar").length > 0) {
@@ -45,10 +44,16 @@ $(function () {
     }
   }
 
-  scrollbar(".js-list, .js-chat-section, .js-list, todo-inner, .sidebar-nav")
+  scrollbar(".js-list, .js-chat-section, .js-list, .js-todo-inner, .sidebar-nav, #tab3")
 
-  // Js scrollbar chat
-  // var pt = new PerfectScrollbar('.js-chat-section');
+  // Js loading
+  $('.toggle-loading').on('click',function(){
+    $('.loading, .spinner').addClass('show');
+    setTimeout(function(){
+    $('.loading, .spinner').removeClass('show');
+    },2000);
+  })
+  
 
   // show sidebarRight
 
@@ -64,7 +69,20 @@ $(function () {
       }
     }
   });
-
+  // show sidebar left
+  $(document).on('mouseup', function (element) {
+    if (document.getElementsByClassName('js-menu')[0].contains(element.target)) {
+      $('.js-sidebar-left').toggleClass('sidebarLeft-show');
+      $('.js-layer').toggleClass('show');
+    }
+    else {
+      var container2 = $('.js-sidebar-left');
+      if (!container2.is(element.target) && container2.has(element.target).length === 0) {
+        $('.js-sidebar-left').removeClass('sidebarLeft-show');
+        $('.js-layer').removeClass('show');
+      }
+    }
+  });
   // show chat window
   $('.js-user-chat').on('click', function () {
     $('.js-chat-window').animate({
@@ -98,64 +116,7 @@ $(function () {
     $('html, body').animate({ scrollTop: 0 }, 'slow');
     return false;
   });
-  // sparkline
-  $('#spark1').sparkline([0, 5, 3, 7, 5, 10, 3, 6, 5, 10], {
-    type: 'line',
-    pointDot: false,
-    spotColor: false,
-    minSpotColor: false,
-    maxSpotColor: false,
-    lineColor: '#4285f4',
-    highlightLineColor: '#4285f4',
-    highlightSpotColor: '#4285f4',
-    fillColor: false,
-    width: '85',
-    height: '35',
-    lineWidth: 1.15
-  });
-  $('#spark2').sparkline([5, 8, 7, 10, 9, 10, 8, 6, 4, 6, 8, 7, 6, 8], {
-    type: 'bar',
-    barColor: '#fbbc05',
-    pointDot: false,
-    spotColor: false,
-    minSpotColor: false,
-    maxSpotColor: false,
-    fillColor: false,
-    highlightColor: '#fbbc05',
-    width: '81',
-    height: '35',
-    barWidth: 3,
-    barSpacing: 3,
-    chartRangeMin: 0,
-  });
-  $('#spark3').sparkline([2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 6, 5, 4, 3, 4, 5, 6, 5, 4, 4, 5], {
-    type: 'discrete',
-    pointDot: false,
-    spotColor: false,
-    minSpotColor: false,
-    maxSpotColor: false,
-    fillColor: false,
-    width: "85",
-    height: "35",
-    lineHeight: 20,
-    lineColor: '#007f00',
-    highlightColor: '#007f00',
-    xwidth: 18
-  });
-  $('#spark4').sparkline([2, 5, 3, 7, 5, 10, 3, 6, 5, 7], {
-    type: 'line',
-    lineColor: '#e12717',
-    pointDot: false,
-    spotColor: false,
-    minSpotColor: false,
-    maxSpotColor: false,
-    fillColor: false,
-    highlightSpotColor: '#e12717',
-    width: '85',
-    height: '35',
-    lineWidth: 1.15
-  });
-
+ 
   // countup
   $('.number').each(function () {
     var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
@@ -164,7 +125,7 @@ $(function () {
       Counter: $(this).text()
     },
       {
-        duration: 3000,
+        duration: 1500,
         step: function (func) {
           if (_suffix.length > 0) {
             $(this).text(parseFloat(func).toFixed(size) + `${_suffix}`);
@@ -196,6 +157,11 @@ $(function () {
   $(window).on('load resize', function () {
     chartcustom('#main-chart');
     chart_pie('#top-sales');
+    barChart('#bar-chart');
+    var width = $(window).width();
+    if(width >= 768) {
+      $('.js-layer').removeClass('show');
+    }
   });
   //map 
   $("#map").vectorMap({
@@ -219,4 +185,3 @@ $(function () {
     normalizeFunction: "polynomial"
   })
 
-});

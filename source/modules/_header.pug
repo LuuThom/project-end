@@ -33,7 +33,7 @@ mixin header(title)
             a.nav-link.nav-link-setting.jsnav-link-setting(href="#" role="button" aria-expanded="false")
               i.icon.zmdi.zmdi-settings
           li.nav-item.dropdown
-            a.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-expanded="false")
+            a.nav-link(href="#" data-toggle="dropdown" role="button" aria-expanded="false")
               i.icon.zmdi.zmdi-notifications
               span.indicator
             .dropdown-menu.block-notifications
@@ -81,7 +81,7 @@ mixin header(title)
               .footer
                 a(href="#") View all notifications
           li.nav-item.dropdown
-            a.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-expanded="false")
+            a.nav-link(href="#" data-toggle="dropdown" role="button" aria-expanded="false")
               i.icon.zmdi.zmdi-apps
             .dropdown-menu.block-connect
               .list-connect
@@ -113,3 +113,6 @@ mixin header(title)
                       span Dropbox
               .footer
                 a(href="#") More
+          li.nav-item.dropdown.js-menu.d-inline-block.d-md-none
+            a.nav-link.nav-link-menu(href="#" role="button" aria-expanded="false")
+              i.icon.zmdi.zmdi-menu         

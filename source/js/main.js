@@ -7,6 +7,7 @@
 //=require flot/jquery.flot.js
 //=require flot-orderbars/js/jquery.flot.orderBars.js
 //=require flot/jquery.flot.pie.js
+//=require _jquery.flot.orderBars.js
 //=require flot.curvedlines/curvedLines.js
 //=require jquery.flot.tooltip/js/jquery.flot.tooltip.min.js
 //=require jquery-ui-dist/jquery-ui.min.js

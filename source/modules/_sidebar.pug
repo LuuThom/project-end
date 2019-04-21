@@ -94,7 +94,7 @@ mixin sidebarRight()
                   i.zmdi.zmdi-mail-send.send-msg
           .tab-pane.tab-todo.fade#tab2(role="tabpanel")
             .todo-content
-              .todo-inner
+              .todo-inner.js-todo-inner
                 h3 Today
                 ul.todo-list
                   li
@@ -243,7 +243,7 @@ mixin sidebarRight()
                   })
                     
 mixin sidebarLeft(page, link)
-  aside.sidebar-left
+  aside.sidebar-left.js-sidebar-left
     .sidebar-left-inner
       .sidebar-nav
         +menu(page, link)

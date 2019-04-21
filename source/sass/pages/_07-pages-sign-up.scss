@@ -1,6 +1,12 @@
-.card-header {
-  margin-bottom: 0;
+.login.signup {
+  max-width: 433px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .card-header {
+    margin-bottom: 0;
+  }
 }
+
 .login-title {
   text-align: center;
   display: block;

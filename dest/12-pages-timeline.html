@@ -27,7 +27,7 @@
           </ul>
           <ul class="nav navbar-nav float-right icon-nav">
             <li class="nav-item dropdown js-settings"><a class="nav-link nav-link-setting jsnav-link-setting" href="#" role="button" aria-expanded="false"><i class="icon zmdi zmdi-settings"></i></a></li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-notifications"></i><span class="indicator"></span></a>
+            <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-notifications"></i><span class="indicator"></span></a>
               <div class="dropdown-menu block-notifications">
                 <div class="title">Notifications<span class="badge badge-pill">3</span></div>
                 <div class="list js-list-notifi">
@@ -63,7 +63,7 @@
                 <div class="footer"><a href="#">View all notifications</a></div>
               </div>
             </li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-apps"></i></a>
+            <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-apps"></i></a>
               <div class="dropdown-menu block-connect">
                 <div class="list-connect">
                   <div class="row">
@@ -80,6 +80,7 @@
                 <div class="footer"><a href="#">More</a></div>
               </div>
             </li>
+            <li class="nav-item dropdown js-menu d-inline-block d-md-none"><a class="nav-link nav-link-menu" href="#" role="button" aria-expanded="false"><i class="icon zmdi zmdi-menu"> </i></a></li>
           </ul>
         </div>
       </div>
@@ -167,7 +168,7 @@
             </div>
             <div class="tab-pane tab-todo fade" id="tab2" role="tabpanel">
               <div class="todo-content">
-                <div class="todo-inner">
+                <div class="todo-inner js-todo-inner">
                   <h3>Today</h3>
                   <ul class="todo-list">
                     <li>
@@ -287,12 +288,12 @@
         </div>
       </div>
     </nav>
-    <aside class="sidebar-left">
+    <aside class="sidebar-left js-sidebar-left">
       <div class="sidebar-left-inner">
         <div class="sidebar-nav">
-          <ul class="nav">
+          <ul class="nav" id="nav">
             <li class="divider">Menu</li>
-            <li class="nav__item active"><a class="nav__link" href="home.html"><i class="zmdi zmdi-home"></i><span class="nav__text">Dashboard</span></a>
+            <li class="nav__item"><a class="nav__link" href="home.html"><i class="zmdi zmdi-home"></i><span class="nav__text">Dashboard</span></a>
             </li>
             <li class="nav__item parent"><a class="nav__link" href="#uielements" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-face"></i><span class="nav__text">UI Elements</span></a>
               <div class="collapse js-collapse01" id="uielements">
@@ -374,8 +375,8 @@
                 </ul>
               </div>
             </li>
-            <li class="nav__item parent"><a class="nav__link" href="#pages" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-layers"></i><span class="nav__text">Pages</span></a>
-              <div class="collapse js-collapse01" id="pages">
+            <li class="nav__item active parent"><a class="nav__link" href="#pages" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-layers"></i><span class="nav__text">Pages</span></a>
+              <div class="collapse js-collapse01 show" id="pages">
                 <ul class="sub-menu parent">
                   <li class="nav__item child"><a class="nav__link" href="01-blankpage.html"><span class="nav__text">Blank Page</span></a>
                   </li>
@@ -397,7 +398,7 @@
                   </li>
                   <li class="nav__item child"><a class="nav__link" href="11-pages-pricing-table2.html"><span class="nav__text">Pricing Tables v2</span></a>
                   </li>
-                  <li class="nav__item child"><a class="nav__link" href="12-pages-timeline.html"><span class="nav__text">Timeline</span></a>
+                  <li class="nav__item child"><a class="nav__link active" href="12-pages-timeline.html"><span class="nav__text">Timeline</span></a>
                   </li>
                   <li class="nav__item child"><a class="nav__link" href="13-pages-timeline2.html"><span class="nav__text">Timeline v2</span></a>
                   </li>
@@ -613,6 +614,7 @@
         </div>
       </div>
     </div><a class="scrollTop js-scrollTop" href="#"></a>
+    <div class="layer js-layer"></div>
     <script src="js/main.js"></script>
   </body>
 </html>
