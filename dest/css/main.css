@@ -19665,6 +19665,11 @@ body {
     background-image: url("../images/logo-xx.png");
     background-repeat: no-repeat;
     background-position: 0; }
+    @media (max-width: 991.98px) {
+      .invoice-logo {
+        height: 27px;
+        width: 102px;
+        background-image: url("../images/logo.png"); } }
   .invoice-header {
     margin-bottom: 100px; }
   .invoice-order {
@@ -19673,9 +19678,16 @@ body {
     display: block;
     font-size: 2.308rem;
     line-height: 2.308rem; }
+    @media (max-width: 991.98px) {
+      .invoice-id {
+        font-size: 1.154rem;
+        line-height: 1.3849rem; } }
   .invoice-date {
     display: block;
     font-size: 1.385rem; }
+    @media (max-width: 991.98px) {
+      .invoice-date {
+        font-size: 1rem; } }
   .invoice-data {
     margin-bottom: 110px; }
   .invoice-person span {
@@ -19686,6 +19698,10 @@ body {
     font-weight: 401; }
   .invoice-person:last-child {
     text-align: right; }
+  @media (max-width: 991.98px) {
+    .invoice-person span {
+      font-size: 1.0004rem;
+      line-height: 1.5385rem; } }
   .invoice-payment-direction {
     text-align: center;
     position: relative;
@@ -19698,6 +19714,12 @@ body {
       font-size: 3.846rem;
       color: #c2c2c2;
       line-height: 80px; }
+      @media (max-width: 991.98px) {
+        .invoice-payment-direction .icon {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 1.923rem; } }
   .invoice-details {
     width: 100%;
     font-size: 1.231rem; }
@@ -19723,14 +19745,24 @@ body {
     .invoice-details .total-value {
       font-size: 1.692rem;
       color: #4285f4; }
+      @media (max-width: 991.98px) {
+        .invoice-details .total-value {
+          font-size: .8464rem; } }
     .invoice-details th:first-child {
       text-align: left; }
+    @media (max-width: 991.98px) {
+      .invoice-details {
+        font-size: .8464rem; } }
   .invoice-payment-method {
     margin-bottom: 75px; }
     .invoice-payment-method span {
       font-size: 1.385rem;
       line-height: 2rem;
       display: block; }
+      @media (max-width: 991.98px) {
+        .invoice-payment-method span {
+          font-size: 1.0004rem;
+          line-height: 1.5385rem; } }
     .invoice-payment-method .title {
       font-weight: 401; }
   .invoice-message {
@@ -19743,6 +19775,9 @@ body {
       margin-bottom: 12px; }
     .invoice-message p {
       line-height: 2rem; }
+    @media (max-width: 991.98px) {
+      .invoice-message {
+        font-size: 1rem; } }
   .invoice-company-info {
     margin-bottom: 70px; }
     .invoice-company-info div:first-child {
@@ -19750,9 +19785,19 @@ body {
     .invoice-company-info .summary {
       padding: 0 30px;
       line-height: 16px; }
+      @media (max-width: 767.98px) {
+        .invoice-company-info .summary {
+          padding: 8px 15px; } }
     .invoice-company-info div {
       border-left: 1px solid #f0f0f0;
       padding: 8px 40px; }
+      @media (max-width: 767.98px) {
+        .invoice-company-info div {
+          border: none;
+          padding: 8px 15px; } }
+    @media (max-width: 767.98px) {
+      .invoice-company-info {
+        margin-bottom: 35px; } }
   .invoice .phone span {
     display: block; }
   .invoice .email .mail {
@@ -19761,9 +19806,15 @@ body {
     text-align: center; }
     .invoice-footer .btn {
       min-width: 96px;
-      font-size: 1.077rem; }
+      font-size: 1.077rem;
+      padding: 0 12px;
+      line-height: 38px;
+      border-color: #e3e3e3; }
     .invoice-footer .btn-space {
       margin-right: 5px;
       margin-bottom: 5px; }
+  @media (max-width: 991.98px) {
+    .invoice {
+      padding: 50px 50px 35px; } }
 
 /*# sourceMappingURL=main.css.map */
