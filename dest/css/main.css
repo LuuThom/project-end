@@ -17145,6 +17145,9 @@ body {
       float: left;
       text-align: center;
       overflow: hidden; }
+    .notification > a .image img {
+      max-width: 100%;
+      max-height: 100%; }
     .notification > a .time-active {
       margin: 0;
       color: #8a8a8a;
@@ -17260,7 +17263,7 @@ body {
   .sidebarRight-content {
     height: 100%; }
   .sidebarRight .nav {
-    border-bottom: 1px solid #424242; }
+    border-bottom: 0; }
     .sidebarRight .nav-link {
       background-color: #f2f2f2;
       border-width: 0;
@@ -18929,6 +18932,9 @@ body {
     font-weight: 400;
     color: #504e4e;
     padding: 8px 20px; }
+
+.tools.dropdown .icon {
+  margin-right: 0; }
 
 .be-content {
   top: 63px; }
