@@ -17692,7 +17692,7 @@ body {
   .nav__link:hover, .nav__link:focus {
     background-color: #f0f0f0;
     color: #696969; }
-  .nav__link[aria-expanded='true']:before {
+  .nav__link[aria-expanded='true']:before, .nav__link[aria-expanded='true']:after {
     transition: transform .5s;
     transform: rotate(180deg); }
 
@@ -17700,13 +17700,20 @@ body {
   padding-left: 20px;
   color: #4285f4; }
 
-.nav__item.parent > a:before {
+.nav__item.parent > a:before,
+.nav__item.has-child > a:after,
+.nav__item.has-child > a:after {
   content: '\f2f2';
   float: right;
   font-family: "Material-Design-Iconic-Font";
   transition: transform .5s;
   font-size: 1.615rem;
   color: #b0b0b0; }
+
+.nav__item.has-child > a:after,
+.nav__item.has-child > a:after {
+  position: absolute;
+  right: 20px; }
 
 .nav .zmdi {
   line-height: 18px;

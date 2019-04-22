@@ -531,7 +531,8 @@
       background-color: $cl-gray4;
       color: $cl-dark9;
     }
-    &[aria-expanded='true']:before {
+    &[aria-expanded='true']:before,
+    &[aria-expanded='true']:after {
       transition: transform .5s;
       transform: rotate(180deg);
     }
@@ -542,7 +543,9 @@
     color: $bg-primary;
   }
 
-  &__item.parent > a:before {
+  &__item.parent > a:before,
+  &__item.has-child > a:after,
+  &__item.has-child > a:after {
     content: '\f2f2';
     float: right;
     font-family: $font-icon;
@@ -550,7 +553,11 @@
     font-size: 1.615rem;
     color: $cl-grey;
   }
-
+  &__item.has-child > a:after,
+  &__item.has-child > a:after {
+    position: absolute;
+    right: 20px;
+  }
   .zmdi {
     line-height: 18px;
     font-size: $font-size-large + 1;

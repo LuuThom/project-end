@@ -34,8 +34,7 @@ mixin menu(page, link)
                       data-toggle= val1.dropdown ? "collapse" : null
                       aria-expanded= val1.dropdown ? "false" : null
                       class= (val1.link === link) ? "active" : null
-                    )
-                      span.nav__text= val1.item
+                    )= val1.item
                       if val1.badge
                         span.badge.badge-primary New
                     if val1.dropdown
@@ -51,8 +50,7 @@ mixin menu(page, link)
                                 href= val2.dropdownChild ? `#${val2.link}` : `${val2.link}`
                                 data-toggle= val2.dropdownChild ? "collapse" : null
                                 aria-expanded= val2.dropdownChild ? "false" : null
-                              )
-                                span.nav__text= val2.item
+                              )= val2.item
                               if val2.dropdownChild
                                 .collapse.js-collapse03(
                                   id= val2.link
