@@ -114,6 +114,7 @@ body {
 .tooltip-chart .content-chart .label {
   font-size: 11px;
   text-align: center;
+  border: 0;
 }
 
 .tooltip-chart .content-chart .label .label-x,
@@ -163,7 +164,7 @@ body {
       color: $cl-dark3;
       min-width: 1.538rem;
       text-align: center;
-
+      margin-right: 0;
       &:hover {
         color: $cl-dark4;
       }
@@ -275,7 +276,7 @@ body {
       .desc {
         text-transform: uppercase;
         font-size: .8462rem;
-        color: #9d9d9d;
+        color: $cl-grey5;
       }
 
       .value {
@@ -367,27 +368,27 @@ body {
 
 .ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td} a.ui-state-active,
 .ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td} a.ui-state-highlight {
-  background-color: #e6e6e6;
+  background-color: $cl-grey7;
   border-radius: 50%;
 }
 
 .ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td} a.ui-state-highlight {
-  background-color: #4285f4;
+  background-color: $bg-primary;
   color: $color-white;
 }
 
 .ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td}.has-events a {
   position: relative;
-  background-color: #ebf2fe;
+  background-color: $cl-white6;
   border-radius: 50%;
 }
 
 .ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td}.ui-datepicker-other-month a {
-  color: #ccc;
+  color: $cl-gray-light;
 }
 
 .ui-datepicker #{$table}.ui-datepicker-calendar #{$tr} #{$td}.ui-datepicker-other-month a.ui-state-highlight {
-  color: #fff;
+  color: $bg-white;
 }
 
 .ui-datepicker.ui-datepicker-6rows {
@@ -405,7 +406,7 @@ body {
 }
 
 .hasDatepicker {
-  background: #fff;
+  background: $bg-white;
   margin-top: 0;
   padding-bottom: 33px;
 }
@@ -491,7 +492,7 @@ body {
 
     .dropdown-item {
       font-weight: $font-weight-base;
-      color: #504e4e;
+      color: $cl-dark8;
       padding: 8px 20px;
     }
   }
@@ -501,7 +502,7 @@ body {
 
   .card-header {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: $font-weight-light;
   }
 
   .table {
@@ -513,18 +514,18 @@ body {
     }
 
     &.table-borderless th {
-      border-bottom: 2px solid #dee2e6;
+      border-bottom: 2px solid $cl-black2;
     }
 
     &.table-striped tbody tr:nth-of-type(odd) {
-      background-color: #f5f5f5;
+      background-color: $cl-white8;
     }
 
     .actions {
       text-align: center;
 
       .icon {
-        color: #a1a1a1;
+        color: $cl-gray5;
         font-size: 1.3846rem;
         line-height: 18px;
       }
@@ -587,7 +588,7 @@ body {
 
 .card-header-divider {
   text-align: left;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid $cl-white4;
   margin: 0 1.538rem 8px;
   padding: 20px 0 15px;
 }
@@ -612,15 +613,15 @@ body {
     }
 
     &.cl1:before {
-      background-color: rgb(52, 168, 83);
+      background-color: $bg-success;
     }
 
     &.cl2:before {
-      background-color: rgb(251, 188, 5);
+      background-color: $bg-warning;
     }
 
     &.cl3:before {
-      background-color: rgb(66, 133, 244);
+      background-color: $bg-primary;
     }
   }
 }
@@ -651,7 +652,7 @@ body {
     top: 2px;
     height: 100%;
     width: 2px;
-    background-color: #f6c163;
+    background-color: $cl-warning-pricing;
   }
 
   &:after {
@@ -661,7 +662,7 @@ body {
     bottom: -2px;
     height: 8px;
     width: 8px;
-    background-color: #f6c163;
+    background-color: $cl-warning-pricing;
     border-radius: 50%;
   }
 
@@ -678,9 +679,9 @@ body {
       top: 2px;
       height: 16px;
       width: 16px;
-      background-color: #fff;
+      background-color: $bg-white;
       border-radius: 50%;
-      border: 1px solid #f6c163;
+      border: 1px solid $cl-warning-pricing;
     }
   }
 }
@@ -698,7 +699,7 @@ body {
       text-transform: capitalize;
       margin-bottom: 0;
       line-height: 22px;
-      color: #737373;
+      color: $cl-dark6;
     }
 
     .user-timeline-title {
@@ -707,13 +708,13 @@ body {
     }
 
     .user-timeline-description {
-      color: #737373;
+      color: $cl-dark6;
       margin-top: 4px;
     }
   }
 
   .latest:before {
-    background-color: #f6c163;
+    background-color: $cl-warning-pricing;
   }
 }
 
@@ -724,8 +725,8 @@ body {
   cursor: pointer;
   width: 30px;
   height: 30px;
-  background-color: #d9d9d9;
-  color: #7a7a7a;
+  background-color: $cl-white4;
+  color: $cl-grey6;
   font-size: 22px;
   line-height: 24px;
   text-align: center;
@@ -773,7 +774,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, .7);
+  background: rgba($color-white, .7);
   transition: all .2s ease;
   z-index: 2;
 }
@@ -785,7 +786,7 @@ body {
 
 .spinner svg {
   animation: be-spinner-rotation 1.4s linear infinite;
-  stroke: #4285f4;
+  stroke: $bg-primary;
 }
 
 .spinner svg .circle {
@@ -832,8 +833,8 @@ body {
 .dropdown-table {
   left: -76px;
   .dropdown-item {
-    font-weight: 400;
-    color: #504e4e;
+    font-weight: $font-weight-base;
+    color: $cl-dark8;
     padding: 8px 20px;
   }
 }

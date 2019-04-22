@@ -8,17 +8,17 @@
     display: block;
     margin-bottom: 5px;
     margin-top: 6px;
-    font-weight: 300;
+    font-weight: $font-weight-light;
     letter-spacing: -1px;
     font-size: 2.154rem;
-    color: #6b6b6b;
+    color: $cl-grey4;
     line-height: 36px;
   }
   .breadcrumb {
     padding: 0;
     background: none;
     a {
-      color: #5e5e5e;
+      color: $cl-back-top;
     }
   }
 }

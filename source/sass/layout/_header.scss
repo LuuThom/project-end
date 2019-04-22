@@ -1,6 +1,6 @@
 body {
   background-image: none;
-  background-color: #eee;
+  background-color: $cl-disabled;
 }
 
 .widget {
@@ -17,10 +17,10 @@ body {
 }
 
 .navbar {
-  background-color: #fff;
+  background-color: $color-white;
   border: 0;
   margin-bottom: 0;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid $cl-gray2;
   padding: 0;
 
   &-wrap {
@@ -52,7 +52,7 @@ body {
   float: left;
   flex: 1 1;
   padding: 0 20px;
-  color: #404040;
+  color: $cl-pri-hover;
 
   span {
     display: block;
@@ -71,7 +71,7 @@ body {
   @include breakpoint-down(phone) {
     width: 100%;
     padding-right: 0;
-    background: #4285f4;
+    background: $bg-primary;
     .nav-item {
       position: fixed;
       left: 15px;
@@ -97,7 +97,7 @@ body {
 
     @include breakpoint-down(phone) {
       display: inline-block;
-      color: #fff;
+      color: $color-white;
     }
   }
 
@@ -119,8 +119,8 @@ body {
     left: 0;
   }
   .user-info {
-    background-color: #4285f4;
-    color: #fff;
+    background-color: $bg-primary;
+    color: $color-white;
     padding: 20px 15px 14px;
     border-radius: 2px 2px 0 0;
     margin-bottom: 7px;
@@ -136,7 +136,7 @@ body {
     margin-left: 0;
   }
   .dropdown-item {
-    color: #504e4e;
+    color: $cl-dark8;
     padding: 10px 20px;
     min-width: 175px;
     line-height: 18px;
@@ -156,15 +156,15 @@ body {
       width: 7px;
       left: 0;
       top: 5px;
-      border: 1px solid #6cd187;
+      border: 1px solid $cl-green1;
       border-radius: 50%;
       display: block;
-      background-color: #6cd187;
+      background-color: $cl-green1;
     }
   }
 
   &:after {
-    border-bottom: 8px solid #fff;
+    border-bottom: 8px solid $color-white;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     top: -8px;
@@ -174,11 +174,11 @@ body {
     position: absolute;
     display: none;
     right: 13px;
-    border-bottom-color: #4285f4;
+    border-bottom-color: $bg-primary;
   }
 }
 .dropdown {
-  color: #504e4e;
+  color: $cl-dark8;
   line-height: 18px;
 
   .icon {
@@ -186,7 +186,7 @@ body {
     line-height: normal;
     vertical-align: middle;
     margin-right: 10px;
-    color: #696969;
+    color: $cl-dark9;
     font-family: $font-icon;
   }
 
@@ -198,7 +198,7 @@ body {
     position: relative;
 
     .indicator {
-      background-color: #4285f4;
+      background-color: $bg-primary;
       border-radius: 50%;
       display: block;
       height: 6px;
@@ -208,13 +208,13 @@ body {
       right: 14px;
 
       @include breakpoint-down(phone) {
-        background-color: #fff;
+        background-color: $color-white;
       }
     }
   }
 
   .nav-link.dropdown-toggle:after {
-    border-top-color: #fff;
+    border-top-color: $color-white;
     top: 28px;
     position: absolute;
 
@@ -225,11 +225,11 @@ body {
   .nav-link .icon {
     font-size: 1.846rem;
     vertical-align: middle;
-    color: #737373;
+    color: $cl-dark6;
     font-family: $font-icon;
 
     @include breakpoint-down(phone) {
-      color: #fff;
+      color: $color-white;
     }
   }
 
@@ -237,16 +237,16 @@ body {
     content: ' ';
     position: absolute;
     z-index: 1000;
-    border-bottom: 9px solid #fff;
+    border-bottom: 9px solid $color-white;
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
     bottom: -13px;
   }
   &.show .nav-link .icon {
-    color: #4285f4;
+    color: $bg-primary;
 
     @include breakpoint-down(phone) {
-      color: #fff;
+      color: $color-white;
     }
   }
 }
@@ -263,7 +263,7 @@ body {
 
     a,
     i {
-      color: #4285f4;
+      color: $bg-primary;
     }
   }
 }
@@ -271,8 +271,8 @@ body {
   width: 300px;
   padding: 0;
   box-sizing: content-box;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
-  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba($color-black, .08);
+  border: 1px solid $cl-gray1;
   border-radius: 3px;
   margin-top: 12px;
   line-height: 20px;
@@ -283,7 +283,7 @@ body {
 
 .user-nav .dropdown {
   &.show > .nav-link:before {
-    border-bottom: 8px solid #4285f4;
+    border-bottom: 8px solid $bg-primary;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     bottom: -13px;
@@ -312,10 +312,10 @@ body {
 
   .title {
     font-size: 1rem;
-    color: #8a8a8a;
+    color: $cl-gray;
     text-align: center;
     padding: 10px 0 8px;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid $cl-white2;
   }
 
   .badge {
@@ -323,13 +323,13 @@ body {
     line-height: 10px;
     vertical-align: middle;
     margin-left: 4px;
-    background-color: #e4e4e4;
-    color: #8a8a8a;
+    background-color: $cl-white3;
+    color: $cl-gray;
     min-width: 17px;
     height: 17px;
     text-align: center;
     padding: 3px 6px;
-    border: 1px solid #d9d9d9;
+    border: 1px solid $cl-white4;
   }
 
   .list .content-notifications {
@@ -338,24 +338,24 @@ body {
   }
 
   .footer a {
-    background-color: #fafafa;
+    background-color: $cl-white5;
     font-size: 1rem;
-    color: #8a8a8a;
+    color: $cl-gray;
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid $cl-white2;
     display: block;
     outline: 0;
     font-family: inherit;
     &:hover {
-      background-color: #f5f5f5;
+      background-color: $cl-white8;
     }
   }
 }
 
 .notification {
   overflow: hidden;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid $cl-white2;
 
   & > a {
     position: relative;
@@ -367,7 +367,7 @@ body {
       height: 38px;
       width: 38px;
       border-radius: 50%;
-      background-color: #e4e4e4;
+      background-color: $cl-white3;
       float: left;
       text-align: center;
       overflow: hidden;
@@ -375,7 +375,7 @@ body {
 
     .time-active {
       margin: 0;
-      color: #8a8a8a;
+      color: $cl-gray;
       display: block;
       font-size: .6923rem;
       margin-top: 4px;
@@ -388,15 +388,15 @@ body {
     line-height: 14px;
 
     .text {
-      font-weight: 500;
-      color: #8a8a8a;
+      font-weight: $font-weight-base + 100;
+      color: $cl-gray;
       font-size: .9231rem;
       line-height: 16px;
       margin-bottom: 0;
 
       .user-name {
         display: inline-block;
-        color: #4285f4;
+        color: $bg-primary;
         font-size: 1rem;
         margin-left: 0;
       }
@@ -404,19 +404,19 @@ body {
   }
 
   &:hover {
-    background-color: #4285f4;
+    background-color: $bg-primary;
 
     .user-name,
     .time-active,
     .text {
-      color: #fff;
+      color: $color-white;
     }
   }
 }
 
 .notification.notification-unread {
-  background-color: #ebf2fe;
-  border-bottom: 1px solid #dce9fd;
+  background-color: $cl-white6;
+  border-bottom: 1px solid $cl-white7;
 
   a:after {
     content: '';
@@ -426,17 +426,17 @@ body {
     bottom: 57px;
     width: 6px;
     height: 6px;
-    background-color: #4285f4;
+    background-color: $bg-primary;
     border-radius: 50px;
   }
 
   &:hover {
-    background-color: #4285f4;
+    background-color: $bg-primary;
 
     .user-name,
     .time,
     .text {
-      color: #fff;
+      color: $color-white;
     }
   }
 
@@ -445,13 +445,13 @@ body {
       .user-name,
       .time,
       .text {
-        color: #fff;
+        color: $color-white;
       }
     }
   }
 
   &:hover a:after {
-    background: #fff;
+    background: $color-white;
   }
 }
 
@@ -479,7 +479,7 @@ body {
     padding: 15px 0 9px;
     display: block;
     border: 1px solid transparent;
-    color: #737373;
+    color: $cl-dark6;
 
     img {
       max-height: 35px;
@@ -495,22 +495,22 @@ body {
 
     &:hover {
       background-color: transparent;
-      border-color: #ebebeb;
+      border-color: $cl-white2;
     }
   }
 
   .footer a {
-    background-color: #fafafa;
+    background-color: $cl-white5;
     font-size: 1rem;
-    color: #8a8a8a;
+    color: $cl-gray;
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid $cl-white2;
     display: block;
     outline: 0;
     font-family: $font-family-base;
     &:hover {
-      background-color: #f5f5f5;
+      background-color: $cl-white8;
     }
   }
 }

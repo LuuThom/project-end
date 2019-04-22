@@ -6,7 +6,7 @@
     {type: 'secondary', text: 'Secondary'},
     {type: 'primary', text: 'Primary'},
     {type: 'danger', text: 'Danger'},
-    {type: 'warning', text: 'Waring'},
+    {type: 'warning', text: 'Warning'},
     {type: 'success', text: 'Success'},
   ]
 
@@ -14,7 +14,7 @@ h2 Basic Buttons
 each val in nomal
   .row
     each item in ['xs', 'sm', 'md', 'lg', 'xl']
-      .col-md-4.col-12
+      .col-12.col-md-4
         .code-example
           .demo
             +buttons({
@@ -25,9 +25,9 @@ each val in nomal
           pre
             code
               |+buttons({
-              | type: `#{val.type}`,
-              | text: `#{val.text}`,
-              | size: `#{item}`
+              |   type: '#{val.type}',
+              |   text: '#{val.text}',
+              |   size: '#{item}'
               |})
 -
   var listIcon = [
@@ -41,7 +41,7 @@ h2 Buttons Icon
 each val in nomal
   .row
     each item in listIcon
-      .col-md-4.col-12
+      .col-12.col-md-4
         .code-example
           .demo
             +buttons({
@@ -53,17 +53,17 @@ each val in nomal
           pre
             code
               |+buttons({
-              |   type: `#{val.type}`,
-              |   text: `#{val.text}`,
-              |   size : `#{item.size}`,
-              |   icon: `#{item.icon}`
+              |   type: '#{val.type}',
+              |   text: '#{val.text}',
+              |   size : '#{item.size}',
+              |   icon: '#{item.icon}'
               |})
 
 h2 Button Rounded Nomal
 each val in nomal
   .row
     each item in listIcon
-      .col-md-4.col-12
+      .col-12.col-md-4
         .code-example
           .demo
             +buttons({
@@ -76,9 +76,9 @@ each val in nomal
           pre
             code
               |+buttons({
-              |   type: `#{val.type}`,
-              |   text: `#{val.type}`,
-              |   size :  `#{item.size}`,
-              |   icon: `#{item.icon}`,
+              |   type: '#{val.type}',
+              |   text: '#{val.type}',
+              |   size :  '#{item.size}',
+              |   icon: '#{item.icon}',
               |   rounded: true
               |})

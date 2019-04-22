@@ -104,9 +104,9 @@ ol {
 }
 
 .card {
-  background-color: #fff;
+  background-color: $bg-white;
   margin-bottom: 25px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .04);
+  box-shadow: 0 0 4px 0 rgba($color-black, .04);
   border-width: 0;
   border-radius: 3px;
   display: block;
@@ -120,11 +120,18 @@ ol {
   min-height: 100%;
   top: 61px;
   width: 100%;
-  background: #cccccca1;
+  background: $cl-gray-light1;
   z-index: 1000;
   display: none;
   transition: all .5s;
   &.show {
     display: block;
   }
+}
+.page-title-mobile {
+  position: relative;
+  top: 61px;
+  width: 100%;
+  background: $bg-white;
+  padding: 20px 10px;
 }

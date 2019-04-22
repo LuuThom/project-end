@@ -5,7 +5,7 @@
   line-height: 28px;
   font-family: inherit;
   display: inline-block;
-  font-weight: 700;
+  font-weight: $font-weight-bolded;
   border: 0;
   border-radius: 3px;
   outline: 0;
@@ -171,46 +171,44 @@
       border-top-color: $bd-success-top;
     }
   }
-
   .icon {
     margin-right: 4px;
-  }
-
-  &-xs {
-    padding: 0 6px;
-    font-size: $font-size-small - 1;
-    line-height: 18px;
-    border-radius: 1px;
-  }
-
-  &-sm {
-    padding: 0 8px;
-    font-size: $font-size-base - 1;
-    line-height: 22px;
-    border-radius: 2px;
-  }
-
-  &-lg {
-    padding: 0 12px;
-    font-size: $font-size-medium - 1;
-    line-height: 38px;
-    border-radius: 3px;
-    font-weight: $font-weight-base + 1;
-  }
-
-  &-xl {
-    padding: 0 12px;
-    font-size: $font-size-medium - 1;
-    line-height: 43px;
-    border-radius: 3px;
-    font-weight: $font-weight-base + 1;
-  }
-
-  &-rounded {
-    border-radius: 15px;
+    font-size: 1.231rem;
   }
 }
+.btn.btn-xs .icon {
+  padding: 0 6px;
+  font-size: $font-size-small - 1;
+  line-height: 18px;
+  border-radius: 1px;
+}
 
+.btn.btn-sm .icon {
+  padding: 0 8px;
+  font-size: $font-size-base - 1;
+  line-height: 22px;
+  border-radius: 2px;
+}
+
+.btn-lg .icon {
+  padding: 0 12px;
+  font-size: $font-size-medium - 1;
+  line-height: 38px;
+  border-radius: 3px;
+  font-weight: $font-weight-base + 1;
+}
+
+.btn-xl {
+  padding: 0 12px;
+  font-size: $font-size-medium - 1;
+  line-height: 43px;
+  border-radius: 3px;
+  font-weight: $font-weight-base + 1;
+}
+
+.btn-rounded {
+  border-radius: 15px;
+}
 .btn:active:focus {
   outline: 0;
 }

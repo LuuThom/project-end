@@ -1,6 +1,6 @@
 .sidebarRight {
   position: fixed;
-  background-color: #fafafa;
+  background-color: $cl-white5;
   margin-top: 61px;
   padding-bottom: 61px;
   width: 290px;
@@ -8,7 +8,7 @@
   right: -290px;
   top: 0;
   bottom: 0;
-  border-left: 1px solid #e8e8e8;
+  border-left: 1px solid $cl-grey1;
   z-index: 1000;
   transition: all .35s ease;
 
@@ -17,10 +17,10 @@
   }
 
   .nav {
-    border-bottom: 1px solid #dee2e642;
+    border-bottom: 1px solid $cl-black-light;
 
     &-link {
-      background-color: #f2f2f2;
+      background-color: $cl-white1;
       border-width: 0;
       padding: 15px 10px;
       min-width: auto;
@@ -28,7 +28,7 @@
       margin-right: 0;
       text-align: center;
       border-radius: 0;
-      color: #404040;
+      color: $cl-pri-hover;
       cursor: pointer;
 
       &:focus {
@@ -37,13 +37,13 @@
 
       &:hover {
         border: 0;
-        background-color: #f6f6f6;
-        color: #3b3b3b;
+        background-color: $cl-white9;
+        color: $cl-back-1;
       }
     }
 
     &-link.active {
-      color: #4285f4;
+      color: $bg-primary;
       background-color: transparent;
     }
   }
@@ -76,9 +76,9 @@
 
     h2 {
       font-size: 1.154rem;
-      font-weight: 400;
+      font-weight: $font-weight-base;
       padding-bottom: 15px;
-      border-bottom: 1px solid #ebebeb;
+      border-bottom: 1px solid $cl-white2;
       padding-left: 5px;
       margin-bottom: 20px;
       margin-top: 18px;
@@ -101,21 +101,21 @@
 
   .chat-search {
     position: relative;
-    border-top: 1px solid #f2f2f2;
+    border-top: 1px solid $cl-white1;
 
     input {
       border: 0;
-      background-color: #fafafa;
-      color: #404040;
+      background-color: $cl-white5;
+      color: $cl-pri-hover;
       width: 100%;
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: $font-weight-base;
       padding: 15px 20px;
       outline: 0;
     }
     i {
       position: absolute;
-      color: #aaa;
+      color: $cl-grey2;
       right: 15px;
       top: 50%;
       font-size: 1.538rem;
@@ -153,19 +153,19 @@
       margin: 0;
       padding: 0;
       font-size: 1.154rem;
-      font-weight: 400;
+      font-weight: $font-weight-base;
       border: 0;
     }
     span {
       display: block;
       font-size: .9231rem;
-      color: #999;
+      color: $cl-dark2;
     }
     .return {
       font-size: 2.077rem;
       width: 27px;
       text-align: center;
-      color: #b3b3b3;
+      color: $cl-gray9;
       position: relative;
       vertical-align: middle;
       cursor: pointer;
@@ -175,7 +175,7 @@
     font-size: 2.077rem;
     width: 27px;
     text-align: center;
-    color: #b3b3b3;
+    color: $cl-gray9;
     position: relative;
     vertical-align: middle;
     cursor: pointer;
@@ -208,8 +208,8 @@
     .smg {
       position: relative;
       display: inline-block;
-      background-color: #4c8bf5;
-      color: #fff;
+      background-color: $bg-primary;
+      color: $color-white;
       font-size: 1rem;
       padding: 6px 8px;
       border-radius: 3px;
@@ -218,8 +218,8 @@
       margin-left: 40px;
     }
     #{$li}.friend .smg {
-      background-color: #f0f0f0;
-      color: #595858;
+      background-color: $cl-gray4;
+      color: $cl-black1;
       margin-left: 0;
       margin-right: 40px;
     }
@@ -229,7 +229,7 @@
   }
   .chat-input {
     .input-wrapper {
-      border-top: 1px solid #f2f2f2;
+      border-top: 1px solid $cl-white1;
       position: relative;
     }
     .send-camera {
@@ -240,7 +240,7 @@
     }
     i {
       position: absolute;
-      color: #aaa;
+      color: $cl-grey2;
       right: 15px;
       top: 50%;
       font-size: 1.538rem;
@@ -249,8 +249,8 @@
     }
     input {
       border: 0;
-      background-color: #fafafa;
-      color: #b3b3b3;
+      background-color: $cl-white5;
+      color: $cl-gray9;
       width: 100%;
       font-size: 1rem;
       font-weight: 300;
@@ -280,7 +280,7 @@
     line-height: 16px;
 
     .status {
-      background-color: #00b777;
+      background-color: $cl-green2;
       border-radius: 50%;
       float: right;
       width: 7px;
@@ -289,23 +289,23 @@
       top: 5px;
 
       &.away {
-        background-color: #f2c329;
+        background-color: $cl-warning1;
       }
 
       &.offline {
-        background-color: #e65a5a;
+        background-color: $cl-red1;
       }
     }
 
     .name {
-      color: #404040;
-      font-weight: 500;
+      color: $cl-pri-hover;
+      font-weight: $font-weight-base + 100;
       font-size: 1rem;
     }
 
     .message {
       display: block;
-      color: #999;
+      color: $cl-dark2;
       font-size: 1rem;
     }
   }
@@ -320,19 +320,19 @@
   .todo-input {
     position: relative;
     bottom: 0;
-    border-top: 1px solid #f2f2f2;
+    border-top: 1px solid $cl-white1;
     input {
       border: 0;
-      color: #404040;
+      color: $cl-pri-hover;
       width: 100%;
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: $font-weight-base;
       padding: 15px 20px;
       outline: 0;
     }
     i {
       position: absolute;
-      color: #aaa;
+      color: $cl-grey2;
       right: 15px;
       top: 50%;
       font-size: 1.538rem;
@@ -353,11 +353,11 @@
   h3 {
     display: block;
     font-size: 1.154rem;
-    font-weight: 400;
+    font-weight: $font-weight-base;
     color: gray;
     padding-top: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid $cl-white2;
     margin-bottom: 15px;
     margin-top: 0;
   }
@@ -385,8 +385,8 @@
     display: block;
     vertical-align: top;
     font-size: 1rem;
-    font-weight: 400;
-    color: #666;
+    font-weight: $font-weight-base;
+    color: $cl-gray6;
     outline: 0;
     cursor: pointer;
     margin-left: 0;
@@ -412,14 +412,14 @@
       position: absolute;
       border-radius: 3px;
       margin: 0;
-      color: #4285f4;
+      color: $bg-primary;
       display: block;
       width: 1.38462rem;
       height: 1.38462rem;
       pointer-events: none;
       content: '';
-      background-color: #fff;
-      border: #a1a1a1 solid 1px;
+      background-color: $color-white;
+      border: $cl-gray5 solid 1px;
     }
   }
   .custom-checkbox-input:checked ~ .custom-checkbox-label:after {
@@ -430,7 +430,7 @@
 
 .todo-list > li .custom-control input[type='checkbox']:checked ~ .custom-control-label {
   text-decoration: line-through;
-  color: #999;
+  color: $cl-dark2;
 }
 
 .tab-settings-list {
@@ -471,10 +471,10 @@
   top: 0;
   bottom: 0;
   z-index: 1029;
-  background-color: #f5f5f5;
+  background-color: $cl-white8;
   width: 230px;
   left: 0;
-  border-right: 1px solid #e3e3e3;
+  border-right: 1px solid $bg-secondary-active;
   transition: all .35s ease;
 
   &-inner {
@@ -505,9 +505,9 @@
 
     .divider {
       padding: 20px 20px 0;
-      color: #7b7b7b;
+      color: $cl-dark10;
       line-height: 30px;
-      font-weight: 600;
+      font-weight: $font-weight-bold;
       text-transform: uppercase;
       font-size: .8462rem;
     }
@@ -518,7 +518,7 @@
   &__link {
     display: block;
     padding: 0 20px;
-    color: #696969;
+    color: $cl-dark9;
     font-size: 1.077rem;
     line-height: 38px;
     text-overflow: ellipsis;
@@ -528,8 +528,8 @@
 
     &:hover,
     &:focus {
-      background-color: #f0f0f0;
-      color: #696969;
+      background-color: $cl-gray4;
+      color: $cl-dark9;
     }
     &[aria-expanded='true']:before {
       transition: transform .5s;
@@ -539,7 +539,7 @@
 
   &__item.active .nav__link {
     padding-left: 20px;
-    color: #4285f4;
+    color: $bg-primary;
   }
 
   &__item.parent > a:before {
@@ -548,12 +548,12 @@
     font-family: $font-icon;
     transition: transform .5s;
     font-size: 1.615rem;
-    color: #b0b0b0;
+    color: $cl-grey;
   }
 
   .zmdi {
     line-height: 18px;
-    font-size: 19px;
+    font-size: $font-size-large + 1;
     min-width: 19px;
     margin-right: 9px;
     text-align: center;
@@ -561,7 +561,7 @@
   }
 
   .sub-menu {
-    background-color: #eee;
+    background-color: $cl-disabled;
     padding: 10px 0;
     list-style: none;
     line-height: 20px;
@@ -569,7 +569,7 @@
     .child {
       .nav__link {
         padding: 2px 15px 2px 49px;
-        color: #696969;
+        color: $cl-dark9;
         font-size: 13px;
         display: flex;
         align-items: center;
@@ -578,12 +578,12 @@
         white-space: nowrap;
       }
       .nav__link.active {
-        color: #4285f4;
+        color: $bg-primary;
       }
       .badge {
         display: inline-block;
         border-radius: 2px;
-        font-weight: 500;
+        font-weight: $font-weight-base + 100;
         line-height: 9px;
         font-size: .85rem;
         padding: 2px 7px;
@@ -600,7 +600,7 @@
   cursor: pointer;
 
   &__data {
-    color: #696969;
+    color: $cl-dark9;
 
     .value {
       float: right;
@@ -610,7 +610,7 @@
   &__status {
     margin: 10px 0 0;
     height: 8px;
-    background-color: #ebebeb;
+    background-color: $cl-white2;
     border-radius: 2px;
   }
 }

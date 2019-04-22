@@ -5402,6 +5402,13 @@ function chart_pie(id) {
     var width = $(window).width();
     if(width >= 768) {
       $('.js-layer').removeClass('show');
+      $('.js-sidebar-left').removeClass('sidebarLeft-show');
+      $('.js-page-title-mobile').css('display','none');
+
+    }
+    else {
+      $('.js-page-title-mobile').css('display','block').text($('.page-title').text());
+
     }
   });
   //map 
@@ -5426,4 +5433,16 @@ function chart_pie(id) {
     normalizeFunction: "polynomial"
   })
 
+// colappse menu
+$('.js-collapse01').on('show.bs.collapse', function() {
+  $('.parent').find('.js-collapse01').not($(this)).collapse('hide');
+});
+$('.js-collapse02').on('show.bs.collapse', function() {
+  $('.has-child').find('.js-collapse02').not($(this)).collapse('hide');
+});
+$('.js-collapse03').on('show.bs.collapse', function() {
+  $('.has-child2').find('.js-collapse03').not($(this)).collapse('hide');
+});
 
+
+  

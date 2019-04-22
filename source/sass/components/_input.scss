@@ -1,7 +1,7 @@
 .form__control {
   display: block;
   width: 100%;
-  font-weight: 400;
+  font-weight: $font-weight-base;
   line-height: 1.428571;
   color: $cl-pri-hover;
   background-color: $bg-white;
@@ -30,7 +30,7 @@
     height: 57px;
     padding: 12px 14px;
     font-size: 1.385rem;
-    font-weight: 300;
+    font-weight: $font-weight-light;
     border-radius: 2px;
   }
 
@@ -70,7 +70,7 @@
   }
 
   &.is--invalid:focus {
-    border-color: #ea4335;
+    border-color: $bg-danger;
     box-shadow: none;
   }
 }
@@ -167,9 +167,9 @@ $textarea: textarea;
 
 #{$textarea}.form-control {
   &:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #0b79fa;
+    color: $cl-dark7;
+    background-color: $bg-white;
+    border-color: $bg-blue-1;
     outline: 0;
     box-shadow: none;
   }

@@ -1,7 +1,7 @@
 //-  
 //- This page only for Frontend Developer                      
 extends modules/layout/_page-other 
-                 
+                   
 block head         
   +head('Styleguides')
   style.
@@ -55,16 +55,8 @@ block main
         title: 'Switch'
       },
       {
-        id: 'slide',
-        title: 'Slides'
-      },
-      {
         id: 'datetime',
         title: 'Datetimepicker'
-      },
-      {
-        id: 'radio',
-        title: 'Radio'
       }
     ];    
 
@@ -114,11 +106,7 @@ block main
                   include styleguides/_checkbox 
                 when 'switch'
                   include styleguides/_switch
-                when 'slide'
-                  include styleguides/_slider
                 when 'datetime'
                   include styleguides/_datetimepicker
-                when 'radio'
-                  include styleguides/_radio
                 default
                   - throw new Error('"val.id" must be in "components" variable')

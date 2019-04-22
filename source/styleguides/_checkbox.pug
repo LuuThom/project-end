@@ -5,7 +5,7 @@
 
 h2 Checkbox
 .row
-  .col-md-6.col-12
+  .col-12.col-md-6
     .code-example
       .demo
         h3 Checkbox Base
@@ -43,42 +43,4 @@ h2 Checkbox
         |  label: 'Option3',
         |  disabled: true
         | })
-  .col-md-6.col-12
-    .code-example
-      .demo.custom-demo
-        h3 Checkbox Inline
-        +checkbox({
-          checked: true,
-          id: 'check4',
-          label: 'Option1',
-        })(class="custom-checkbox--inline")
-        +checkbox({
-          checked: false,
-          id: 'check5',
-          label: 'Option2',
-        })(class="custom-checkbox--inline")
-        +checkbox({
-          checked: false,
-          id: 'check6',
-          label: 'Option3',
-          disabled: true
-        })(class="custom-checkbox--inline")
-      pre
-        code
-        |+checkbox({
-        |  checked: true,
-        |  id: check4,
-        |  label: 'Option1'
-        |})
-        |+checkbox({
-        |  checked: false,
-        |  id: check5,
-        |  label: 'Option2'
-        |})
-        |+checkbox({
-        |  checked: false,
-        |  id: check6,
-        |  label: 'Option3'
-        |  disabled: true
-        |})
   

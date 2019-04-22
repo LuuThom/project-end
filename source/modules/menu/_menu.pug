@@ -24,7 +24,7 @@ mixin menu(page, link)
               id= val.link
               class= (val.link === page) ? "show" : null 
             )
-              ul.sub-menu.parent
+              ul.sub-menu
                 each val1 in val.sub
                   li.nav__item.child(
                     class= val1.dropdown ? "has-child" : null
@@ -45,7 +45,7 @@ mixin menu(page, link)
                         ul.sub-menu.child
                           each val2 in val1.dropdown
                             li.nav__item.child2(
-                              class= val2.dropdownChild ? "has-child" : null
+                              class= val2.dropdownChild ? "has-child has-child-2" : null
                             )
                               a.nav__link(
                                 href= val2.dropdownChild ? `#${val2.link}` : `${val2.link}`
