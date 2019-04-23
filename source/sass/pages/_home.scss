@@ -134,6 +134,9 @@ body {
 
   &.loading {
     position: relative;
+    .widget-head {
+      margin-bottom: 15px;
+    }
   }
 
   &#{$this}-fullwidth {
@@ -840,4 +843,19 @@ body {
 }
 .tools.dropdown .icon {
   margin-right: 0;
+}
+.jqvmap-label,
+.jqvmap-pin {
+  pointer-events: none;
+}
+.jqvmap-label {
+  position: absolute;
+  display: none;
+  border-radius: 3px;
+  background: $cl-tooltip;
+  color: $color-white;
+  font-family: $font-web-map;
+  font-size: $font-size-small - 1;
+  padding: 3px;
+  font-weight: $font-weight-light;
 }

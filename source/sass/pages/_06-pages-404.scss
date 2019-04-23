@@ -5,6 +5,10 @@
     .btn {
       width: auto;
     }
+
+    @include breakpoint-down(phone) {
+      margin-top: 50px;
+    }
   }
   &-number {
     color: $cl-pri-hover;
@@ -16,18 +20,38 @@
     max-height: 240px;
     background: url('../images/404-bg.png') no-repeat center center;
     background-size: contain;
+
+    @include breakpoint-down(phone) {
+      padding: 20px 0;
+      font-size: 6.923rem;
+      margin-bottom: 10px;
+      line-height: 100px;
+    }
+
+    @include breakpoint-down(smallphone) {
+      padding: 0;
+      font-size: 5.385rem;
+    }
   }
   &-description {
     font-size: 2.308rem;
     font-weight: $font-weight-light;
     line-height: 32px;
     margin-bottom: 30px;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.462rem;
+    }
   }
   &-goback-text {
     font-size: 1.692rem;
     font-weight: $font-weight-light;
     margin-bottom: 30px;
     margin-top: 15px;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.15rem;
+    }
   }
   &-goback-button {
     margin-bottom: 30px;

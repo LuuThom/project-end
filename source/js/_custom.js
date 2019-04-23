@@ -177,7 +177,7 @@
     color: "#4285f4",
     hoverOpacity: .7,
     selectedColor: "#4285f4",
-    enableZoom: !0,
+    enableZoom: true,
     showTooltip: !0,
     values: {
       ru: "14",

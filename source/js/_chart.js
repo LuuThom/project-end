@@ -70,11 +70,11 @@ function chartcustom(id) {
         [8, 40],
         [9, 60]
       ],
-      // showLabels: !0,
-      // label: "Purchases",
-      // labelPlacement: "below",
-      // canvasRender: !0,
-      // cColor: "#FFFFFF"
+      showLabels: !0,
+      label: "Purchases",
+      labelPlacement: "below",
+      canvasRender: !0,
+      cColor: "#FFFFFF"
     }, {
       data: [
         [1, 20],

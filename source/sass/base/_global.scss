@@ -66,6 +66,19 @@ ol {
 
 .main-content {
   padding: 25px;
+
+  @include breakpoint-down(smallphone) {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .row {
+    @include breakpoint-down(smallphone) {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
 }
 
 .scrollTop {
@@ -133,5 +146,12 @@ ol {
   top: 61px;
   width: 100%;
   background: $bg-white;
-  padding: 20px 10px;
+  padding: 16px 10px;
+  font-weight: 300;
+  color: $cl-pri-hover;
+}
+.page-head {
+  @include breakpoint-down(smallphone) {
+    display: none;
+  }
 }

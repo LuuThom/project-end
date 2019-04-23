@@ -15,12 +15,26 @@
       width: 102px;
       background-image: url('../images/logo.png');
     }
+
+    @include breakpoint-down(smallphone) {
+      margin: 0 auto 20px;
+      float: none;
+      min-width: auto;
+    }
   }
   &-header {
     margin-bottom: 100px;
+
+    @include breakpoint-down(tablet) {
+      margin-bottom: 50px;
+    }
   }
   &-order {
     text-align: right;
+
+    @include breakpoint-down(smallphone) {
+      text-align: center;
+    }
   }
   &-id {
     display: block;
@@ -42,6 +56,10 @@
   }
   &-data {
     margin-bottom: 110px;
+
+    @include breakpoint-down(tablet) {
+      margin-bottom: 55px;
+    }
   }
   &-person {
     & span {
@@ -54,6 +72,10 @@
     }
     &:last-child {
       text-align: right;
+
+      @include breakpoint-down(smallphone) {
+        text-align: center;
+      }
     }
 
     @include breakpoint-down(tablet) {
@@ -61,6 +83,10 @@
         font-size: 1.0004rem;
         line-height: 1.5385rem;
       }
+    }
+
+    @include breakpoint-down(smallphone) {
+      text-align: center;
     }
   }
   &-payment-direction {
@@ -82,6 +108,14 @@
         line-height: 40px;
         font-size: 1.923rem;
       }
+
+      @include breakpoint-down(smallphone) {
+        transform: rotate(90deg);
+      }
+    }
+
+    @include breakpoint-down(smallphone) {
+      padding: 20px;
     }
   }
   &-details {
@@ -217,5 +251,9 @@
 
   @include breakpoint-down(tablet) {
     padding: 50px 50px 35px;
+  }
+
+  @include breakpoint-down(smallphone) {
+    padding: 35px 25px 15px;
   }
 }

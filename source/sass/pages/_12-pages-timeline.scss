@@ -1,3 +1,8 @@
+.page-head {
+  @include breakpoint-down(phone) {
+    display: none;
+  }
+}
 .timeline {
   margin: 0 auto 40px;
   padding: 0 0 20px;
@@ -13,6 +18,12 @@
     background: $color-load-more;
     left: 170px;
     margin-left: -1px;
+
+    @include breakpoint-down(phone) {
+      left: 50%;
+      margin-left: -1px;
+      top: -35px;
+    }
   }
 
   &-item {
@@ -48,6 +59,12 @@
     &:nth-child(4n+4):before {
       border-color: $bg-danger;
     }
+
+    @include breakpoint-down(phone) {
+      padding-left: 0;
+      margin-top: 60px;
+      margin-bottom: 0;
+    }
   }
 
   &-date {
@@ -60,6 +77,21 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    span {
+      @include breakpoint-down(phone) {
+        background-color: #e0e0e0;
+        padding: 5px 8px;
+        border-radius: 4px;
+        line-height: 25px;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      width: 100%;
+      left: 0;
+      top: -40px;
+      text-align: center;
+    }
   }
 
   &-content {
@@ -118,6 +150,10 @@
   &-time {
     float: right;
     color: $cl-gray3;
+
+    @include breakpoint-down(phone) {
+      padding-top: 0;
+    }
   }
 
   &-autor {
@@ -185,10 +221,26 @@
       font-weight: $font-weight-base + 100;
       position: absolute;
       left: 131px;
+
+      @include breakpoint-down(phone) {
+        position: relative;
+        left: 0;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      text-align: center;
+      padding: 0;
+      margin-bottom: 40px;
+      margin-top: 40px;
     }
 
     &:before {
       display: none;
     }
+  }
+
+  @include breakpoint-down(phone) {
+    padding: 0;
   }
 }

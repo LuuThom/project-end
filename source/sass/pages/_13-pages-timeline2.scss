@@ -1,11 +1,23 @@
-.timeline.timeline2 {
-  &-variant {
+.timeline {
+  &.timeline-variant {
     max-width: none;
     padding-bottom: 0;
     &:before {
+      @include breakpoint-down(phone) {
+        left: 50%;
+        margin-left: -1px;
+        top: 70px;
+      }
+
       left: 50%;
       z-index: -1;
-      top: 70px;
+      content: '';
+      position: absolute;
+      top: 40px;
+      bottom: 0;
+      width: 2px;
+      background: #dbdbdb;
+      margin-left: -1px;
     }
     & .timeline-header {
       padding-top: 0;
@@ -19,26 +31,52 @@
     & .timeline-item {
       padding-left: 0;
       margin: 30px 0 0;
-      &.left {
-        left: 0;
-        padding-right: calc(50% + 45px);
+
+      @include breakpoint-down(phone) {
+        margin-top: 60px;
       }
       &.left .timeline-content:before {
         right: -5px;
         left: inherit;
-      }
-      &.left .timeline-icon {
-        left: initial;
-        right: -67px;
       }
       &-detailed .timeline-header {
         border-bottom: 1px solid $cl-disabled;
         padding-bottom: 15px;
       }
     }
+    & .timeline-item.right {
+      right: 0;
+      padding-left: calc(50% + 45px);
+
+      @include breakpoint-down(phone) {
+        padding: 0;
+      }
+    }
+    & .timeline-item.left {
+      left: 0;
+      padding-right: calc(50% + 45px);
+
+      @include breakpoint-down(phone) {
+        padding: 0;
+      }
+    }
+    &.timeline-item.left .timeline-icon {
+      left: initial;
+      right: -67px;
+
+      @include breakpoint-down(phone) {
+        left: 50%;
+        margin-left: -18px;
+        top: -48px;
+      }
+    }
     & .timeline-loadmore {
       text-align: center;
       margin-bottom: 40px;
+      .load-more-btn {
+        position: relative;
+        left: initial;
+      }
     }
     & .timeline-activity {
       display: inline;
@@ -69,10 +107,6 @@
       display: none;
     }
   }
-  &-item.right {
-    right: 0;
-    padding-left: calc(50% + 45px);
-  }
   &-icon {
     position: absolute;
     color: $color-white;
@@ -85,9 +119,22 @@
     text-align: center;
     background-color: $cl-gray2;
     border-radius: 50%;
+
+    @include breakpoint-down(phone) {
+      left: 50%;
+      margin-left: -18px;
+      top: -48px;
+      width: 38px;
+      height: 38px;
+      font-size: 1.385rem;
+    }
     .icon {
       line-height: 40px;
       vertical-align: middle;
+
+      @include breakpoint-down(phone) {
+        line-height: 34px;
+      }
     }
   }
   .file &-icon {

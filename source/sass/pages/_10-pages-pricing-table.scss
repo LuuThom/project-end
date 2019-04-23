@@ -6,12 +6,21 @@
     font-size: 40px;
     font-weight: $font-weight-xs;
     margin: 20px 0 15px;
+
+    @include breakpoint-down(phone) {
+      font-size: 32px;
+    }
   }
   &-description {
     font-size: 18px;
     font-weight: $font-weight-xs;
     line-height: 29px;
     margin: 0 0 50px;
+
+    @include breakpoint-down(phone) {
+      font-size: 15px;
+      line-height: 24px;
+    }
   }
 }
 .pricing-table {
