@@ -54,9 +54,12 @@ body {
   padding: 0 20px;
   color: $cl-pri-hover;
 
-  span {
+  h1 {
     display: block;
     white-space: nowrap;
+    font-size: 1.462rem;
+    margin: 0;
+    font-weight: 400;
   }
 
   @include breakpoint-down(phone) {

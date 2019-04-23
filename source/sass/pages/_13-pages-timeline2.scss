@@ -1,3 +1,12 @@
+.timeline2 {
+  .timeline-item {
+    padding-left: 0;
+    margin: 30px 0 0;
+    &:before {
+      display: none;
+    }
+  }
+}
 .timeline {
   &.timeline-variant {
     max-width: none;
@@ -98,13 +107,6 @@
     &:first-child {
       margin-top: 0;
       padding-bottom: 5px;
-    }
-  }
-  &-item {
-    padding-left: 0;
-    margin: 30px 0 0;
-    &:before {
-      display: none;
     }
   }
   &-icon {

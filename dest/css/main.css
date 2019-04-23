@@ -16909,9 +16909,12 @@ body {
       flex: 1 1;
   padding: 0 20px;
   color: #404040; }
-  .page-title span {
+  .page-title h1 {
     display: block;
-    white-space: nowrap; }
+    white-space: nowrap;
+    font-size: 1.462rem;
+    margin: 0;
+    font-weight: 400; }
   @media (max-width: 767.98px) {
     .page-title {
       display: none; } }
@@ -19672,6 +19675,12 @@ body {
     .timeline {
       padding: 0; } }
 
+.timeline2 .timeline-item {
+  padding-left: 0;
+  margin: 30px 0 0; }
+  .timeline2 .timeline-item:before {
+    display: none; }
+
 .timeline.timeline-variant {
   max-width: none;
   padding-bottom: 0; }
@@ -19754,12 +19763,6 @@ body {
   .timeline-month:first-child {
     margin-top: 0;
     padding-bottom: 5px; }
-
-.timeline-item {
-  padding-left: 0;
-  margin: 30px 0 0; }
-  .timeline-item:before {
-    display: none; }
 
 .timeline-icon {
   position: absolute;

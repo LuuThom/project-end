@@ -1,12 +1,11 @@
 extends modules/layout/_page-default
-             
+              
 block head
   +head('Home')
 block main
   +header('Dashboard')
   +sidebarRight()
   +sidebarLeft("home.html")
-  h1 Homepage
   .be-content.content-home
     .main-content.container-fluid
       .row
