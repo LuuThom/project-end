@@ -18724,7 +18724,8 @@ body {
       line-height: 18px; }
   .content-home .table tbody > tr > td {
     font-weight: 400;
-    vertical-align: middle; }
+    vertical-align: middle;
+    white-space: nowrap; }
   .content-home .table.table-responsive tbody > tr > td {
     padding-top: 11px;
     padding-bottom: 11px; }
@@ -18757,7 +18758,8 @@ body {
 
 .user-progress-small .title {
   display: inline-block;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  white-space: nowrap; }
 
 .card-header-divider {
   text-align: left;
@@ -19122,7 +19124,13 @@ body {
     width: 100%;
     color: #fff;
     background-color: #5d82d1;
-    border-color: #5d82d1; }
+    border-color: #5d82d1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center; }
     .login.signup .btn-facebook:hover {
       color: #fff;
       box-shadow: inset 0 -2px 0 #3864c3;
@@ -19133,7 +19141,13 @@ body {
     width: 100%;
     color: #fff;
     background-color: #eb5e4c;
-    border-color: #eb5e4c; }
+    border-color: #eb5e4c;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center; }
     .login.signup .btn--google:hover {
       color: #fff;
       box-shadow: inset 0 -2px 0 #e6351e;
@@ -19142,7 +19156,7 @@ body {
       border-bottom-color: #e6351e; }
   .login.signup .btn .icon {
     font-size: 1.615rem;
-    line-height: 15px; }
+    line-height: 40px; }
   .login.signup .btn .icon-left {
     margin-right: 4px; }
 

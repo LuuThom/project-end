@@ -33,12 +33,11 @@ block main
               .col-6.login-forgot-password
                 a(href='08-pages-forgot-password.html') Forgot Password?
             .form-group.login-submit
-              .col-12
-                +buttons({
-                  type: 'primary',
-                  text: 'Sign me in',
-                  size: 'xl'
-                })
+              +buttons({
+                type: 'primary',
+                text: 'Sign me in',
+                size: 'xl'
+              })
       .footer
         span Don't have an account? 
         a(href="be-07-pages-sign-up.html")

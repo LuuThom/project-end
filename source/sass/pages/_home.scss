@@ -533,6 +533,7 @@ body {
     tbody > tr > td {
       font-weight: $font-weight-base;
       vertical-align: middle;
+      white-space: nowrap;
     }
 
     &.table-responsive tbody > tr > td {
@@ -583,6 +584,7 @@ body {
 .user-progress-small .title {
   display: inline-block;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .card-header-divider {

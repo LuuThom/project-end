@@ -14,6 +14,9 @@
       color: $color-white;
       background-color: $cl-face;
       border-color: $cl-face;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &:hover {
         color: $color-white;
         box-shadow: inset 0 -2px 0 $cl-face-bd;
@@ -27,6 +30,9 @@
       color: $color-white;
       background-color: $cl-gg;
       border-color: $cl-gg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &:hover {
         color: $color-white;
         box-shadow: inset 0 -2px 0 $cl-gg-bd;
@@ -37,7 +43,7 @@
     }
     .icon {
       font-size: 1.615rem;
-      line-height: 15px;
+      line-height: 40px;
     }
     .icon-left {
       margin-right: 4px;
