@@ -50,7 +50,7 @@
   $('.toggle-loading').on('click',function(){
     $('.loading, .spinner').addClass('show');
     setTimeout(function(){
-    $('.loading, .spinner').removeClass('show');
+      $('.loading, .spinner').removeClass('show');
     },2000);
   })
   

@@ -16734,6 +16734,11 @@ a.text-dark:hover, a.text-dark:focus {
   src: url("../fonts/Roboto-BlackItalic.eot");
   src: local("Roboto BlackItalic"), local("Roboto-BlackItalic"), url("../fonts/Roboto-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-BlackItalic.woff2") format("woff2"), url("../fonts/Roboto-BlackItalic.woff") format("woff"), url("../fonts/Roboto-BlackItalic.ttf") format("truetype"), url("../fonts/Roboto-BlackItalic.svg#Roboto") format("svg"); }
 
+.button {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px; }
+
 html {
   font-size: 13px; }
 
@@ -18333,7 +18338,8 @@ textarea.form-control:focus {
     background-size: 50% 50%; }
 
 body {
-  height: auto; }
+  height: auto;
+  background: #b4759a; }
 
 .sub-menu.child li {
   padding-left: 11px; }
