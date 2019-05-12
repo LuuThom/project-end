@@ -1,5 +1,7 @@
 # Frontend folder
 tmp/
+dest/
+node_modules/
 
 # Dependency directories
 node_modules/

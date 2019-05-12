@@ -45,6 +45,9 @@
       },{
         "title": "Pages Invoice",
         "url": "14-pages-invoice"
+      },{
+        "title": "Alert",
+        "url": "15-alert"
       }
     ]
   }

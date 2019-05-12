@@ -1,0 +1,22 @@
+mixin alert({type, dismiss, title, content, icon})
+  .alert(
+    class= type ? `alert-${type}` : null
+    class= (dismiss === true) ? 'alert-dismissible' : null
+  )&attributes(attributes)
+    if (dismiss === true)
+      a(
+        href= '#'
+        class= 'close'
+        data-dismiss= 'alert'
+        aria-label= 'close'
+      )
+        | &times;
+    if icon
+      i(
+        class= icon ? `${icon}` : null
+      )
+    if title
+      .alert__title
+        | #{title}
+    p.alert__content
+      | #{content}

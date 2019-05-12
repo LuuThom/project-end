@@ -1,0 +1,91 @@
+extends modules/layout/_page-default
+             
+block head
+  +head('Home')
+
+block main
+  .be-content.alert-page
+    .main-content.container-fluid
+      .alert__inner
+        h2.main-content__title Alert
+        .row
+          .col-12.col-md-6
+            .card
+              .card-header
+                h3.card-title Alert / Base
+              .card-body
+                +alert({
+                  type: 'secondary',
+                  content: 'Well done! You successfully read this important alert message.'
+                })
+                +alert({
+                  type: 'primary',
+                  content: 'Heads up. This alert needs yours attention, but its not super importainer.'
+                })
+                +alert({
+                  type: 'warning',
+                  content: 'Warning! Better check yourself, you&#39;re not looking too good.'
+                })
+                +alert({
+                  type: 'danger',
+                  content: 'Oh snap! Change a few things up try submitting again'
+                })
+            .card
+              .card-header
+                h3.card-title Alert / Additional Content
+              .card-body
+                +alert({
+                  title: 'Well done!',
+                  type: 'secondary',
+                  dismiss: true,
+                  content: 'Aww yeah, you successfully read this important alert message.'
+                })(class= 'alert__add-content')
+          .col-12.col-md-6
+            .card
+              .card-header
+                h3.card-title Alert / Dismissing
+              .card-body
+                +alert({
+                  type: 'secondary',
+                  dismiss: true,
+                  content: 'Well done! You successfully read this important alert message.'
+                })
+                +alert({
+                  type: 'primary',
+                  dismiss: true,
+                  content: 'Heads up. This alert needs yours attention, but it&#39;s not super importainer.'
+                })
+                +alert({
+                  type: 'warning',
+                  dismiss: true,
+                  content: 'Warning! Better check yourself, you&#39;re not looking too good.'
+                })
+                +alert({
+                  type: 'danger',
+                  dismiss: true,
+                  content: 'Oh snap! Change a few things up try submitting again'
+                })
+            .card
+              .card-header
+                h3.card-title Alert / Icons
+              .card-body
+                +alert({
+                  type: 'secondary',
+                  icon: 'fas fa-times',
+                  content: 'Well done! You successfully read this important alert message.'
+                })
+                +alert({
+                  type: 'primary',
+                  icon: 'fas fa-adjust',
+                  content: 'Heads up. This alert needs yours attention, but it&#39;s not super importainer.'
+                })
+                +alert({
+                  type: 'warning',
+                  icon: 'fas fa-adjust',                
+                  content: 'Warning! Better check yourself, you&#39;re not looking too good.'
+                })
+                +alert({
+                  type: 'danger',
+                  icon: 'fas fa-adjust',                
+                  content: 'Oh snap! Change a few things up try submitting again'
+                })
